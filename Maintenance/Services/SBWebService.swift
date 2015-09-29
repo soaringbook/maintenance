@@ -9,7 +9,6 @@
 import Foundation
 
 enum SBWebServiceError: ErrorType {
-    case Success
     case Failure
     case Unauthenticated
 }
@@ -38,12 +37,11 @@ class SBWebService: NSObject {
     
     // MARK:- Authenticate
     
-    func authenticate(token token: String, callback: (SBWebServiceError) -> ()) {
+    func authenticate(token token: String, callback: (SBWebServiceError?) -> ()) {
         let request = authenticatedRequest(path: "gliders.json", method: "HEAD", token: token)
-        
         let task = session.dataTaskWithRequest(request) { data, response, error in
-            if error == nil {
-                callback(.Success)
+            if let response = response as? NSHTTPURLResponse where response.statusCode == 200 {
+                callback(nil)
             } else {
                 callback(.Unauthenticated)
             }
@@ -56,7 +54,7 @@ class SBWebService: NSObject {
     private func authenticatedRequest(path path: String, method: String = "GET", token: String? = nil) -> NSMutableURLRequest {
         let hostProtocol = SBConfiguration.sharedInstance.apiProtocol
         let host = SBConfiguration.sharedInstance.apiHost
-        let URL = NSURL(string: NSString(format: "\(hostProtocol)://\(host)/%@", path) as String)
+        let URL = NSURL(string: "\(hostProtocol)://\(host)/api/\(path)")
         
         let request = NSMutableURLRequest(URL: URL!)
         request.HTTPMethod = method

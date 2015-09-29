@@ -35,7 +35,15 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     
     private func authenticate() {
         SBWebService().authenticate(token: tokenField.text ?? "") { error in
-            print("error \(error)")
+            if let error = error {
+                let controller = UIAlertController(error: error)
+                controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                dispatch_main {
+                    self.presentViewController(controller, animated: true, completion: nil)
+                }
+            } else {
+                
+            }
         }
     }
     
