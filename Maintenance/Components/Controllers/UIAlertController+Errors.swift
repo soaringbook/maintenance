@@ -9,9 +9,15 @@
 import UIKit
 
 extension UIAlertController {
-    
     convenience init(error: SBWebServiceError) {
         self.init(title: "An error occured", message: "error message", preferredStyle: .Alert)
     }
-    
+}
+
+extension UIViewController {
+    func presentErrorController(error: SBWebServiceError) {
+        let controller = UIAlertController(error: error)
+        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
 }
