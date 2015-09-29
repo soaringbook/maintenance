@@ -9,32 +9,42 @@
 import UIKit
 
 class LoginViewController : UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet var tokenField: UITextField!
-    @IBOutlet var bottomConstraint: NSLayoutConstraint!
+    var loginView: LoginView! { return self.view as! LoginView }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
-            self.handleKeyboardNotification(notification)
+            self.loginView.handleKeyboardNotification(notification)
         }
         NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
-            self.handleKeyboardNotification(notification)
+            self.loginView.handleKeyboardNotification(notification)
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        loginView.animateIn()
+    }
+    
+    // MARK: - Gestures
+    
+    @IBAction func tap(sender: AnyObject) {
+        loginView.resignFirstResponder()
     }
     
     // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        authenticate()
+        authenticate(textField: textField)
         return textField.resignFirstResponder()
     }
     
     // MARK: - Service
     
-    private func authenticate() {
-        SBWebService().authenticate(token: tokenField.text ?? "") { error in
+    private func authenticate(textField textField: UITextField) {
+        SBWebService().authenticate(token: textField.text ?? "") { error in
             if let error = error {
                 let controller = UIAlertController(error: error)
                 controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -44,19 +54,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
             } else {
                 
             }
-        }
-    }
-    
-    // MARK: - Animations
-    
-    private func handleKeyboardNotification(notification: NSNotification) {
-        let userInfo = notification.userInfo!
-        let keyboardBounds = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        let keyboardAnimationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
-        
-        self.bottomConstraint.constant = notification.name == UIKeyboardWillHideNotification ? 0.0 : keyboardBounds.size.height
-        UIView.animateWithDuration(keyboardAnimationDuration) {
-            self.view.layoutIfNeeded()
         }
     }
 }
