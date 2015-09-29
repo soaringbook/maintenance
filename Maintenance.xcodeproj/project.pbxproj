@@ -19,6 +19,7 @@
 		626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23961BBA7E290055D8FC /* SBKeychain.swift */; settings = {ASSET_TAGS = (); }; };
 		626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */; settings = {ASSET_TAGS = (); }; };
 		626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239F1BBA8F200055D8FC /* CommonMacros.swift */; settings = {ASSET_TAGS = (); }; };
+		626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23A21BBA901E0055D8FC /* Gliders.storyboard */; settings = {ASSET_TAGS = (); }; };
 		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		626D23961BBA7E290055D8FC /* SBKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBKeychain.swift; sourceTree = "<group>"; };
 		626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Errors.swift"; sourceTree = "<group>"; };
 		626D239F1BBA8F200055D8FC /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
+		626D23A21BBA901E0055D8FC /* Gliders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gliders.storyboard; sourceTree = "<group>"; };
 		715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC19AA8EFBEA7923232DB0EF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 		626D23841BBA69A90055D8FC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				626D23A11BBA90140055D8FC /* Gliders */,
 				626D238C1BBA6F0E0055D8FC /* Login */,
 			);
 			path = Modules;
@@ -210,6 +213,14 @@
 				626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		626D23A11BBA90140055D8FC /* Gliders */ = {
+			isa = PBXGroup;
+			children = (
+				626D23A21BBA901E0055D8FC /* Gliders.storyboard */,
+			);
+			path = Gliders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */,
+				626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
