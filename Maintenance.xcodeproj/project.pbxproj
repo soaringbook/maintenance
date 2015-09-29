@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620D3FF61BBA930200751D86 /* GlidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23561BBA696C0055D8FC /* AppDelegate.swift */; };
 		626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */; };
 		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		620D3FF51BBA930200751D86 /* GlidersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersViewController.swift; sourceTree = "<group>"; };
 		626D23531BBA696C0055D8FC /* Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maintenance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D23561BBA696C0055D8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		626D23621BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				626D23A21BBA901E0055D8FC /* Gliders.storyboard */,
+				620D3FF51BBA930200751D86 /* GlidersViewController.swift */,
 			);
 			path = Gliders;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
+				620D3FF61BBA930200751D86 /* GlidersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
