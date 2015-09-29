@@ -27,7 +27,16 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        authenticate()
         return textField.resignFirstResponder()
+    }
+    
+    // MARK: - Service
+    
+    private func authenticate() {
+        SBWebService().authenticate(token: tokenField.text ?? "") { error in
+            print("error \(error)")
+        }
     }
     
     // MARK: - Animations
