@@ -14,6 +14,10 @@
 		626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23881BBA69C20055D8FC /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D238D1BBA6F0E0055D8FC /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
 		626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D238F1BBA6F200055D8FC /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		626D23931BBA72690055D8FC /* SBWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23921BBA72690055D8FC /* SBWebService.swift */; settings = {ASSET_TAGS = (); }; };
+		626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23941BBA73200055D8FC /* SBConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
+		626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23961BBA7E290055D8FC /* SBKeychain.swift */; settings = {ASSET_TAGS = (); }; };
+		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,12 @@
 		626D23881BBA69C20055D8FC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		626D238D1BBA6F0E0055D8FC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		626D238F1BBA6F200055D8FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		626D23921BBA72690055D8FC /* SBWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBWebService.swift; sourceTree = "<group>"; };
+		626D23941BBA73200055D8FC /* SBConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBConfiguration.swift; sourceTree = "<group>"; };
+		626D23961BBA7E290055D8FC /* SBKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBKeychain.swift; sourceTree = "<group>"; };
+		715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AC19AA8EFBEA7923232DB0EF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +178,16 @@
 				626D238F1BBA6F200055D8FC /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		626D23911BBA72350055D8FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				626D23941BBA73200055D8FC /* SBConfiguration.swift */,
+				626D23961BBA7E290055D8FC /* SBKeychain.swift */,
+				626D23921BBA72690055D8FC /* SBWebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
