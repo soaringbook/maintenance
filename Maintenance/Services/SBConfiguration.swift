@@ -10,9 +10,9 @@ import UIKit
 
 class SBConfiguration: NSObject {
     
-    private let SBConfigurationApiHostKey = "soaring_book_api_host"
-    private let SBConfigurationApiProtocolKey = "soaring_book_api_protocol"
-    private let SBConfigurationApiVersionKey = "soaring_book_api_version"
+    private let SBConfigurationApiHostKey =     "API_HOST"
+    private let SBConfigurationApiProtocolKey = "API_PROTOCOL"
+    private let SBConfigurationApiVersionKey =  "API_VERSION"
     
     // MARK: - Getter
     

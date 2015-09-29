@@ -128,10 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
-				626D23911BBA72350055D8FC /* Services */,
-				626D23841BBA69A90055D8FC /* Modules */,
-				626D23851BBA69A90055D8FC /* UI */,
 				626D23621BBA696C0055D8FC /* Info.plist */,
+				626D23841BBA69A90055D8FC /* Modules */,
+				626D23911BBA72350055D8FC /* Services */,
+				626D23851BBA69A90055D8FC /* UI */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -203,6 +203,7 @@
 				626D23511BBA696C0055D8FC /* Resources */,
 				F3DE284F1FBF3EE700B64129 /* Embed Pods Frameworks */,
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
+				626D239A1BBA859F0055D8FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -333,6 +334,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		626D239A1BBA859F0055D8FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/load_env.rb;
 		};
 		77FFAE9F368C61C3D4194549 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
