@@ -41,6 +41,7 @@ class SBWebService: NSObject {
         let request = authenticatedRequest(path: "gliders.json", method: "HEAD", token: token)
         let task = session.dataTaskWithRequest(request) { data, response, error in
             if let response = response as? NSHTTPURLResponse where response.statusCode == 200 {
+                SBKeychain.sharedInstance.token = token
                 callback(nil)
             } else {
                 callback(.Unauthenticated)
