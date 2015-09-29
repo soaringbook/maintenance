@@ -52,6 +52,24 @@ class SBWebService: NSObject {
     
     // MARK: - Requests
     
+    func fetchRequest(path path: String, callback: (SBWebServiceError?, AnyObject?) -> ()) {
+        let request = authenticatedRequest(path: path)
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
+            if let _ = error {
+                callback(.Failure, nil)
+            } else {
+                do {
+                    let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableLeaves)
+                    callback(nil, data)
+                } catch {
+                    callback(.Failure, nil)
+                }
+            }
+        })
+        task.resume()
+    }
+    
     private func authenticatedRequest(path path: String, method: String = "GET", token: String? = nil) -> NSMutableURLRequest {
         let hostProtocol = SBConfiguration.sharedInstance.apiProtocol
         let host = SBConfiguration.sharedInstance.apiHost
