@@ -24,8 +24,6 @@
 		626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239F1BBA8F200055D8FC /* CommonMacros.swift */; settings = {ASSET_TAGS = (); }; };
 		626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23A21BBA901E0055D8FC /* Gliders.storyboard */; settings = {ASSET_TAGS = (); }; };
 		62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B77BC81BBAA59F00D74376 /* LoginView.swift */; settings = {ASSET_TAGS = (); }; };
-		62F1F3AB1BBC074C001FF957 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F1F3A91BBC0743001FF957 /* PureLayout.framework */; };
-		62F1F3AC1BBC074C001FF957 /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62F1F3A91BBC0743001FF957 /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -53,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				62F1F3AC1BBC074C001FF957 /* PureLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +81,6 @@
 		626D239F1BBA8F200055D8FC /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
 		626D23A21BBA901E0055D8FC /* Gliders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gliders.storyboard; sourceTree = "<group>"; };
 		62B77BC81BBAA59F00D74376 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		62F1F3A91BBC0743001FF957 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PureLayout.framework; sourceTree = "<group>"; };
 		715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC19AA8EFBEA7923232DB0EF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62F1F3AB1BBC074C001FF957 /* PureLayout.framework in Frameworks */,
 				A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +172,6 @@
 			children = (
 				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
 				626D23621BBA696C0055D8FC /* Info.plist */,
-				62F1F3A81BBC0740001FF957 /* Frameworks */,
 				626D239B1BBA8D510055D8FC /* Components */,
 				626D23841BBA69A90055D8FC /* Modules */,
 				626D23911BBA72350055D8FC /* Services */,
@@ -268,14 +262,6 @@
 				620D3FF51BBA930200751D86 /* GlidersViewController.swift */,
 			);
 			path = Gliders;
-			sourceTree = "<group>";
-		};
-		62F1F3A81BBC0740001FF957 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				62F1F3A91BBC0743001FF957 /* PureLayout.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

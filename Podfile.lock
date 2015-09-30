@@ -1,9 +1,11 @@
 PODS:
   - KeychainAccess (2.0.0)
+  - PureLayout (3.0.1)
 
 DEPENDENCIES:
   - KeychainAccess (from `https://github.com/kishikawakatsumi/KeychainAccess.git`,
     branch `swift-2.0`)
+  - PureLayout (~> 3.0)
 
 EXTERNAL SOURCES:
   KeychainAccess:
@@ -17,5 +19,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   KeychainAccess: 1e705665a234b3af69d653aaa3c8f696e4a992f1
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
 COCOAPODS: 0.38.2
