@@ -38,20 +38,26 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         authenticate(textField: textField)
-        return textField.resignFirstResponder()
+        return true
     }
     
     // MARK: - Service
     
     private func authenticate(textField textField: UITextField) {
         SBWebService().authenticate(token: textField.text ?? "") { error in
-            if let error = error {
-                dispatch_main {
+            dispatch_main {
+                if let error = error {
                     self.presentErrorController(error)
+                } else {
+                    textField.resignFirstResponder()
+                    self.presentGliderFlow()
                 }
-            } else {
-                
             }
         }
+    }
+    
+    private func presentGliderFlow() {
+        print("presentedViewController \(presentedViewController)")
+        print("presentingViewController \(presentingViewController)")
     }
 }
