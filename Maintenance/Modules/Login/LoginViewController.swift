@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate {
+    func loginViewControllerWillDismiss(controller: LoginViewController)
+}
+
 class LoginViewController : UIViewController, UITextFieldDelegate {
     var loginView: LoginView! { return self.view as! LoginView }
+    var delegate: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +55,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
                     self.presentErrorController(error)
                 } else {
                     textField.resignFirstResponder()
-                    self.presentGliderFlow()
+                    self.delegate?.loginViewControllerWillDismiss(self)
                 }
             }
         }
-    }
-    
-    private func presentGliderFlow() {
-        print("presentedViewController \(presentedViewController)")
-        print("presentingViewController \(presentingViewController)")
     }
 }

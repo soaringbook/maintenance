@@ -9,58 +9,48 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelegate {
 
     var window: UIWindow?
     
     // MARK: - UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        presentIntialFlow()
-        self.window?.makeKeyAndVisible()
-        
         return true
     }
     
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationDidBecomeActive(application: UIApplication) {
         presentLoginFlowIfNeeded()
+    }
+    
+    // MARK: - LoginViewControllerDelegate
+    
+    func loginViewControllerWillDismiss(controller: LoginViewController) {
+        self.window?.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - Flow
     
-    private func storyboardName() -> String {
-        return SBKeychain.sharedInstance.token == nil ? "Login" : "Gliders"
-    }
-    
-    private func presentIntialFlow() {
-        let storyboard = UIStoryboard(name: storyboardName(), bundle: nil)
-        if let controller = storyboard.instantiateInitialViewController() {
-            self.window?.rootViewController = controller
-        }
+    private func shouldPresentLogin() -> Bool {
+        return SBKeychain.sharedInstance.token == nil
     }
     
     private func presentLoginFlowIfNeeded() {
-        let isLoginPresented = self.window?.rootViewController is LoginViewController
-        guard !isLoginPresented else {
-            return
-        }
-        
         guard self.window?.rootViewController?.presentedViewController == nil else {
             // Return when a modal is already being presented.
             return
         }
 
-        if SBKeychain.sharedInstance.token != nil {
+        guard shouldPresentLogin() else {
             // Return when a token is set.
             return
         }
         
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        if let controller = storyboard.instantiateInitialViewController() {
+        if let controller = storyboard.instantiateInitialViewController() as? LoginViewController {
+            controller.delegate = self
             // Use dispatch async to overcome the unbalanced warning.
-            dispatch_async(dispatch_get_main_queue()) {
+            dispatch_main {
                 self.window?.rootViewController?.presentViewController(controller, animated: false, completion: nil)
             }
         }
