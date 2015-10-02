@@ -12,6 +12,7 @@
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; settings = {ASSET_TAGS = (); }; };
 		623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; settings = {ASSET_TAGS = (); }; };
+		623728AB1BBECBB500948D0D /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728AA1BBECBB500948D0D /* Glider.swift */; settings = {ASSET_TAGS = (); }; };
 		626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23561BBA696C0055D8FC /* AppDelegate.swift */; };
 		626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */; };
 		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
@@ -66,6 +67,7 @@
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GliderTableViewCell.swift; sourceTree = "<group>"; };
 		623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		623728AA1BBECBB500948D0D /* Glider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glider.swift; sourceTree = "<group>"; };
 		626D23531BBA696C0055D8FC /* Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maintenance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D23561BBA696C0055D8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		626D23621BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,22 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		623728A81BBECB9B00948D0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				623728AA1BBECBB500948D0D /* Glider.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		623728A91BBECBA500948D0D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				626D23621BBA696C0055D8FC /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		626D234A1BBA696C0055D8FC = {
 			isa = PBXGroup;
 			children = (
@@ -177,10 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
-				626D23621BBA696C0055D8FC /* Info.plist */,
 				626D239B1BBA8D510055D8FC /* Components */,
+				623728A81BBECB9B00948D0D /* Models */,
 				626D23841BBA69A90055D8FC /* Modules */,
 				626D23911BBA72350055D8FC /* Services */,
+				623728A91BBECBA500948D0D /* Support */,
 				626D23851BBA69A90055D8FC /* UI */,
 			);
 			path = Maintenance;
@@ -484,6 +503,7 @@
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */,
 				623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */,
+				623728AB1BBECBB500948D0D /* Glider.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */,
