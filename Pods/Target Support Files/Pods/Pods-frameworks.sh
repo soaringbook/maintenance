@@ -52,10 +52,10 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'Pods/KeychainAccess.framework'
   install_framework 'Pods/PureLayout.framework'
+  install_framework 'Pods/SSKeychain.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'Pods/KeychainAccess.framework'
   install_framework 'Pods/PureLayout.framework'
+  install_framework 'Pods/SSKeychain.framework'
 fi

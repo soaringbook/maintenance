@@ -7,33 +7,24 @@
 //
 
 import Foundation
-import KeychainAccess
+import SSKeychain
 
 class SBKeychain: NSObject {
     
-    private let SBTokenKey = "TOKEN_KEY"
-    
-    private let keychain = Keychain(service: "com.soaringbook.maintenance")
+    private let SBTokenService = "token.service"
+    private let SBAccountName = "com.soaringbook.maintenance"
     
     // MARK: - Getter
     
     var token: String? {
         get {
-            do {
-                return try keychain.get(SBTokenKey)
-            } catch {
-                return nil
-            }
+            return SSKeychain.passwordForService(SBTokenService, account: SBAccountName)
         }
         set {
-            do {
-                if let newValue = newValue {
-                    return try keychain.set(newValue, key: SBTokenKey)
-                } else {
-                    return try keychain.remove(SBTokenKey)
-                }
-            } catch {
-                
+            if let newValue = newValue {
+                SSKeychain.setPassword(newValue, forService: SBTokenService, account: SBAccountName)
+            } else {
+                SSKeychain.deletePasswordForService(SBTokenService, account: SBAccountName)
             }
         }
     }
