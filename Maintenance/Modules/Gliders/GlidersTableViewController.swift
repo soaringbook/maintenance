@@ -1,5 +1,5 @@
 //
-//  GlidersViewController.swift
+//  GlidersTableViewController.swift
 //  Maintenance
 //
 //  Created by Jelle Vandenbeeck on 29/09/15.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class GlidersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    @IBOutlet var collectionView: UICollectionView!
+class GlidersTableViewController: UITableViewController {
     
     private var gliders = [NSDictionary]()
     
@@ -19,7 +17,7 @@ class GlidersViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        self.title = "Gliders"
     }
     
     // MARK: - Actions
@@ -29,20 +27,20 @@ class GlidersViewController: UIViewController, UICollectionViewDataSource, UICol
             if let list: [NSDictionary] = (response.data as! NSDictionary)["gliders"] as? [NSDictionary] {
                 self.gliders = list
                 dispatch_main {
-                    self.collectionView.reloadData()
+                    self.tableView.reloadData()
                 }
             }
         }
     }
     
-    // MARK: - UICollectionViewDataSource
+    // MARK: - UITableViewDataSource
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gliders.count
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15 //gliders.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GliderCell", forIndexPath: indexPath)
-        return cell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("GliderCell")
+        return cell!
     }
 }

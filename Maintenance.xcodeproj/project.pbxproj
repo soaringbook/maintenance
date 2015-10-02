@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		620D3FF61BBA930200751D86 /* GlidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; settings = {ASSET_TAGS = (); }; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; settings = {ASSET_TAGS = (); }; };
 		626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23561BBA696C0055D8FC /* AppDelegate.swift */; };
 		626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */; };
 		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
@@ -59,9 +61,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		620D3FF51BBA930200751D86 /* GlidersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersViewController.swift; sourceTree = "<group>"; };
+		620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersTableViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Gliders.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
+		623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GliderTableViewCell.swift; sourceTree = "<group>"; };
+		623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		626D23531BBA696C0055D8FC /* Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maintenance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D23561BBA696C0055D8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		626D23621BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,7 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				626D23A21BBA901E0055D8FC /* Gliders.storyboard */,
-				620D3FF51BBA930200751D86 /* GlidersViewController.swift */,
+				620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */,
+				623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */,
 			);
 			path = Gliders;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */,
+				623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -477,13 +483,15 @@
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */,
+				623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
+				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */,
-				620D3FF61BBA930200751D86 /* GlidersViewController.swift in Sources */,
+				620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
