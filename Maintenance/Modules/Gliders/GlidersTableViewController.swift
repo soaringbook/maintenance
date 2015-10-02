@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GlidersTableViewController: UITableViewController {
     
-    private var gliders = [NSDictionary]()
+    private var gliders: Results<Glider>?
+    private var realm: Realm? {
+        do {
+            return try Realm()
+        } catch {
+            return nil
+        }
+    }
     
     // MARK: - View flow
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        gliders = realm?.objects(Glider)
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +39,7 @@ class GlidersTableViewController: UITableViewController {
     @IBAction func reload(sender: AnyObject) {
         SBWebService().fetchGliders { response in
             if let list: [NSDictionary] = (response.data as! NSDictionary)["gliders"] as? [NSDictionary] {
-                self.gliders = list
+//                self.gliders = list
                 dispatch_main {
                     self.tableView.reloadData()
                 }
@@ -36,7 +50,7 @@ class GlidersTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15 //gliders.count
+        return gliders?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
