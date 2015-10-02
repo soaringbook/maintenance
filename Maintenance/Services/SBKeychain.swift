@@ -11,7 +11,7 @@ import KeychainAccess
 
 class SBKeychain: NSObject {
     
-    private let SBTokenKey = "soaring_book_token_key"
+    private let SBTokenKey = "TOKEN_KEY"
     
     private let keychain = Keychain(service: "com.soaringbook.maintenance")
     

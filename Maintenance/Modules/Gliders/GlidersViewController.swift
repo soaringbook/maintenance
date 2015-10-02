@@ -25,13 +25,12 @@ class GlidersViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: - Actions
     
     @IBAction func reload(sender: AnyObject) {
-        SBWebService().fetchGliders { (error, data) -> () in
-            if let gliderList = data?["gliders"] as? [NSDictionary] {
-                self.gliders = gliderList
+        SBWebService().fetchGliders { response in
+            if let list: [NSDictionary] = (response.data as! NSDictionary)["gliders"] as? [NSDictionary] {
+                self.gliders = list
                 dispatch_main {
                     self.collectionView.reloadData()
                 }
-                
             }
         }
     }

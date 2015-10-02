@@ -8,9 +8,69 @@
 
 import Foundation
 
-enum SBWebServiceError: ErrorType {
-    case Failure
-    case Unauthenticated
+enum SBWebServiceResponse {
+    case Failure(NSError)
+    case FetchSuccess(NSDictionary)
+    case DownloadSuccess(NSData)
+    case Authenticated
+    case NotAuthenticated(NSError)
+    case NotAvailable
+    
+    // Parse the result for authentication
+    init(error: NSError?, response: NSHTTPURLResponse) {
+        if let error = error {
+            self = .Failure(error)
+        } else if response.statusCode == 200 {
+            self = .Authenticated
+        } else {
+            self = .NotAuthenticated(NSError(code: .Authentication))
+        }
+    }
+    
+    // Parse the result as URL
+    init(error: NSError?, url: NSURL?) {
+        if let error = error {
+            self = .Failure(error)
+        } else {
+            if let url = url {
+                let content = NSData(contentsOfURL: url)
+                self = .DownloadSuccess(content!)
+            } else {
+                self = .Failure(NSError(code: .Downloading))
+            }
+        }
+    }
+    
+    // Parse the result as JSON
+    init(error: NSError?, data: NSData) {
+        if let error = error {
+            self = .Failure(error)
+        } else {
+            do {
+                let content = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary) as NSDictionary?
+                self = .FetchSuccess(content!)
+            } catch {
+                self = .Failure(NSError(code: .Fetching))
+            }
+        }
+    }
+    
+    var error: NSError? {
+        switch self {
+        case .FetchSuccess(_): return nil
+        case .Failure(let error): return error
+        case .NotAuthenticated(let error): return error
+        default: return nil
+        }
+    }
+    
+    var data: AnyObject? {
+        switch self {
+        case .DownloadSuccess(let data): return data
+        case .FetchSuccess(let data): return data
+        default: return nil
+        }
+    }
 }
 
 class SBWebService: NSObject {
@@ -37,14 +97,17 @@ class SBWebService: NSObject {
     
     // MARK:- Authenticate
     
-    func authenticate(token token: String, callback: (SBWebServiceError?) -> ()) {
+    func authenticate(token token: String, callback: (SBWebServiceResponse) -> ()) {
         let request = authenticatedRequest(path: "gliders.json", method: "HEAD", token: token)
         let task = session.dataTaskWithRequest(request) { data, response, error in
-            if let response = response as? NSHTTPURLResponse where response.statusCode == 200 {
-                SBKeychain.sharedInstance.token = token
-                callback(nil)
+            if let response = response as? NSHTTPURLResponse {
+                let serviceResponse = SBWebServiceResponse(error: error, response: response)
+                if serviceResponse.error == nil {
+                    SBKeychain.sharedInstance.token = token
+                }
+                callback(serviceResponse)
             } else {
-                callback(.Unauthenticated)
+                callback(SBWebServiceResponse.NotAuthenticated(NSError(code: .Authentication)))
             }
         }
         task.resume()
@@ -52,20 +115,11 @@ class SBWebService: NSObject {
     
     // MARK: - Requests
     
-    func fetchRequest(path path: String, callback: (SBWebServiceError?, AnyObject?) -> ()) {
+    func fetchRequest(path path: String, callback: (SBWebServiceResponse) -> ()) {
         let request = authenticatedRequest(path: path)
         
         let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
-            if let _ = error {
-                callback(.Failure, nil)
-            } else {
-                do {
-                    let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableLeaves)
-                    callback(nil, data)
-                } catch {
-                    callback(.Failure, nil)
-                }
-            }
+            callback(SBWebServiceResponse(error: error, data: data!))
         })
         task.resume()
     }

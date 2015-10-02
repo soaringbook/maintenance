@@ -9,9 +9,7 @@
 import Foundation
 
 extension SBWebService {
-    func fetchGliders(callback callback: (SBWebServiceError?, AnyObject?) -> ()) {
-        fetchRequest(path: "gliders.json") { error, data in
-            callback(error, data)
-        }
+    func fetchGliders(callback callback: (SBWebServiceResponse) -> ()) {
+        fetchRequest(path: "gliders.json", callback: callback)
     }
 }

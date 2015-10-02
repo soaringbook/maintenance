@@ -49,9 +49,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Service
     
     private func authenticate(textField textField: UITextField) {
-        SBWebService().authenticate(token: textField.text ?? "") { error in
+        SBWebService().authenticate(token: textField.text ?? "") { response in
             dispatch_main {
-                if let error = error {
+                if let error = response.error {
                     self.presentErrorController(error)
                 } else {
                     textField.resignFirstResponder()
