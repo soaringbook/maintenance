@@ -1,13 +1,21 @@
 PODS:
   - PureLayout (3.0.1)
+  - Realm (0.95.2):
+    - Realm/Headers (= 0.95.2)
+  - Realm/Headers (0.95.2)
+  - RealmSwift (0.95.2):
+    - Realm (= 0.95.2)
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
   - PureLayout (~> 3.0)
+  - RealmSwift (~> 0.95)
   - SSKeychain (~> 1.2)
 
 SPEC CHECKSUMS:
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
+  RealmSwift: ac7822fe7ab8dca7fa979f4d576793b111d6dce1
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
 
 COCOAPODS: 0.38.2
