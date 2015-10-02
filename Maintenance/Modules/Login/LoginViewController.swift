@@ -49,10 +49,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Service
     
     private func authenticate(textField textField: UITextField) {
+        loginView.startAnimating()
         SBWebService().authenticate(token: textField.text ?? "") { response in
             dispatch_main {
                 if let error = response.error {
                     self.presentErrorController(error)
+                    self.loginView.stopAnimating()
                 } else {
                     textField.resignFirstResponder()
                     self.delegate?.loginViewControllerWillDismiss(self)

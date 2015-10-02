@@ -13,6 +13,7 @@ class LoginView: UIView {
     @IBOutlet var bottomImageConstraint: NSLayoutConstraint!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var tokenField: UITextField!
+    @IBOutlet var activityView: UIActivityIndicatorView!
     
     private let bottomPadding: CGFloat = 20
     
@@ -28,6 +29,18 @@ class LoginView: UIView {
     
     override func resignFirstResponder() -> Bool {
         return tokenField.resignFirstResponder()
+    }
+    
+    // MARK: - Activity
+    
+    func startAnimating() {
+        activityView.startAnimating()
+        tokenField.alpha = 0.0
+    }
+    
+    func stopAnimating() {
+        activityView.stopAnimating()
+        tokenField.alpha = 1.0
     }
     
     // MARK: - Animations
