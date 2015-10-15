@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelegate {
@@ -20,6 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
+        let glider = Glider()
+        glider.immatriculation = "OO-YDV"
+        glider.name = "Schleicher ASW-19wl"
+        
+        do {
+            let realm = try Realm()
+            realm.write {
+                realm.add(glider)
+            }
+        } catch {
+            print("errored")
+        }
+        
         presentLoginFlowIfNeeded()
     }
     

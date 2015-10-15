@@ -11,10 +11,11 @@ import UIKit
 class GliderTableViewCell : UITableViewCell {
     
     @IBOutlet var taskCountLabel: UILabel!
+    @IBOutlet var taskCountLabel: UILabel!
     
     // MARK: - Configure
     
-    func configure(flider: NSDictionary) {
+    func configure(glider glider: Glider) {
         taskCountLabel.text = "13"
     }
     

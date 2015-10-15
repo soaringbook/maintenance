@@ -54,7 +54,9 @@ class GlidersTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GliderCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("GliderCell") as! GliderTableViewCell
+        let glider: Glider = gliders![indexPath.row]
+        cell.configure(glider: glider)
         return cell!
     }
 }
