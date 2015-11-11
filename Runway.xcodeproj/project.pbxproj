@@ -565,7 +565,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway;
 				PRODUCT_NAME = Runway;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -582,7 +581,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway;
 				PRODUCT_NAME = Runway;
 				PROVISIONING_PROFILE = "be6b5af6-0ef7-436d-9ac4-1356eb95cb0e";
 				TARGETED_DEVICE_FAMILY = 2;
