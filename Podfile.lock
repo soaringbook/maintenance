@@ -1,4 +1,5 @@
 PODS:
+  - AGWindowView (0.1.9)
   - PureLayout (3.0.1)
   - Realm (0.95.2):
     - Realm/Headers (= 0.95.2)
@@ -8,11 +9,13 @@ PODS:
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
+  - AGWindowView (~> 0.1)
   - PureLayout (~> 3.0)
   - RealmSwift (~> 0.95)
   - SSKeychain (~> 1.2)
 
 SPEC CHECKSUMS:
+  AGWindowView: 08dc8d448b8c96430e78b3945a9c2cf5b0fde754
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
   RealmSwift: ac7822fe7ab8dca7fa979f4d576793b111d6dce1

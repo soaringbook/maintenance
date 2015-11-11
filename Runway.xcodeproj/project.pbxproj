@@ -10,6 +10,7 @@
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
 		04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA61BF35CD100F33F1F /* Launch.storyboard */; };
+		04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */; };
 		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
@@ -65,6 +66,9 @@
 		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04D04FA01BF3578300F33F1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04D04FA61BF35CD100F33F1F /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Badge.swift"; sourceTree = "<group>"; };
+		04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersTableViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Gliders.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		04D04FAA1BF35E4500F33F1F /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */,
+				04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		0849EF3C681534567BD45BB6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +195,7 @@
 		623728A91BBECBA500948D0D /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				04D04FAA1BF35E4500F33F1F /* Configurations */,
 				626D23621BBA696C0055D8FC /* Info.plist */,
 			);
 			name = Support;
@@ -244,8 +258,8 @@
 		626D23841BBA69A90055D8FC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				04D04F9C1BF3578300F33F1F /* Launch */,
 				626D23A11BBA90140055D8FC /* Gliders */,
+				04D04F9C1BF3578300F33F1F /* Launch */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 			children = (
 				62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */,
 				623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */,
+				04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +523,7 @@
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
+				04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */,
 				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */,
@@ -557,6 +573,7 @@
 /* Begin XCBuildConfiguration section */
 		626D23791BBA696C0055D8FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -602,6 +619,7 @@
 		};
 		626D237A1BBA696C0055D8FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -643,6 +661,7 @@
 			baseConfigurationReference = A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -657,6 +676,7 @@
 			baseConfigurationReference = 715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

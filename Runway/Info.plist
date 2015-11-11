@@ -8,6 +8,8 @@
 	<string></string>
 	<key>API_VERSION</key>
 	<string></string>
+	<key>BADGE_IMAGE_NAME</key>
+	<string>$(BADGE_IMAGE_NAME)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
