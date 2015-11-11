@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,7 +15,64 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poc-Bi-ocN">
+                                <rect key="frame" x="46" y="206" width="508" height="189"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-tu-UYP">
+                                        <rect key="frame" x="8" y="8" width="200" height="181"/>
+                                        <animations/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zP-RB-Nk0" userLabel="Title Container">
+                                        <rect key="frame" x="228" y="58" width="280" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUNWAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98y-OF-S9l">
+                                                <rect key="frame" x="0.0" y="10" width="280" height="72"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                                <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOARING BOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOk-Kx-bFC">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <color key="textColor" red="0.52941176469999995" green="0.54117647059999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DOk-Kx-bFC" secondAttribute="trailing" id="3E6-59-hUK"/>
+                                            <constraint firstAttribute="bottom" secondItem="98y-OF-S9l" secondAttribute="bottom" id="Cct-Wn-fO7"/>
+                                            <constraint firstItem="DOk-Kx-bFC" firstAttribute="leading" secondItem="6zP-RB-Nk0" secondAttribute="leading" id="Fd4-j4-cwk"/>
+                                            <constraint firstItem="DOk-Kx-bFC" firstAttribute="top" secondItem="6zP-RB-Nk0" secondAttribute="top" id="N8U-bi-rXk"/>
+                                            <constraint firstAttribute="width" constant="280" id="Oww-QR-HGD"/>
+                                            <constraint firstItem="98y-OF-S9l" firstAttribute="top" secondItem="DOk-Kx-bFC" secondAttribute="bottom" constant="-14" id="RKg-uW-s2l"/>
+                                            <constraint firstAttribute="trailing" secondItem="98y-OF-S9l" secondAttribute="trailing" id="XZ5-xq-FmR"/>
+                                            <constraint firstItem="98y-OF-S9l" firstAttribute="leading" secondItem="6zP-RB-Nk0" secondAttribute="leading" id="jly-Xz-hxK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6zP-RB-Nk0" firstAttribute="centerY" secondItem="UIF-tu-UYP" secondAttribute="centerY" id="6NF-2p-IG4"/>
+                                    <constraint firstAttribute="trailing" secondItem="6zP-RB-Nk0" secondAttribute="trailing" id="TfI-V3-36F"/>
+                                    <constraint firstItem="UIF-tu-UYP" firstAttribute="top" secondItem="Poc-Bi-ocN" secondAttribute="top" constant="8" id="bwD-Yg-c2V"/>
+                                    <constraint firstItem="UIF-tu-UYP" firstAttribute="leading" secondItem="Poc-Bi-ocN" secondAttribute="leading" constant="8" id="cjz-0t-PtX"/>
+                                    <constraint firstItem="6zP-RB-Nk0" firstAttribute="leading" secondItem="UIF-tu-UYP" secondAttribute="trailing" constant="20" id="rB6-7x-ehv"/>
+                                    <constraint firstAttribute="bottom" secondItem="UIF-tu-UYP" secondAttribute="bottom" id="tYo-50-jdH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Poc-Bi-ocN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="U29-7o-CUW"/>
+                            <constraint firstItem="Poc-Bi-ocN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tzQ-Xv-yE0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +80,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LoginLogo" width="200" height="181"/>
+    </resources>
 </document>

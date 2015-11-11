@@ -62,4 +62,10 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    // MARK: - Status bar
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

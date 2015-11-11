@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
+		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
+		04D04FA51BF3579300F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA41BF3579300F33F1F /* Launch.storyboard */; };
 		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
@@ -18,15 +21,12 @@
 		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
 		626D23871BBA69B50055D8FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D23861BBA69B50055D8FC /* Images.xcassets */; };
 		626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23881BBA69C20055D8FC /* Launch Screen.storyboard */; };
-		626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D238D1BBA6F0E0055D8FC /* Login.storyboard */; };
-		626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D238F1BBA6F200055D8FC /* LoginViewController.swift */; };
 		626D23931BBA72690055D8FC /* SBWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23921BBA72690055D8FC /* SBWebService.swift */; };
 		626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23941BBA73200055D8FC /* SBConfiguration.swift */; };
 		626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23961BBA7E290055D8FC /* SBKeychain.swift */; };
 		626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */; };
 		626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239F1BBA8F200055D8FC /* CommonMacros.swift */; };
 		626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23A21BBA901E0055D8FC /* Gliders.storyboard */; };
-		62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B77BC81BBAA59F00D74376 /* LoginView.swift */; };
 		62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */; };
 		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		04D04FA01BF3578300F33F1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04D04FA41BF3579300F33F1F /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Launch.storyboard; path = Login/Launch.storyboard; sourceTree = "<group>"; };
 		620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersTableViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Gliders.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -79,15 +82,12 @@
 		626D23781BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626D23861BBA69B50055D8FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		626D23881BBA69C20055D8FC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		626D238D1BBA6F0E0055D8FC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		626D238F1BBA6F200055D8FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		626D23921BBA72690055D8FC /* SBWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBWebService.swift; sourceTree = "<group>"; };
 		626D23941BBA73200055D8FC /* SBConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBConfiguration.swift; sourceTree = "<group>"; };
 		626D23961BBA7E290055D8FC /* SBKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBKeychain.swift; sourceTree = "<group>"; };
 		626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Errors.swift"; sourceTree = "<group>"; };
 		626D239F1BBA8F200055D8FC /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
 		626D23A21BBA901E0055D8FC /* Gliders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gliders.storyboard; sourceTree = "<group>"; };
-		62B77BC81BBAA59F00D74376 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Custom.swift"; sourceTree = "<group>"; };
 		715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +126,24 @@
 				AC19AA8EFBEA7923232DB0EF /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04D04F9C1BF3578300F33F1F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				04D04FA41BF3579300F33F1F /* Launch.storyboard */,
+				04D04F9D1BF3578300F33F1F /* Login */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		04D04F9D1BF3578300F33F1F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04D04F9F1BF3578300F33F1F /* LoginView.swift */,
+				04D04FA01BF3578300F33F1F /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		0849EF3C681534567BD45BB6 /* Pods */ = {
@@ -226,8 +244,8 @@
 		626D23841BBA69A90055D8FC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04D04F9C1BF3578300F33F1F /* Launch */,
 				626D23A11BBA90140055D8FC /* Gliders */,
-				626D238C1BBA6F0E0055D8FC /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,16 +257,6 @@
 				626D23881BBA69C20055D8FC /* Launch Screen.storyboard */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		626D238C1BBA6F0E0055D8FC /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				626D238D1BBA6F0E0055D8FC /* Login.storyboard */,
-				62B77BC81BBAA59F00D74376 /* LoginView.swift */,
-				626D238F1BBA6F200055D8FC /* LoginViewController.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		626D23911BBA72350055D8FC /* Services */ = {
@@ -408,9 +416,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D04FA51BF3579300F33F1F /* Launch.storyboard in Resources */,
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
-				626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */,
 				626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,17 +508,17 @@
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
+				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
-				626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */,
 				623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Glider.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
+				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
-				62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */,
 				620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

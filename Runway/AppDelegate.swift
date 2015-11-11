@@ -21,19 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
-        let glider = Glider()
-        glider.immatriculation = "OO-YDV"
-        glider.name = "Schleicher ASW-19wl"
-        
-        do {
-            let realm = try Realm()
-            realm.write {
-                realm.add(glider)
-            }
-        } catch {
-            print("errored")
-        }
-        
         presentLoginFlowIfNeeded()
     }
     
@@ -50,23 +37,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
     }
     
     private func presentLoginFlowIfNeeded() {
-        guard self.window?.rootViewController?.presentedViewController == nil else {
-            // Return when a modal is already being presented.
-            return
-        }
-
-        guard shouldPresentLogin() else {
-            // Return when a token is set.
-            return
-        }
-        
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        if let controller = storyboard.instantiateInitialViewController() as? LoginViewController {
-            controller.delegate = self
-            // Use dispatch async to overcome the unbalanced warning.
-            dispatch_main {
-                self.window?.rootViewController?.presentViewController(controller, animated: false, completion: nil)
-            }
-        }
+//        guard self.window?.rootViewController?.presentedViewController == nil else {
+//            // Return when a modal is already being presented.
+//            return
+//        }
+//
+//        guard shouldPresentLogin() else {
+//            // Return when a token is set.
+//            return
+//        }
+//        
+//        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//        if let controller = storyboard.instantiateInitialViewController() as? LoginViewController {
+//            controller.delegate = self
+//            // Use dispatch async to overcome the unbalanced warning.
+//            dispatch_main {
+//                self.window?.rootViewController?.presentViewController(controller, animated: false, completion: nil)
+//            }
+//        }
     }
 }
