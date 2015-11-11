@@ -24,3 +24,4 @@ xcuserdata
 *.ipa
 .env
 Carthage
+.DS_Store
