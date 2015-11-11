@@ -53,7 +53,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         SBWebService().authenticate(token: textField.text ?? "") { response in
             dispatch_main {
                 if let error = response.error {
-                    self.presentErrorController(error)
+                    self.navigationController?.presentErrorController(error)
                     self.loginView.stopAnimating()
                 } else {
                     textField.resignFirstResponder()
