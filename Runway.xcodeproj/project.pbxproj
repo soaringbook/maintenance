@@ -134,6 +134,13 @@
 			path = Navigations;
 			sourceTree = "<group>";
 		};
+		047CE30C1BF3743300ACF7E0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		04D04F9C1BF3578300F33F1F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +249,7 @@
 			children = (
 				626D23A11BBA90140055D8FC /* Gliders */,
 				04D04F9C1BF3578300F33F1F /* Launch */,
+				047CE30C1BF3743300ACF7E0 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
