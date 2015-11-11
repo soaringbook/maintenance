@@ -171,7 +171,7 @@
                         <viewControllerLayoutGuide type="top" id="Z6e-HS-Jb3"/>
                         <viewControllerLayoutGuide type="bottom" id="Dtf-Ix-B98"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jOh-Da-rZL">
+                    <view key="view" contentMode="scaleToFill" id="jOh-Da-rZL" customClass="DashboardView" customModule="Runway" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -206,11 +206,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK2-QF-VsK">
-                                <rect key="frame" x="0.0" y="180" width="240" height="240"/>
+                                <rect key="frame" x="20" y="200" width="200" height="200"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="9r8-Wd-ZjT"/>
-                                    <constraint firstAttribute="width" constant="240" id="cIG-63-sOU"/>
+                                    <constraint firstAttribute="height" constant="200" id="9r8-Wd-ZjT"/>
+                                    <constraint firstAttribute="width" constant="200" id="cIG-63-sOU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
@@ -219,11 +219,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctG-OP-Jc9">
-                                <rect key="frame" x="360" y="180" width="240" height="240"/>
+                                <rect key="frame" x="380" y="200" width="200" height="200"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="BOE-YU-lMx"/>
-                                    <constraint firstAttribute="width" constant="240" id="oTH-bI-ntX"/>
+                                    <constraint firstAttribute="height" constant="200" id="BOE-YU-lMx"/>
+                                    <constraint firstAttribute="width" constant="200" id="oTH-bI-ntX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
@@ -242,6 +242,12 @@
                             <constraint firstItem="ctG-OP-Jc9" firstAttribute="centerY" secondItem="jOh-Da-rZL" secondAttribute="centerY" id="ne5-1g-btt"/>
                             <constraint firstItem="r28-Sd-hKN" firstAttribute="top" secondItem="Z6e-HS-Jb3" secondAttribute="bottom" constant="60" id="ta6-x2-eRy"/>
                         </constraints>
+                        <connections>
+                            <outlet property="flightsHeightConstraint" destination="9r8-Wd-ZjT" id="3tX-lP-YLw"/>
+                            <outlet property="flightsWidthConstraint" destination="cIG-63-sOU" id="uQU-tR-Cum"/>
+                            <outlet property="winterHeightConstraint" destination="oTH-bI-ntX" id="Hey-9u-83g"/>
+                            <outlet property="winterWidthConstraint" destination="BOE-YU-lMx" id="A8A-aT-Nx8"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kU-FQ-IFr" userLabel="First Responder" sceneMemberID="firstResponder"/>

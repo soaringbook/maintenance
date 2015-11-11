@@ -8,7 +8,14 @@
 
 import UIKit
 
-class DashboardViewController : UIViewController, UITextFieldDelegate {
+class DashboardViewController : UIViewController {
+    var dashboardView: DashboardView! { return self.view as! DashboardView }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        dashboardView.animateIn()
+    }
     
     // MARK: - Status bar
     
