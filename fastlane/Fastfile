@@ -1,0 +1,28 @@
+fastlane_version '1.38.0'
+
+default_platform :ios
+
+platform :ios do
+  desc 'Upload this version to HockyApp.'
+  lane :hockey do
+    # Version bump.
+    increment_build_number
+    commit_version_bump
+    add_git_tag prefix: 'v'
+    push_to_git_remote
+
+    # Build the application.
+    gym(scheme: 'Runway')
+
+    # Create a dsym archive.
+    dsym_zip
+
+    # Upload to HockeyApp.
+    hockey(
+      api_token: '323d69560e30494f831ffc54a99a6475',
+      teams: 'Runway',
+      notify: 1,
+      status: 2
+    )
+  end
+end
