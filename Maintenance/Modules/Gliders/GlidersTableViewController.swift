@@ -38,7 +38,7 @@ class GlidersTableViewController: UITableViewController {
     
     @IBAction func reload(sender: AnyObject) {
         SBWebService().fetchGliders { response in
-            if let list: [NSDictionary] = (response.data as! NSDictionary)["gliders"] as? [NSDictionary] {
+            if let _: [NSDictionary] = (response.data as! NSDictionary)["gliders"] as? [NSDictionary] {
 //                self.gliders = list
                 dispatch_main {
                     self.tableView.reloadData()
@@ -57,6 +57,6 @@ class GlidersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("GliderCell") as! GliderTableViewCell
         let glider: Glider = gliders![indexPath.row]
         cell.configure(glider: glider)
-        return cell!
+        return cell
     }
 }

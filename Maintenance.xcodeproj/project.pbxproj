@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; settings = {ASSET_TAGS = (); }; };
-		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; settings = {ASSET_TAGS = (); }; };
-		623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; settings = {ASSET_TAGS = (); }; };
-		623728AB1BBECBB500948D0D /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728AA1BBECBB500948D0D /* Glider.swift */; settings = {ASSET_TAGS = (); }; };
+		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; };
+		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; };
+		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
+		623728A51BBEC5D900948D0D /* GliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A41BBEC5D900948D0D /* GliderTableViewCell.swift */; };
+		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; };
+		623728AB1BBECBB500948D0D /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728AA1BBECBB500948D0D /* Glider.swift */; };
 		626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23561BBA696C0055D8FC /* AppDelegate.swift */; };
 		626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */; };
 		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
-		626D23871BBA69B50055D8FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D23861BBA69B50055D8FC /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23881BBA69C20055D8FC /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D238D1BBA6F0E0055D8FC /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
-		626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D238F1BBA6F200055D8FC /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		626D23931BBA72690055D8FC /* SBWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23921BBA72690055D8FC /* SBWebService.swift */; settings = {ASSET_TAGS = (); }; };
-		626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23941BBA73200055D8FC /* SBConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
-		626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23961BBA7E290055D8FC /* SBKeychain.swift */; settings = {ASSET_TAGS = (); }; };
-		626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */; settings = {ASSET_TAGS = (); }; };
-		626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239F1BBA8F200055D8FC /* CommonMacros.swift */; settings = {ASSET_TAGS = (); }; };
-		626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23A21BBA901E0055D8FC /* Gliders.storyboard */; settings = {ASSET_TAGS = (); }; };
-		62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B77BC81BBAA59F00D74376 /* LoginView.swift */; settings = {ASSET_TAGS = (); }; };
-		62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */; settings = {ASSET_TAGS = (); }; };
-		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		626D23871BBA69B50055D8FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D23861BBA69B50055D8FC /* Images.xcassets */; };
+		626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23881BBA69C20055D8FC /* Launch Screen.storyboard */; };
+		626D238E1BBA6F0E0055D8FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D238D1BBA6F0E0055D8FC /* Login.storyboard */; };
+		626D23901BBA6F200055D8FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D238F1BBA6F200055D8FC /* LoginViewController.swift */; };
+		626D23931BBA72690055D8FC /* SBWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23921BBA72690055D8FC /* SBWebService.swift */; };
+		626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23941BBA73200055D8FC /* SBConfiguration.swift */; };
+		626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23961BBA7E290055D8FC /* SBKeychain.swift */; };
+		626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239D1BBA8D640055D8FC /* UIAlertController+Errors.swift */; };
+		626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D239F1BBA8F200055D8FC /* CommonMacros.swift */; };
+		626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23A21BBA901E0055D8FC /* Gliders.storyboard */; };
+		62B77BC91BBAA59F00D74376 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B77BC81BBAA59F00D74376 /* LoginView.swift */; };
+		62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */; };
+		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -636,10 +636,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Maintenance/Frameworks",
-				);
 				INFOPLIST_FILE = Maintenance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.maintenance;
@@ -654,10 +650,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Maintenance/Frameworks",
-				);
 				INFOPLIST_FILE = Maintenance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.maintenance;

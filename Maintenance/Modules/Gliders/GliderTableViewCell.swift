@@ -11,7 +11,6 @@ import UIKit
 class GliderTableViewCell : UITableViewCell {
     
     @IBOutlet var taskCountLabel: UILabel!
-    @IBOutlet var taskCountLabel: UILabel!
     
     // MARK: - Configure
     
