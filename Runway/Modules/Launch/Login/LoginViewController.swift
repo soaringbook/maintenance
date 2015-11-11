@@ -8,13 +8,8 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate {
-    func loginViewControllerWillDismiss(controller: LoginViewController)
-}
-
 class LoginViewController : UIViewController, UITextFieldDelegate {
     var loginView: LoginView! { return self.view as! LoginView }
-    var delegate: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +31,13 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     
-        loginView.animateIn()
+        if SBKeychain.sharedInstance.token == nil {
+            loginView.animateIn()
+        } else {
+            dispatch_main_after(0.5) {
+                self.presentDashboard()
+            }
+        }
     }
     
     // MARK: - Gestures
@@ -63,10 +64,16 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
                     self.loginView.stopAnimating()
                 } else {
                     textField.resignFirstResponder()
-                    self.delegate?.loginViewControllerWillDismiss(self)
+                    self.presentDashboard()
                 }
             }
         }
+    }
+    
+    // MARK: - Navigation
+    
+    private func presentDashboard() {
+        performSegueWithIdentifier("Dashboard", sender: nil)
     }
     
     // MARK: - Status bar

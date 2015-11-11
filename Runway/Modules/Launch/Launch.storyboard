@@ -150,6 +150,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>
+                    <connections>
+                        <segue destination="Qe0-da-9LM" kind="show" identifier="Dashboard" id="PH8-0r-X5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzj-T5-JOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wnB-mM-ur9">
@@ -159,6 +162,25 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1138" y="380"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sji-X3-rYP">
+            <objects>
+                <viewController id="Qe0-da-9LM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z6e-HS-Jb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dtf-Ix-B98"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jOh-Da-rZL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kU-FQ-IFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="380"/>
         </scene>
     </scenes>
     <resources>

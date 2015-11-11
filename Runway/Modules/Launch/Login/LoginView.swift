@@ -47,10 +47,10 @@ class LoginView: UIView {
     // MARK: - Animations
     
     func animateIn() {
-        titleTopConstraint.priority = 750
         tokenFieldBottomConstraint.priority = 750
-        titleCenterConstraint.priority = 250
         tokenFieldCenterConstraint.priority = 250
+        titleTopConstraint.priority = 750
+        titleCenterConstraint.priority = 250
         UIView.animateWithDuration(0.35, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             self.tokenField.alpha = 1
             self.layoutIfNeeded()
