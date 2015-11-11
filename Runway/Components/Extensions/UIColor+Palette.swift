@@ -1,6 +1,6 @@
 //
 //  UIColor+Palette.swift
-//  Maintenance
+//  Runway
 //
 //  Created by Jelle Vandenbeeck on 02/10/15.
 //  Copyright © 2015 Soaring Book. All rights reserved.

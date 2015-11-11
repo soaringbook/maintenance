@@ -1,6 +1,6 @@
 //
 //  SBKeychain.swift
-//  Maintenance
+//  Runway
 //
 //  Created by Jelle Vandenbeeck on 29/09/15.
 //  Copyright © 2015 Soaring Book. All rights reserved.
@@ -12,7 +12,7 @@ import SSKeychain
 class SBKeychain: NSObject {
     
     private let SBTokenService = "token.service"
-    private let SBAccountName = "com.soaringbook.maintenance"
+    private let SBAccountName = "com.soaringbook.runway"
     
     // MARK: - Getter
     

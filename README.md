@@ -1,6 +1,6 @@
-# MAINTENANCE
+# Runway
 
-The maintenance iPhone/iPad application for Soaring Book.
+The iPhone/iPad application for Soaring Book.
 
 ## LICENSE
 
