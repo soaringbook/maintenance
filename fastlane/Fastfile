@@ -14,9 +14,6 @@ platform :ios do
     # Build the application.
     gym(scheme: 'Runway')
 
-    # Create a dsym archive.
-    dsym_zip
-
     # Upload to HockeyApp.
     hockey(
       api_token: '323d69560e30494f831ffc54a99a6475',
