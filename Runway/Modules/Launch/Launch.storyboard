@@ -205,7 +205,7 @@
                                     <constraint firstItem="FHb-Wm-hh1" firstAttribute="leading" secondItem="r28-Sd-hKN" secondAttribute="leading" id="kgp-Qd-zgJ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK2-QF-VsK">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK2-QF-VsK">
                                 <rect key="frame" x="20" y="200" width="200" height="200"/>
                                 <animations/>
                                 <constraints>
