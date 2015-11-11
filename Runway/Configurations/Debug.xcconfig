@@ -7,3 +7,5 @@
 //
 
 BADGE_IMAGE_NAME = Debug
+
+PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway.debug

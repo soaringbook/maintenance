@@ -6,3 +6,5 @@
 //  Copyright © 2015 Soaring Book. All rights reserved.
 //
 BADGE_IMAGE_NAME =
+
+PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway.release

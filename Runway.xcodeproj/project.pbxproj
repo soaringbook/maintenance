@@ -22,8 +22,6 @@
 		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; };
 		623728AB1BBECBB500948D0D /* Glider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728AA1BBECBB500948D0D /* Glider.swift */; };
 		626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23561BBA696C0055D8FC /* AppDelegate.swift */; };
-		626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */; };
-		626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */; };
 		626D23871BBA69B50055D8FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D23861BBA69B50055D8FC /* Images.xcassets */; };
 		626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D23881BBA69C20055D8FC /* Launch Screen.storyboard */; };
 		626D23931BBA72690055D8FC /* SBWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D23921BBA72690055D8FC /* SBWebService.swift */; };
@@ -35,23 +33,6 @@
 		62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */; };
 		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		626D23681BBA696C0055D8FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 626D234B1BBA696C0055D8FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 626D23521BBA696C0055D8FC;
-			remoteInfo = Maintenance;
-		};
-		626D23731BBA696C0055D8FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 626D234B1BBA696C0055D8FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 626D23521BBA696C0055D8FC;
-			remoteInfo = Maintenance;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		62F1F3AD1BBC074C001FF957 /* Embed Frameworks */ = {
@@ -86,12 +67,6 @@
 		626D23531BBA696C0055D8FC /* Runway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D23561BBA696C0055D8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		626D23621BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		626D23671BBA696C0055D8FC /* Runway.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Runway.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceTests.swift; sourceTree = "<group>"; };
-		626D236D1BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		626D23721BBA696C0055D8FC /* Runway.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Runway.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceUITests.swift; sourceTree = "<group>"; };
-		626D23781BBA696C0055D8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626D23861BBA69B50055D8FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		626D23881BBA69C20055D8FC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		626D23921BBA72690055D8FC /* SBWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBWebService.swift; sourceTree = "<group>"; };
@@ -112,20 +87,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626D23641BBA696C0055D8FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626D236F1BBA696C0055D8FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				626D23551BBA696C0055D8FC /* Runway */,
-				626D236A1BBA696C0055D8FC /* RunwayTests */,
-				626D23751BBA696C0055D8FC /* RunwayUITests */,
 				626D23541BBA696C0055D8FC /* Products */,
 				0849EF3C681534567BD45BB6 /* Pods */,
 				00D9145E98BCAC1F7C60EA90 /* Frameworks */,
@@ -260,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				626D23531BBA696C0055D8FC /* Runway.app */,
-				626D23671BBA696C0055D8FC /* Runway.xctest */,
-				626D23721BBA696C0055D8FC /* Runway.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,24 +235,6 @@
 				626D23851BBA69A90055D8FC /* UI */,
 			);
 			path = Runway;
-			sourceTree = "<group>";
-		};
-		626D236A1BBA696C0055D8FC /* RunwayTests */ = {
-			isa = PBXGroup;
-			children = (
-				626D236B1BBA696C0055D8FC /* MaintenanceTests.swift */,
-				626D236D1BBA696C0055D8FC /* Info.plist */,
-			);
-			path = RunwayTests;
-			sourceTree = "<group>";
-		};
-		626D23751BBA696C0055D8FC /* RunwayUITests */ = {
-			isa = PBXGroup;
-			children = (
-				626D23761BBA696C0055D8FC /* MaintenanceUITests.swift */,
-				626D23781BBA696C0055D8FC /* Info.plist */,
-			);
-			path = RunwayUITests;
 			sourceTree = "<group>";
 		};
 		626D23841BBA69A90055D8FC /* Modules */ = {
@@ -392,42 +331,6 @@
 			productReference = 626D23531BBA696C0055D8FC /* Runway.app */;
 			productType = "com.apple.product-type.application";
 		};
-		626D23661BBA696C0055D8FC /* RunwayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 626D237E1BBA696C0055D8FC /* Build configuration list for PBXNativeTarget "RunwayTests" */;
-			buildPhases = (
-				626D23631BBA696C0055D8FC /* Sources */,
-				626D23641BBA696C0055D8FC /* Frameworks */,
-				626D23651BBA696C0055D8FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				626D23691BBA696C0055D8FC /* PBXTargetDependency */,
-			);
-			name = RunwayTests;
-			productName = MaintenanceTests;
-			productReference = 626D23671BBA696C0055D8FC /* Runway.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		626D23711BBA696C0055D8FC /* RunwayUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 626D23811BBA696C0055D8FC /* Build configuration list for PBXNativeTarget "RunwayUITests" */;
-			buildPhases = (
-				626D236E1BBA696C0055D8FC /* Sources */,
-				626D236F1BBA696C0055D8FC /* Frameworks */,
-				626D23701BBA696C0055D8FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				626D23741BBA696C0055D8FC /* PBXTargetDependency */,
-			);
-			name = RunwayUITests;
-			productName = MaintenanceUITests;
-			productReference = 626D23721BBA696C0055D8FC /* Runway.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -439,14 +342,7 @@
 				TargetAttributes = {
 					626D23521BBA696C0055D8FC = {
 						CreatedOnToolsVersion = 7.0.1;
-					};
-					626D23661BBA696C0055D8FC = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = 626D23521BBA696C0055D8FC;
-					};
-					626D23711BBA696C0055D8FC = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = 626D23521BBA696C0055D8FC;
+						DevelopmentTeam = 743AM63YFU;
 					};
 				};
 			};
@@ -464,8 +360,6 @@
 			projectRoot = "";
 			targets = (
 				626D23521BBA696C0055D8FC /* Runway */,
-				626D23661BBA696C0055D8FC /* RunwayTests */,
-				626D23711BBA696C0055D8FC /* RunwayUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -479,20 +373,6 @@
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626D23651BBA696C0055D8FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626D23701BBA696C0055D8FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,36 +467,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		626D23631BBA696C0055D8FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				626D236C1BBA696C0055D8FC /* MaintenanceTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626D236E1BBA696C0055D8FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				626D23771BBA696C0055D8FC /* MaintenanceUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		626D23691BBA696C0055D8FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 626D23521BBA696C0055D8FC /* Runway */;
-			targetProxy = 626D23681BBA696C0055D8FC /* PBXContainerItemProxy */;
-		};
-		626D23741BBA696C0055D8FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 626D23521BBA696C0055D8FC /* Runway */;
-			targetProxy = 626D23731BBA696C0055D8FC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		626D23791BBA696C0055D8FC /* Debug */ = {
@@ -710,10 +561,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 5;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway;
 				PRODUCT_NAME = Runway;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -725,60 +576,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
+				CURRENT_PROJECT_VERSION = 5;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway;
 				PRODUCT_NAME = Runway;
+				PROVISIONING_PROFILE = "be6b5af6-0ef7-436d-9ac4-1356eb95cb0e";
 				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		626D237F1BBA696C0055D8FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MaintenanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.MaintenanceTests;
-				PRODUCT_NAME = Runway;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runway.app/Runway";
-			};
-			name = Debug;
-		};
-		626D23801BBA696C0055D8FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MaintenanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.MaintenanceTests;
-				PRODUCT_NAME = Runway;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runway.app/Runway";
-			};
-			name = Release;
-		};
-		626D23821BBA696C0055D8FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MaintenanceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.MaintenanceUITests;
-				PRODUCT_NAME = Runway;
-				TEST_TARGET_NAME = Runway;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		626D23831BBA696C0055D8FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MaintenanceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.MaintenanceUITests;
-				PRODUCT_NAME = Runway;
-				TEST_TARGET_NAME = Runway;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -799,24 +604,6 @@
 			buildConfigurations = (
 				626D237C1BBA696C0055D8FC /* Debug */,
 				626D237D1BBA696C0055D8FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		626D237E1BBA696C0055D8FC /* Build configuration list for PBXNativeTarget "RunwayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				626D237F1BBA696C0055D8FC /* Debug */,
-				626D23801BBA696C0055D8FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		626D23811BBA696C0055D8FC /* Build configuration list for PBXNativeTarget "RunwayUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				626D23821BBA696C0055D8FC /* Debug */,
-				626D23831BBA696C0055D8FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
