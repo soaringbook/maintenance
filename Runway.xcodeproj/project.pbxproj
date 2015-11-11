@@ -562,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
@@ -578,7 +578,7 @@
 				BADGE_IMAGE_NAME = "Badge$(BADGE_IMAGE_NAME)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
