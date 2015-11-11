@@ -16,6 +16,7 @@ platform :ios do
 
     # Upload to HockeyApp.
     hockey(
+      api_token: ENV['HOCKEYAPP_API_TOKEN'],
       teams: 'Runway',
       notify: '1',
       status: '2'
