@@ -25,3 +25,4 @@ xcuserdata
 .env
 Carthage
 .DS_Store
+fastlane/report.xml
