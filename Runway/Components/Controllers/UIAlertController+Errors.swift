@@ -10,7 +10,7 @@ import UIKit
 
 extension UIAlertController {
     convenience init(error: NSError) {
-        self.init(title: "An error occured", message: "error message", preferredStyle: .Alert)
+        self.init(title: "An error occured", message: error.localizedDescription, preferredStyle: .Alert)
     }
 }
 
