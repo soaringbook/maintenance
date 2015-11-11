@@ -239,6 +239,9 @@
                                     <constraint firstAttribute="width" constant="50" id="JTM-Vq-HA0"/>
                                 </constraints>
                                 <state key="normal" image="DashboardSettings"/>
+                                <connections>
+                                    <segue destination="u91-kM-b72" kind="presentation" id="sh0-ah-T1p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -264,6 +267,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kU-FQ-IFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1886" y="380"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Fb2-C5-KUi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="u91-kM-b72" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPg-J5-PlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345.5" y="120"/>
         </scene>
     </scenes>
     <resources>
