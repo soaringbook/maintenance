@@ -26,3 +26,4 @@ xcuserdata
 Carthage
 .DS_Store
 fastlane/report.xml
+Runway.app.dSYM.zip
