@@ -46,6 +46,6 @@ class SBSyncService: NSObject {
         for object in objects {
             realm.create(type, value: object, update: true)
         }
-        realm.commitWrite()
+        try! realm.commitWrite()
     }
 }
