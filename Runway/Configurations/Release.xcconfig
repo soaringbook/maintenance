@@ -7,4 +7,4 @@
 //
 BADGE_IMAGE_NAME =
 
-PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway.release
+PRODUCT_BUNDLE_IDENTIFIER = com.soaringbook.runway
