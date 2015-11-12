@@ -12,13 +12,38 @@ class SettingsViewController: UIViewController {
     var settingsView: SettingsView! { return self.view as! SettingsView }
     
     private let service: SBSyncService = SBSyncService()
+    private var updatesTimer: NSTimer?
     
     // MARK: - View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        settingsView.setupUpdateText(updatedPilots: 0)
+        fetchUpdates()
+    }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
+        updatesTimer?.invalidate()
         service.cancel()
+    }
+    
+    // MARK: - Updates
+    
+    private func scheduleFetchUpdates() {
+        self.updatesTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "fetchUpdates", userInfo: nil, repeats: false)
+    }
+    
+    func fetchUpdates() {
+        updatesTimer?.invalidate()
+        service.fetchUpdates { updatedPilots in
+            dispatch_main {
+                self.settingsView.setupUpdateText(updatedPilots: updatedPilots)
+                self.scheduleFetchUpdates()
+            }
+        }
     }
     
     // MARK: - Actions
@@ -30,9 +55,12 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func synchronise(sender: AnyObject) {
+        updatesTimer?.invalidate()
         settingsView.startAnimating()
         service.sync { error in
             dispatch_main {
+                self.updatesTimer?.invalidate()
+                self.fetchUpdates()
                 self.settingsView.stopAnimating()
             }
         }

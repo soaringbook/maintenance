@@ -85,6 +85,18 @@ class SBSyncService: NSObject {
         }
     }
     
+    // MARK: - Updates
+    
+    func fetchUpdates(callback callback: (updatedPilots: Int) -> ()) {
+        service.fetchPilots { response in
+            var count = 0
+            if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
+                count = objects.count
+            }
+            callback(updatedPilots: count)
+        }
+    }
+    
     // MARK: - Importing
     
     private func updateObjects<T: Object>(type: T.Type, objects: [AnyObject]) {

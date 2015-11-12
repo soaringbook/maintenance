@@ -24,4 +24,14 @@ class SettingsView: UIView {
         syncButton.alpha = 1.0
         activityView.stopAnimating()
     }
+    
+    // MARK: - Update
+    
+    func setupUpdateText(updatedPilots updatedPilots: Int) {
+        var updateText = "Nothing to sync from Soaring Book."
+        if updatedPilots > 0 {
+            updateText = "There are \(updatedPilots) pilots updated on Soaring Book."
+        }
+        syncLabel.text = updateText
+    }
 }
