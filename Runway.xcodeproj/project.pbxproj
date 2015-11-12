@@ -316,7 +316,6 @@
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
 				62F1F3AD1BBC074C001FF957 /* Embed Frameworks */,
 				626D239A1BBA859F0055D8FC /* Load environment variables */,
-				0456C55C1BF52C9700D87FB8 /* Configure application icon */,
 			);
 			buildRules = (
 			);
@@ -375,20 +374,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0456C55C1BF52C9700D87FB8 /* Configure application icon */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Configure application icon";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = ./scripts/configure_app_icon.rb;
-		};
 		567A562B201D2C9B0AABB5DC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
