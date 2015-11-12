@@ -40,6 +40,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        loginView.reset()
+    }
+    
     // MARK: - Gestures
     
     @IBAction func tap(sender: AnyObject) {
@@ -85,8 +91,5 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Segue
     
     @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
-        if let segue = segue as? SBSlideSegue {
-            segue.shouldDismiss = true
-        }
     }
 }

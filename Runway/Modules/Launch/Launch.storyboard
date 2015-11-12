@@ -151,7 +151,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>
                     <connections>
-                        <segue destination="Qe0-da-9LM" kind="show" identifier="Dashboard" customClass="SBSlideSegue" customModule="Runway" customModuleProvider="target" id="PH8-0r-X5b"/>
+                        <segue destination="Qe0-da-9LM" kind="show" identifier="Dashboard" id="PH8-0r-X5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzj-T5-JOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,7 +240,7 @@
                                 </constraints>
                                 <state key="normal" image="DashboardSettings"/>
                                 <connections>
-                                    <segue destination="u91-kM-b72" kind="presentation" customClass="SBSlideSegue" customModule="Runway" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="sh0-ah-T1p"/>
+                                    <segue destination="u91-kM-b72" kind="presentation" id="sh0-ah-T1p"/>
                                 </connections>
                             </button>
                         </subviews>

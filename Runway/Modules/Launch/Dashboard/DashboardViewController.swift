@@ -26,8 +26,5 @@ class DashboardViewController : UIViewController {
     // MARK: - Segue
     
     @IBAction func unwindToDashboard(segue: UIStoryboardSegue) {
-        if let segue = segue as? SBSlideSegue {
-            segue.shouldDismiss = true
-        }
     }
 }

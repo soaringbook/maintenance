@@ -10,13 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    // MARK: - Actions
+    
+    @IBAction func disconnect(sender: AnyObject) {
+        SBKeychain.sharedInstance.token = nil
+        performSegueWithIdentifier("Disconnect", sender: nil)
+    }
+    
     // MARK: - Status bar
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
-        return nil
     }
 }

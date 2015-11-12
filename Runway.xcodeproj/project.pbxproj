@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */; };
 		047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3041BF363F900ACF7E0 /* DashboardButton.swift */; };
-		047CE3091BF368DD00ACF7E0 /* SBSlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */; };
 		047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */; };
 		047CE30E1BF3776500ACF7E0 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CE30D1BF3776500ACF7E0 /* Settings.storyboard */; };
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
@@ -52,7 +51,6 @@
 /* Begin PBXFileReference section */
 		047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		047CE3041BF363F900ACF7E0 /* DashboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
-		047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSlideSegue.swift; sourceTree = "<group>"; };
 		047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		047CE30D1BF3776500ACF7E0 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -125,17 +123,8 @@
 		047CE3061BF368BA00ACF7E0 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				047CE3071BF368BA00ACF7E0 /* Navigations */,
 			);
 			path = Animations;
-			sourceTree = "<group>";
-		};
-		047CE3071BF368BA00ACF7E0 /* Navigations */ = {
-			isa = PBXGroup;
-			children = (
-				047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */,
-			);
-			path = Navigations;
 			sourceTree = "<group>";
 		};
 		047CE30C1BF3743300ACF7E0 /* Settings */ = {
@@ -462,7 +451,6 @@
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
 				047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */,
-				047CE3091BF368DD00ACF7E0 /* SBSlideSegue.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
 				04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */,
 				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
