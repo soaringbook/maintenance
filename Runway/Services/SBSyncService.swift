@@ -13,6 +13,7 @@ class SBSyncService: NSObject {
     
     private let service: SBWebService
     private let realm: Realm
+    private var cancelSync: Bool = false
     
     // MARK: - Init
     
@@ -26,7 +27,9 @@ class SBSyncService: NSObject {
     // MARK: - Actions
     
     func sync(callback callback: (error: NSError?) -> ()) {
+        print("")
         print("🚁 Start syncing")
+        cancelSync = false
         syncPilots { error in
             print("🚁 Stop syncing")
         }
@@ -38,6 +41,11 @@ class SBSyncService: NSObject {
         try! realm.write {
             self.realm.deleteAll()
         }
+    }
+    
+    func cancel() {
+        cancelSync = true
+        service.cancel()
     }
     
     // MARK: - Pilots
@@ -57,6 +65,11 @@ class SBSyncService: NSObject {
     }
     
     private func syncDeletedPilots(callback callback: (error: NSError?) -> ()) {
+        if cancelSync {
+            callback(error: nil)
+            return
+        }
+        
         service.fetchPilots(handleUpdatedAt: false) { response in
             if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
                 let ids = objects.map { $0["id"] as! Int }

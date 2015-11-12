@@ -12,6 +12,16 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet var syncLabel: UILabel!
     
+    private let service: SBSyncService = SBSyncService()
+    
+    // MARK: - View
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        service.cancel()
+    }
+    
     // MARK: - Actions
     
     @IBAction func disconnect(sender: AnyObject) {
@@ -21,7 +31,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func synchronise(sender: AnyObject) {
-        SBSyncService().sync { error in
+        service.sync { error in
             print("🏁")
         }
     }

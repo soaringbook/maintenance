@@ -15,6 +15,7 @@ enum SBWebServiceResponse {
     case Authenticated
     case NotAuthenticated(NSError)
     case NotAvailable
+    case Empty
     
     // Parse the result for authentication
     init(error: NSError?, response: NSHTTPURLResponse) {
@@ -42,16 +43,18 @@ enum SBWebServiceResponse {
     }
     
     // Parse the result as JSON
-    init(error: NSError?, data: NSData) {
+    init(error: NSError?, data: NSData?) {
         if let error = error {
             self = .Failure(error)
-        } else {
+        } else if let data = data {
             do {
                 let content = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary) as NSDictionary?
                 self = .FetchSuccess(content!)
             } catch {
                 self = .Failure(NSError(code: .Fetching))
             }
+        } else {
+            self = .Empty
         }
     }
     
@@ -119,7 +122,7 @@ class SBWebService: NSObject {
         let request = authenticatedRequest(path: path)
         
         let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
-            callback(SBWebServiceResponse(error: error, data: data!))
+            callback(SBWebServiceResponse(error: error, data: data))
         })
         task.resume()
     }
