@@ -12,11 +12,13 @@ import RealmSwift
 class SBSyncService: NSObject {
     
     private let service: SBWebService
+    private let realm: Realm
     
     // MARK: - Init
     
     override init() {
         service = SBWebService()
+        realm = try! Realm()
         
         super.init()
     }
@@ -24,7 +26,18 @@ class SBSyncService: NSObject {
     // MARK: - Actions
     
     func sync(callback callback: (error: NSError?) -> ()) {
-        syncPilots(callback: callback)
+        print("🚁 Start syncing")
+        syncPilots { error in
+            print("🚁 Stop syncing")
+        }
+    }
+    
+    func deleteData() {
+        print("🚁 Delete all data")
+        SBConfiguration.sharedInstance.pilotsLastUpdatedAt = nil
+        try! realm.write {
+            self.realm.deleteAll()
+        }
     }
     
     // MARK: - Pilots
@@ -32,7 +45,9 @@ class SBSyncService: NSObject {
     private func syncPilots(callback callback: (error: NSError?) -> ()) {
         service.fetchPilots { response in
             if let pilots = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
+                print("🚁 Fetched \(pilots.count) pilots")
                 self.updateObjects(Pilot.self, objects: pilots)
+                SBConfiguration.sharedInstance.pilotsLastUpdatedAt = NSDate()
             }
             callback(error: response.error)
         }
