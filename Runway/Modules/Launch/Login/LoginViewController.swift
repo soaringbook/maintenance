@@ -40,6 +40,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        loginView.reset()
+    }
+    
     // MARK: - Gestures
     
     @IBAction func tap(sender: AnyObject) {
@@ -80,5 +86,10 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    // MARK: - Segue
+    
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
     }
 }

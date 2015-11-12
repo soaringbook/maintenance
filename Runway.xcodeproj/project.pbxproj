@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */; };
 		047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3041BF363F900ACF7E0 /* DashboardButton.swift */; };
-		047CE3091BF368DD00ACF7E0 /* SBSlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */; };
 		047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */; };
+		047CE30E1BF3776500ACF7E0 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CE30D1BF3776500ACF7E0 /* Settings.storyboard */; };
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
 		04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA61BF35CD100F33F1F /* Launch.storyboard */; };
 		04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */; };
+		04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE42B81BF3D65E0022651C /* SettingsViewController.swift */; };
 		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
@@ -50,14 +51,15 @@
 /* Begin PBXFileReference section */
 		047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		047CE3041BF363F900ACF7E0 /* DashboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
-		047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSlideSegue.swift; sourceTree = "<group>"; };
 		047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		047CE30D1BF3776500ACF7E0 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04D04FA01BF3578300F33F1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04D04FA61BF35CD100F33F1F /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Badge.swift"; sourceTree = "<group>"; };
 		04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		04EE42B81BF3D65E0022651C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersTableViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Gliders.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -121,17 +123,17 @@
 		047CE3061BF368BA00ACF7E0 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				047CE3071BF368BA00ACF7E0 /* Navigations */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		047CE3071BF368BA00ACF7E0 /* Navigations */ = {
+		047CE30C1BF3743300ACF7E0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				047CE3081BF368DD00ACF7E0 /* SBSlideSegue.swift */,
+				047CE30D1BF3776500ACF7E0 /* Settings.storyboard */,
+				04EE42B81BF3D65E0022651C /* SettingsViewController.swift */,
 			);
-			path = Navigations;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		04D04F9C1BF3578300F33F1F /* Launch */ = {
@@ -242,6 +244,7 @@
 			children = (
 				626D23A11BBA90140055D8FC /* Gliders */,
 				04D04F9C1BF3578300F33F1F /* Launch */,
+				047CE30C1BF3743300ACF7E0 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -319,8 +322,9 @@
 				626D23511BBA696C0055D8FC /* Resources */,
 				F3DE284F1FBF3EE700B64129 /* Embed Pods Frameworks */,
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
-				626D239A1BBA859F0055D8FC /* ShellScript */,
 				62F1F3AD1BBC074C001FF957 /* Embed Frameworks */,
+				626D239A1BBA859F0055D8FC /* Load environment variables */,
+				0456C55C1BF52C9700D87FB8 /* Configure application icon */,
 			);
 			buildRules = (
 			);
@@ -373,12 +377,27 @@
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				626D23A31BBA901E0055D8FC /* Gliders.storyboard in Resources */,
+				047CE30E1BF3776500ACF7E0 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0456C55C1BF52C9700D87FB8 /* Configure application icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Configure application icon";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/configure_app_icon.rb;
+		};
 		567A562B201D2C9B0AABB5DC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,13 +413,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		626D239A1BBA859F0055D8FC /* ShellScript */ = {
+		626D239A1BBA859F0055D8FC /* Load environment variables */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Load environment variables";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +467,6 @@
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
 				047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */,
-				047CE3091BF368DD00ACF7E0 /* SBSlideSegue.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
 				04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */,
 				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
@@ -456,6 +475,7 @@
 				623728AB1BBECBB500948D0D /* Glider.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
+				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,

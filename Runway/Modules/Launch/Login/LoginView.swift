@@ -44,6 +44,18 @@ class LoginView: UIView {
         tokenField.alpha = 1.0
     }
     
+    // MARK: - State
+    
+    func reset() {
+        activityView.stopAnimating()
+        tokenField.text = nil
+        
+        tokenFieldBottomConstraint.priority = 250
+        tokenFieldCenterConstraint.priority = 750
+        titleTopConstraint.priority = 250
+        titleCenterConstraint.priority = 750
+    }
+    
     // MARK: - Animations
     
     func animateIn() {
