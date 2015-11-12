@@ -322,8 +322,9 @@
 				626D23511BBA696C0055D8FC /* Resources */,
 				F3DE284F1FBF3EE700B64129 /* Embed Pods Frameworks */,
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
-				626D239A1BBA859F0055D8FC /* ShellScript */,
 				62F1F3AD1BBC074C001FF957 /* Embed Frameworks */,
+				626D239A1BBA859F0055D8FC /* Load environment variables */,
+				0456C55C1BF52C9700D87FB8 /* Configure application icon */,
 			);
 			buildRules = (
 			);
@@ -383,6 +384,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0456C55C1BF52C9700D87FB8 /* Configure application icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Configure application icon";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/configure_app_icon.rb;
+		};
 		567A562B201D2C9B0AABB5DC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,13 +413,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		626D239A1BBA859F0055D8FC /* ShellScript */ = {
+		626D239A1BBA859F0055D8FC /* Load environment variables */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Load environment variables";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
