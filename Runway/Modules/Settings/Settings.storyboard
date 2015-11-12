@@ -28,7 +28,7 @@
                                 <animations/>
                                 <state key="normal" image="Dismiss"/>
                                 <connections>
-                                    <segue destination="EDm-o7-7FC" kind="unwind" unwindAction="unwindToDashboard:" id="WaF-Z0-LzI"/>
+                                    <segue destination="EDm-o7-7FC" kind="unwind" identifier="Dismiss" customClass="SBSlideSegue" customModule="Runway" customModuleProvider="target" unwindAction="unwindToDashboard:" id="WaF-Z0-LzI"/>
                                 </connections>
                             </button>
                         </subviews>

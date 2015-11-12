@@ -85,12 +85,8 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Segue
     
     @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
-        // SHITTY iOS code in order to get unwinding work.
+        if let segue = segue as? SBSlideSegue {
+            segue.shouldDismiss = true
+        }
     }
-    
-//    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-//        let segue = SBSlideSegue(identifier: "Pop", source: fromViewController, destination: toViewController)
-//        segue.shouldDismiss = true
-//        return segue
-//    }
 }
