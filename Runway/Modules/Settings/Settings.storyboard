@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="CBe-6Z-J82"/>
                         <viewControllerLayoutGuide type="bottom" id="bB5-M2-iqM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qbY-bJ-rTR">
+                    <view key="view" contentMode="scaleToFill" id="qbY-bJ-rTR" customClass="SettingsView" customModule="Runway" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -90,14 +90,21 @@
                                         <color key="textColor" red="0.1215686275" green="0.1647058824" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gta-3d-ZI2">
+                                        <rect key="frame" x="332" y="151" width="37" height="37"/>
+                                        <animations/>
+                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="hIp-GU-dOm" firstAttribute="leading" secondItem="s76-hh-Te9" secondAttribute="leading" id="0zk-Cq-fo2"/>
                                     <constraint firstItem="5aQ-VW-3HS" firstAttribute="centerY" secondItem="hIp-GU-dOm" secondAttribute="centerY" id="8fO-0A-gRO"/>
+                                    <constraint firstItem="gta-3d-ZI2" firstAttribute="centerY" secondItem="5aQ-VW-3HS" secondAttribute="centerY" id="AwH-It-mIW"/>
                                     <constraint firstItem="5aQ-VW-3HS" firstAttribute="leading" secondItem="hIp-GU-dOm" secondAttribute="trailing" constant="50" id="DUj-ih-dgG"/>
                                     <constraint firstItem="qyh-GO-5x2" firstAttribute="top" secondItem="s76-hh-Te9" secondAttribute="top" id="Dux-Ud-zAQ"/>
+                                    <constraint firstItem="gta-3d-ZI2" firstAttribute="centerX" secondItem="5aQ-VW-3HS" secondAttribute="centerX" id="EmY-Aa-tPT"/>
                                     <constraint firstAttribute="trailing" secondItem="5aQ-VW-3HS" secondAttribute="trailing" id="I8o-50-tVd"/>
                                     <constraint firstAttribute="trailing" secondItem="owl-iy-Q9N" secondAttribute="trailing" id="NAE-gh-FXv"/>
                                     <constraint firstItem="hIp-GU-dOm" firstAttribute="top" secondItem="qyh-GO-5x2" secondAttribute="bottom" constant="20" id="OPB-gP-NOI"/>
@@ -119,9 +126,13 @@
                             <constraint firstItem="s76-hh-Te9" firstAttribute="centerX" secondItem="qbY-bJ-rTR" secondAttribute="centerX" id="qWP-RF-gsI"/>
                             <constraint firstItem="8Mn-k6-3m9" firstAttribute="top" secondItem="CBe-6Z-J82" secondAttribute="bottom" constant="40" id="wSL-Q7-ZYz"/>
                         </constraints>
+                        <connections>
+                            <outlet property="activityView" destination="gta-3d-ZI2" id="rre-Jl-NuT"/>
+                            <outlet property="syncButton" destination="5aQ-VW-3HS" id="VZj-51-BbV"/>
+                            <outlet property="syncLabel" destination="owl-iy-Q9N" id="RcX-uW-o4D"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="syncLabel" destination="owl-iy-Q9N" id="pRK-Fe-2PG"/>
                         <segue destination="EDm-o7-7FC" kind="unwind" identifier="Disconnect" unwindAction="unwindToLogin:" id="dAW-9j-dCd"/>
                     </connections>
                 </viewController>

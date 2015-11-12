@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
+		0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5621BF543A800D87FB8 /* SettingsView.swift */; };
 		047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */; };
 		047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3041BF363F900ACF7E0 /* DashboardButton.swift */; };
 		047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
+		0456C5621BF543A800D87FB8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		047CE3041BF363F900ACF7E0 /* DashboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
 		047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				047CE30D1BF3776500ACF7E0 /* Settings.storyboard */,
+				0456C5621BF543A800D87FB8 /* SettingsView.swift */,
 				04EE42B81BF3D65E0022651C /* SettingsViewController.swift */,
 			);
 			path = Settings;
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */,
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,

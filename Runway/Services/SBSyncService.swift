@@ -27,11 +27,11 @@ class SBSyncService: NSObject {
     // MARK: - Actions
     
     func sync(callback callback: (error: NSError?) -> ()) {
-        print("")
         print("🚁 Start syncing")
         cancelSync = false
         syncPilots { error in
             print("🚁 Stop syncing")
+            callback(error: error)
         }
     }
     

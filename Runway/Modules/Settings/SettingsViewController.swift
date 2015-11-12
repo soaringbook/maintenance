@@ -9,8 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
-    @IBOutlet var syncLabel: UILabel!
+    var settingsView: SettingsView! { return self.view as! SettingsView }
     
     private let service: SBSyncService = SBSyncService()
     
@@ -31,8 +30,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func synchronise(sender: AnyObject) {
+        settingsView.startAnimating()
         service.sync { error in
-            print("🏁")
+            dispatch_main {
+                self.settingsView.stopAnimating()
+            }
         }
     }
     
