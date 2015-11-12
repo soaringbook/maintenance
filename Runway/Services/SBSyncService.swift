@@ -44,10 +44,29 @@ class SBSyncService: NSObject {
     
     private func syncPilots(callback callback: (error: NSError?) -> ()) {
         service.fetchPilots { response in
-            if let pilots = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
-                print("🚁 Fetched \(pilots.count) pilots")
-                self.updateObjects(Pilot.self, objects: pilots)
+            if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
+                print("🚁 Fetched \(objects.count) pilots")
+                self.updateObjects(Pilot.self, objects: objects)
                 SBConfiguration.sharedInstance.pilotsLastUpdatedAt = NSDate()
+                
+                self.syncDeletedPilots(callback: callback)
+            } else {
+                callback(error: response.error)
+            }
+        }
+    }
+    
+    private func syncDeletedPilots(callback callback: (error: NSError?) -> ()) {
+        service.fetchPilots(handleUpdatedAt: false) { response in
+            if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
+                let ids = objects.map { $0["id"] as! Int }
+                dispatch_main {
+                    let pilots = Pilot.filterPilotsToDelete(ids: ids, realm: self.realm)
+                    print("🚁 Fetched \(pilots.count) pilots to delete")
+                    try! self.realm.write {
+                        self.realm.delete(pilots)
+                    }
+                }
             }
             callback(error: response.error)
         }

@@ -9,9 +9,9 @@
 import Foundation
 
 extension SBWebService {
-    func fetchPilots(callback callback: (SBWebServiceResponse) -> ()) {
+    func fetchPilots(handleUpdatedAt handleUpdatedAt: Bool = false,  callback: (SBWebServiceResponse) -> ()) {
         var path = "pilots.json"
-        if let updatedAt = SBConfiguration().pilotsLastUpdatedAt {
+        if let updatedAt = SBConfiguration().pilotsLastUpdatedAt where handleUpdatedAt {
             let formattedUpdatedAt = SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(updatedAt)
             path = "\(path)?last_updated_at=\(formattedUpdatedAt)"
         }

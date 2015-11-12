@@ -16,4 +16,11 @@ class Pilot: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    // MARK: - Queries
+    
+    static func filterPilotsToDelete(ids ids: [Int], realm: Realm) -> Results<Pilot> {
+        let filter = NSPredicate(format: "NOT (id in %@)", ids)
+        return realm.objects(Pilot).filter(filter)
+    }
 }
