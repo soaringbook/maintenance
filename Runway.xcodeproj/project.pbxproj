@@ -16,6 +16,7 @@
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
 		04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA61BF35CD100F33F1F /* Launch.storyboard */; };
 		04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */; };
+		04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE42B81BF3D65E0022651C /* SettingsViewController.swift */; };
 		620D3FF61BBA930200751D86 /* GlidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
@@ -60,6 +61,7 @@
 		04D04FA81BF35D6F00F33F1F /* UIWindow+Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Badge.swift"; sourceTree = "<group>"; };
 		04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		04EE42B81BF3D65E0022651C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		620D3FF51BBA930200751D86 /* GlidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidersTableViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Gliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Gliders.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				047CE30D1BF3776500ACF7E0 /* Settings.storyboard */,
+				04EE42B81BF3D65E0022651C /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				623728AB1BBECBB500948D0D /* Glider.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
+				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Gliders.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,

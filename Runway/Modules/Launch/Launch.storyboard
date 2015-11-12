@@ -240,7 +240,7 @@
                                 </constraints>
                                 <state key="normal" image="DashboardSettings"/>
                                 <connections>
-                                    <segue destination="u91-kM-b72" kind="presentation" id="sh0-ah-T1p"/>
+                                    <segue destination="u91-kM-b72" kind="presentation" customClass="SBSlideSegue" customModule="Runway" customModuleProvider="target" modalPresentationStyle="overCurrentContext" id="sh0-ah-T1p"/>
                                 </connections>
                             </button>
                         </subviews>
