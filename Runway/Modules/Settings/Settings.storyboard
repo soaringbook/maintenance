@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="CBe-6Z-J82"/>
                         <viewControllerLayoutGuide type="bottom" id="bB5-M2-iqM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qbY-bJ-rTR">
+                    <view key="view" contentMode="scaleToFill" id="qbY-bJ-rTR" customClass="SettingsView" customModule="Runway" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s76-hh-Te9">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <rect key="frame" x="75" y="200" width="450" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can disconnect this iPad by tapping the disconnect button. All your data will be erased." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyh-GO-5x2">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
@@ -62,16 +62,57 @@
                                             <action selector="disconnect:" destination="aCM-ct-fAa" eventType="touchUpInside" id="ysF-vh-bHe"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aQ-VW-3HS">
+                                        <rect key="frame" x="250" y="140" width="200" height="60"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ZJZ-0N-MUs"/>
+                                            <constraint firstAttribute="height" constant="60" id="fwg-Ff-Xet"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <state key="normal" title="SYNCHRONISE">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="synchronise:" destination="aCM-ct-fAa" eventType="touchUpInside" id="CHb-pS-kGy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing to synchronise." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owl-iy-Q9N">
+                                        <rect key="frame" x="250" y="0.0" width="200" height="24"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <color key="textColor" red="0.1215686275" green="0.1647058824" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gta-3d-ZI2">
+                                        <rect key="frame" x="332" y="151" width="37" height="37"/>
+                                        <animations/>
+                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="owl-iy-Q9N" firstAttribute="leading" secondItem="5aQ-VW-3HS" secondAttribute="leading" id="0Oo-gl-Pw3"/>
                                     <constraint firstItem="hIp-GU-dOm" firstAttribute="leading" secondItem="s76-hh-Te9" secondAttribute="leading" id="0zk-Cq-fo2"/>
-                                    <constraint firstAttribute="trailing" secondItem="hIp-GU-dOm" secondAttribute="trailing" id="DeH-Lc-8JK"/>
+                                    <constraint firstItem="5aQ-VW-3HS" firstAttribute="centerY" secondItem="hIp-GU-dOm" secondAttribute="centerY" id="8fO-0A-gRO"/>
+                                    <constraint firstItem="gta-3d-ZI2" firstAttribute="centerY" secondItem="5aQ-VW-3HS" secondAttribute="centerY" id="AwH-It-mIW"/>
+                                    <constraint firstItem="5aQ-VW-3HS" firstAttribute="leading" secondItem="hIp-GU-dOm" secondAttribute="trailing" constant="50" id="DUj-ih-dgG"/>
                                     <constraint firstItem="qyh-GO-5x2" firstAttribute="top" secondItem="s76-hh-Te9" secondAttribute="top" id="Dux-Ud-zAQ"/>
+                                    <constraint firstItem="gta-3d-ZI2" firstAttribute="centerX" secondItem="5aQ-VW-3HS" secondAttribute="centerX" id="EmY-Aa-tPT"/>
+                                    <constraint firstAttribute="trailing" secondItem="5aQ-VW-3HS" secondAttribute="trailing" id="I8o-50-tVd"/>
+                                    <constraint firstAttribute="trailing" secondItem="owl-iy-Q9N" secondAttribute="trailing" id="NAE-gh-FXv"/>
                                     <constraint firstItem="hIp-GU-dOm" firstAttribute="top" secondItem="qyh-GO-5x2" secondAttribute="bottom" constant="20" id="OPB-gP-NOI"/>
                                     <constraint firstAttribute="bottom" secondItem="hIp-GU-dOm" secondAttribute="bottom" id="kQR-H5-ilw"/>
                                     <constraint firstItem="qyh-GO-5x2" firstAttribute="leading" secondItem="hIp-GU-dOm" secondAttribute="leading" id="ls4-zA-Rrm"/>
+                                    <constraint firstItem="5aQ-VW-3HS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="owl-iy-Q9N" secondAttribute="bottom" constant="20" id="qfA-1h-skG"/>
+                                    <constraint firstItem="owl-iy-Q9N" firstAttribute="top" secondItem="qyh-GO-5x2" secondAttribute="top" id="uSV-wS-KuZ"/>
                                     <constraint firstItem="qyh-GO-5x2" firstAttribute="trailing" secondItem="hIp-GU-dOm" secondAttribute="trailing" id="vDj-Id-x07"/>
                                 </constraints>
                             </view>
@@ -86,6 +127,11 @@
                             <constraint firstItem="s76-hh-Te9" firstAttribute="centerX" secondItem="qbY-bJ-rTR" secondAttribute="centerX" id="qWP-RF-gsI"/>
                             <constraint firstItem="8Mn-k6-3m9" firstAttribute="top" secondItem="CBe-6Z-J82" secondAttribute="bottom" constant="40" id="wSL-Q7-ZYz"/>
                         </constraints>
+                        <connections>
+                            <outlet property="activityView" destination="gta-3d-ZI2" id="rre-Jl-NuT"/>
+                            <outlet property="syncButton" destination="5aQ-VW-3HS" id="VZj-51-BbV"/>
+                            <outlet property="syncLabel" destination="owl-iy-Q9N" id="RcX-uW-o4D"/>
+                        </connections>
                     </view>
                     <connections>
                         <segue destination="EDm-o7-7FC" kind="unwind" identifier="Disconnect" unwindAction="unwindToLogin:" id="dAW-9j-dCd"/>

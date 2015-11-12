@@ -39,8 +39,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j2-u2-1qv">
                                         <rect key="frame" x="46" y="206" width="508" height="189"/>
                                         <subviews>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
-                                                <rect key="frame" x="358" y="89" width="20" height="20"/>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
+                                                <rect key="frame" x="350" y="80" width="37" height="37"/>
                                                 <animations/>
                                                 <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>

@@ -10,9 +10,10 @@ import UIKit
 
 class SBConfiguration: NSObject {
     
-    private let SBConfigurationApiHostKey =     "API_HOST"
-    private let SBConfigurationApiProtocolKey = "API_PROTOCOL"
-    private let SBConfigurationApiVersionKey =  "API_VERSION"
+    private let SBConfigurationApiHostKey =              "API_HOST"
+    private let SBConfigurationApiProtocolKey =          "API_PROTOCOL"
+    private let SBConfigurationApiVersionKey =           "API_VERSION"
+    private let SBConfigurationPilotsLastUpdatedAtKey =  "PILOTS_LAST_UPDATED_AT"
     
     // MARK: - Getter
     
@@ -26,6 +27,15 @@ class SBConfiguration: NSObject {
     
     var apiVersion: NSString {
         return getConfiguration(key: SBConfigurationApiVersionKey)
+    }
+    
+    var pilotsLastUpdatedAt: NSDate? {
+        get {
+            return fetchUpdatedAt(key: SBConfigurationPilotsLastUpdatedAtKey)
+        }
+        set {
+            storeUpdatedAt(key: SBConfigurationPilotsLastUpdatedAtKey, date: newValue)
+        }
     }
     
     // MARK: Privates
@@ -55,5 +65,23 @@ class SBConfiguration: NSObject {
     
     private func removeQuotes(text: NSString) -> NSString {
         return text.stringByReplacingOccurrencesOfString("\"", withString: "")
+    }
+    
+    // MARK: - Updated at
+    
+    private func storeUpdatedAt(key key: NSString, date: NSDate?) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let date = date {
+            defaults.setObject(date, forKey: key as String)
+        } else {
+            defaults.removeObjectForKey(key as String)
+        }
+        defaults.synchronize()
+    }
+    
+    private func fetchUpdatedAt(key key: NSString) -> NSDate? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.synchronize()
+        return defaults.objectForKey(key as String) as! NSDate?
     }
 }
