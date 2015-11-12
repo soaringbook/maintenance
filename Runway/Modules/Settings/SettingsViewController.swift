@@ -20,7 +20,9 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func synchronise(sender: AnyObject) {
-        
+        SBSyncService().sync { error in
+            print("🏁")
+        }
     }
     
     // MARK: - Status bar
