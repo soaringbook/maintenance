@@ -44,9 +44,22 @@
                                                 <animations/>
                                                 <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
                                                 <rect key="frame" x="8" y="8" width="200" height="181"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" id="wmv-d9-860"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="wmv-d9-860"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="wmv-d9-860"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-ps-aYX" userLabel="Title Container">
                                                 <rect key="frame" x="228" y="58" width="280" height="82"/>
@@ -84,7 +97,9 @@
                                                 <color key="tintColor" red="0.098039215686274508" green="0.66666666666666663" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="3nc-nf-Emg"/>
-                                                    <constraint firstAttribute="width" constant="280" id="IQV-24-FcI"/>
+                                                    <constraint firstAttribute="width" constant="280" id="IQV-24-FcI">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="240"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <color key="textColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
@@ -116,6 +131,11 @@
                                             <constraint firstItem="une-Ug-bUB" firstAttribute="bottom" secondItem="zsP-M0-XHl" secondAttribute="bottom" priority="250" id="uSp-h1-d5r"/>
                                             <constraint firstItem="ucz-ps-aYX" firstAttribute="centerY" secondItem="zsP-M0-XHl" secondAttribute="centerY" priority="750" id="vAU-ip-oPm"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="zsP-M0-XHl"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -184,6 +204,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
                                         <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOARING BOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHb-Wm-hh1">
                                         <rect key="frame" x="0.0" y="0.0" width="376" height="36"/>
@@ -191,12 +214,17 @@
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <color key="textColor" red="0.52941176469999995" green="0.54117647059999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="WmK-i0-HTP" firstAttribute="top" secondItem="FHb-Wm-hh1" secondAttribute="bottom" constant="-20" id="Unz-24-sI1"/>
+                                    <constraint firstItem="WmK-i0-HTP" firstAttribute="top" secondItem="FHb-Wm-hh1" secondAttribute="bottom" constant="-20" id="Unz-24-sI1">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-10"/>
+                                    </constraint>
                                     <constraint firstItem="WmK-i0-HTP" firstAttribute="leading" secondItem="r28-Sd-hKN" secondAttribute="leading" id="VTt-C9-gq5"/>
                                     <constraint firstItem="FHb-Wm-hh1" firstAttribute="top" secondItem="r28-Sd-hKN" secondAttribute="top" id="Y8d-be-pqi"/>
                                     <constraint firstAttribute="trailing" secondItem="WmK-i0-HTP" secondAttribute="trailing" id="a2Y-wy-9Ow"/>
@@ -248,13 +276,25 @@
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KBZ-aj-e05" secondAttribute="trailing" constant="20" id="7Af-ep-rX1"/>
-                            <constraint firstItem="UK2-QF-VsK" firstAttribute="centerX" secondItem="jOh-Da-rZL" secondAttribute="centerX" constant="-180" id="8D2-3E-HSC"/>
-                            <constraint firstItem="UK2-QF-VsK" firstAttribute="centerY" secondItem="jOh-Da-rZL" secondAttribute="centerY" id="Odf-Ww-WeT"/>
+                            <constraint firstItem="UK2-QF-VsK" firstAttribute="centerX" secondItem="jOh-Da-rZL" secondAttribute="centerX" constant="-180" id="8D2-3E-HSC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="UK2-QF-VsK" firstAttribute="centerY" secondItem="jOh-Da-rZL" secondAttribute="centerY" id="Odf-Ww-WeT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-100"/>
+                            </constraint>
                             <constraint firstItem="r28-Sd-hKN" firstAttribute="centerX" secondItem="jOh-Da-rZL" secondAttribute="centerX" id="Q7L-G9-5Wm"/>
-                            <constraint firstItem="KBZ-aj-e05" firstAttribute="top" secondItem="jOh-Da-rZL" secondAttribute="top" constant="20" id="WC0-vc-6Id"/>
-                            <constraint firstItem="ctG-OP-Jc9" firstAttribute="centerX" secondItem="jOh-Da-rZL" secondAttribute="centerX" constant="180" id="hiS-J5-F6D"/>
-                            <constraint firstItem="ctG-OP-Jc9" firstAttribute="centerY" secondItem="jOh-Da-rZL" secondAttribute="centerY" id="ne5-1g-btt"/>
-                            <constraint firstItem="r28-Sd-hKN" firstAttribute="top" secondItem="Z6e-HS-Jb3" secondAttribute="bottom" constant="60" id="ta6-x2-eRy"/>
+                            <constraint firstItem="KBZ-aj-e05" firstAttribute="top" secondItem="jOh-Da-rZL" secondAttribute="top" constant="20" id="WC0-vc-6Id">
+                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="ctG-OP-Jc9" firstAttribute="centerX" secondItem="jOh-Da-rZL" secondAttribute="centerX" constant="180" id="hiS-J5-F6D">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ctG-OP-Jc9" firstAttribute="centerY" secondItem="jOh-Da-rZL" secondAttribute="centerY" id="ne5-1g-btt">
+                                <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                            </constraint>
+                            <constraint firstItem="r28-Sd-hKN" firstAttribute="top" secondItem="Z6e-HS-Jb3" secondAttribute="bottom" constant="60" id="ta6-x2-eRy">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
                         </constraints>
                         <connections>
                             <outlet property="flightsHeightConstraint" destination="9r8-Wd-ZjT" id="3tX-lP-YLw"/>

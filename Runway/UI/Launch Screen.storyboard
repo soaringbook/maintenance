@@ -19,9 +19,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poc-Bi-ocN">
                                 <rect key="frame" x="46" y="206" width="508" height="189"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-tu-UYP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-tu-UYP">
                                         <rect key="frame" x="8" y="8" width="200" height="181"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" id="kR6-Qz-K71"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="kR6-Qz-K71"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="kR6-Qz-K71"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zP-RB-Nk0" userLabel="Title Container">
                                         <rect key="frame" x="228" y="58" width="280" height="82"/>
