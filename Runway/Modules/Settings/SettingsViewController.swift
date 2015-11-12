@@ -10,11 +10,17 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet var syncLabel: UILabel!
+    
     // MARK: - Actions
     
     @IBAction func disconnect(sender: AnyObject) {
         SBKeychain.sharedInstance.token = nil
         performSegueWithIdentifier("Disconnect", sender: nil)
+    }
+    
+    @IBAction func synchronise(sender: AnyObject) {
+        
     }
     
     // MARK: - Status bar
