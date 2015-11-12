@@ -44,9 +44,22 @@
                                                 <animations/>
                                                 <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
                                                 <rect key="frame" x="8" y="8" width="200" height="181"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" id="wmv-d9-860"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="wmv-d9-860"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="wmv-d9-860"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-ps-aYX" userLabel="Title Container">
                                                 <rect key="frame" x="228" y="58" width="280" height="82"/>
@@ -84,7 +97,9 @@
                                                 <color key="tintColor" red="0.098039215686274508" green="0.66666666666666663" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="3nc-nf-Emg"/>
-                                                    <constraint firstAttribute="width" constant="280" id="IQV-24-FcI"/>
+                                                    <constraint firstAttribute="width" constant="280" id="IQV-24-FcI">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="240"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <color key="textColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
@@ -116,6 +131,11 @@
                                             <constraint firstItem="une-Ug-bUB" firstAttribute="bottom" secondItem="zsP-M0-XHl" secondAttribute="bottom" priority="250" id="uSp-h1-d5r"/>
                                             <constraint firstItem="ucz-ps-aYX" firstAttribute="centerY" secondItem="zsP-M0-XHl" secondAttribute="centerY" priority="750" id="vAU-ip-oPm"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="zsP-M0-XHl"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <animations/>
