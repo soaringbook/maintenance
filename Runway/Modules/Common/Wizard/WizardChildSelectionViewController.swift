@@ -8,6 +8,13 @@
 
 import UIKit
 
+private let SelectionCellSpacing: CGFloat = 10.0
+private let CollectionViewSpacing: CGFloat = 20.0
+
+protocol WizardSelectionItem {
+    var displayName: String { get }
+}
+
 enum ChildSelectionMessage {
     case None
     case Warning(NSString)
@@ -47,11 +54,7 @@ struct ChildSelectionItem {
     var message: ChildSelectionMessage
 }
 
-class ChildSelectionViewController: WizardChildViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
-    
-    // MARK: - Public
-    
-    var list = [Pilot]()
+class WizardChildSelectionViewController: WizardChildViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     
     // MARK: Privates
     
@@ -70,6 +73,16 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     var searchPlaceholderTitle: String {
         assertionFailure("Should be overwritten set by subclass.")
         return ""
+    }
+    
+    private lazy var lazySelectionItems: [WizardSelectionItem] = {
+        [unowned self] in
+        return self.selectionItems
+    }()
+    
+    var selectionItems: [WizardSelectionItem] {
+        assertionFailure("Should be overwritten set by subclass.")
+        return [WizardSelectionItem]()
     }
     
     // MARK: - View flow
@@ -108,9 +121,8 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     // MARK: - Data
     
     private func prepareContent(query: NSString? = nil) {
-        list = constructList(query)
         self.collectionView?.reloadData()
-//        (self.collectionView?.collectionViewLayout as! RWCollectionViewDynamicFlowLayout).resetLayout()
+        (self.collectionView?.collectionViewLayout as! SBCollectionViewDynamicFlowLayout).resetLayout()
         self.collectionView?.scrollRectToVisible(CGRectMake(0, 0, 10, 10), animated: false)
     }
     
@@ -152,14 +164,13 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     
     private func prepareCollectionView() {
         // Configure layout.
-        let layout = UICollectionViewLayout()
-//        let layout = RWCollectionViewDynamicFlowLayout()
-//        layout.scrollDirection = .Horizontal
-//        layout.sectionInset = UIEdgeInsets(top: CollectionViewSpacing, left: CollectionViewSpacing, bottom: CollectionViewSpacing, right: CollectionViewSpacing)
-//        itemSize = collectionViewHeight - CollectionViewSpacing * 2.0
-//        layout.itemSize = CGSizeMake(itemSize!, itemSize!)
-//        layout.minimumLineSpacing = SelectionCellSpacing
-//        layout.minimumInteritemSpacing = SelectionCellSpacing
+        let layout = SBCollectionViewDynamicFlowLayout()
+        layout.scrollDirection = .Horizontal
+        layout.sectionInset = UIEdgeInsets(top: CollectionViewSpacing, left: CollectionViewSpacing, bottom: CollectionViewSpacing, right: CollectionViewSpacing)
+        itemSize = collectionViewHeight - CollectionViewSpacing * 2.0
+        layout.itemSize = CGSizeMake(itemSize!, itemSize!)
+        layout.minimumLineSpacing = SelectionCellSpacing
+        layout.minimumInteritemSpacing = SelectionCellSpacing
         
         // Configure collection view.
         collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
@@ -168,7 +179,7 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
         collectionView!.autoPinEdgeToSuperviewEdge(.Left)
         collectionView!.autoPinEdgeToSuperviewEdge(.Right)
         collectionView!.autoSetDimension(.Height, toSize: collectionViewHeight)
-        let nib = UINib(nibName: "ImageSelectionViewCell", bundle: nil)
+        let nib = UINib(nibName: "WizardChildImageSelectionViewCell", bundle: nil)
         collectionView!.registerNib(nib, forCellWithReuseIdentifier: "Selection")
         collectionView!.backgroundColor = UIColor.clearColor()
         collectionView!.delegate = self
@@ -177,20 +188,19 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
+        return lazySelectionItems.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Selection", forIndexPath: indexPath) //as! ImageSelectionViewCell
-//        let item = list[indexPath.item]
-//        cell.configure(item: selectionItem(item))
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Selection", forIndexPath: indexPath) as! WizardChildImageSelectionViewCell
+        let item = lazySelectionItems[indexPath.item]
+        cell.configure(item: item)
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        let item: NSManagedObject = list[indexPath.item] as NSManagedObject
-//        let contextItem = item.MR_inContext(self.wizardViewController?.creationContext) as NSManagedObject
-//        selectItem(contextItem)
+        let item = lazySelectionItems[indexPath.item]
+        selectItem(item)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -199,17 +209,7 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     
     // MARK: - Data
     
-    func constructList(query: NSString? = nil) -> [Pilot] {
-        assertionFailure("Should be overwritten set by subclass.")
-        return [Pilot]()
-    }
-    
-    func selectionItem(item: Pilot) -> ChildSelectionItem {
-        assertionFailure("Should be overwritten set by subclass.")
-        return ChildSelectionItem(rawImageData: nil, image: nil, label: nil, message: ChildSelectionMessage.None)
-    }
-    
-    func selectItem(item: Pilot) {
+    func selectItem(item: WizardSelectionItem) {
         assertionFailure("Should be overwritten set by subclass.")
     }
     
