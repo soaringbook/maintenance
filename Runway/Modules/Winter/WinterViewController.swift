@@ -9,6 +9,14 @@
 import UIKit
 
 class WinterViewController: UIViewController {
+    
+    // MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? WizardViewController where segue.identifier == "Start" {
+            controller.type = WizardType.WinterRegistration
+        }
+    }
 
     // MARK: - Status bar
     

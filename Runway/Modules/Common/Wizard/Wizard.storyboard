@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yUv-1H-5zn">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wizard View Controller-->
+        <scene sceneID="wHB-j7-htn">
+            <objects>
+                <viewController id="yUv-1H-5zn" customClass="WizardViewController" customModule="Runway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mwk-Az-rCu"/>
+                        <viewControllerLayoutGuide type="bottom" id="lFH-Ps-uqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rw3-n1-tDU" customClass="WizardView" customModule="Runway" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-Xq-czV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="2"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="Gfw-Ur-Dv9">
+                                        <variation key="widthClass=regular" constant="2"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="Zdk-8f-w8b"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.15686274510000001" green="0.69803921570000005" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gfw-Ur-Dv9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Gfw-Ur-Dv9"/>
+                                    </mask>
+                                </variation>
+                            </progressView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-oa-IOi" userLabel="Back button">
+                                <rect key="frame" x="20" y="41" width="29" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i1B-Wa-aYq"/>
+                                    <constraint firstAttribute="width" constant="50" id="tB7-r0-hE2">
+                                        <variation key="widthClass=regular" constant="29"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Button" image="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Back-Highlighted"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tB7-r0-hE2"/>
+                                        <exclude reference="i1B-Wa-aYq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="tB7-r0-hE2"/>
+                                        <include reference="i1B-Wa-aYq"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-a4-Kzv" userLabel="Title">
+                                <rect key="frame" x="69" y="30" width="139" height="72"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzR-cf-nsd" userLabel="Dismiss button">
+                                <rect key="frame" x="530" y="46" width="40" height="40"/>
+                                <animations/>
+                                <state key="normal" image="Dismiss"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-Ld-fQa" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="112" width="600" height="488"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aCN-a4-Kzv" firstAttribute="leading" secondItem="6ek-oa-IOi" secondAttribute="trailing" constant="20" id="00T-Jt-9XA"/>
+                            <constraint firstItem="OuD-Ld-fQa" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" id="1xK-44-aFN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AzR-cf-nsd" secondAttribute="trailing" constant="10" id="3mt-62-U3j"/>
+                            <constraint firstItem="lFH-Ps-uqc" firstAttribute="top" secondItem="OuD-Ld-fQa" secondAttribute="bottom" id="7Op-DQ-0te"/>
+                            <constraint firstItem="Ta4-Xq-czV" firstAttribute="top" secondItem="Rw3-n1-tDU" secondAttribute="top" id="J4X-mY-m98"/>
+                            <constraint firstItem="6ek-oa-IOi" firstAttribute="centerY" secondItem="aCN-a4-Kzv" secondAttribute="centerY" id="LwM-Ti-8TC"/>
+                            <constraint firstItem="AzR-cf-nsd" firstAttribute="centerY" secondItem="aCN-a4-Kzv" secondAttribute="centerY" id="YwG-A9-DRG"/>
+                            <constraint firstItem="aCN-a4-Kzv" firstAttribute="top" secondItem="mwk-Az-rCu" secondAttribute="bottom" constant="10" id="ZzJ-dc-8y5"/>
+                            <constraint firstItem="Ta4-Xq-czV" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" id="aTl-go-5Yn"/>
+                            <constraint firstItem="6ek-oa-IOi" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" constant="20" id="dzG-MJ-Y7b"/>
+                            <constraint firstAttribute="trailing" secondItem="OuD-Ld-fQa" secondAttribute="trailing" id="lr3-Dl-iUh"/>
+                            <constraint firstItem="OuD-Ld-fQa" firstAttribute="top" secondItem="aCN-a4-Kzv" secondAttribute="bottom" constant="10" id="pNq-Pq-JBM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ta4-Xq-czV" secondAttribute="trailing" id="prv-TL-WcP"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="backButton" destination="6ek-oa-IOi" id="JZO-cJ-MSI"/>
+                            <outlet property="containerView" destination="OuD-Ld-fQa" id="FS0-61-k8h"/>
+                            <outlet property="dismissButton" destination="AzR-cf-nsd" id="eFc-BG-BjR"/>
+                            <outlet property="leftBackButtonConstraint" destination="dzG-MJ-Y7b" id="1g7-k3-Oyc"/>
+                            <outlet property="progressView" destination="Ta4-Xq-czV" id="lal-HW-llN"/>
+                            <outlet property="titleLabel" destination="aCN-a4-Kzv" id="LHK-X5-BHC"/>
+                            <outlet property="topProgressViewConstraint" destination="J4X-mY-m98" id="FYE-CX-37r"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYd-db-XbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="590"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back-Highlighted" width="80" height="80"/>
+        <image name="Dismiss" width="40" height="40"/>
+    </resources>
+</document>

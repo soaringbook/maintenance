@@ -21,6 +21,12 @@
 		04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE42B81BF3D65E0022651C /* SettingsViewController.swift */; };
 		04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F34D861BF72582006EEC4A /* Winter.storyboard */; };
 		04F34D891BF72668006EEC4A /* WinterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D881BF72667006EEC4A /* WinterViewController.swift */; };
+		04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F34D8C1BF72A6D006EEC4A /* Wizard.storyboard */; };
+		04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */; };
+		04F34D921BF72B85006EEC4A /* ChildSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */; };
+		04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */; };
+		04F34D951BF72D1E006EEC4A /* WizardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D941BF72D1E006EEC4A /* WizardType.swift */; };
+		04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D961BF72EEF006EEC4A /* WizardView.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
 		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; };
@@ -67,6 +73,12 @@
 		04EE42B81BF3D65E0022651C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04F34D861BF72582006EEC4A /* Winter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Winter.storyboard; sourceTree = "<group>"; };
 		04F34D881BF72667006EEC4A /* WinterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterViewController.swift; sourceTree = "<group>"; };
+		04F34D8C1BF72A6D006EEC4A /* Wizard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wizard.storyboard; sourceTree = "<group>"; };
+		04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardViewController.swift; sourceTree = "<group>"; };
+		04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildSelectionViewController.swift; sourceTree = "<group>"; };
+		04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardChildViewController.swift; sourceTree = "<group>"; };
+		04F34D941BF72D1E006EEC4A /* WizardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardType.swift; sourceTree = "<group>"; };
+		04F34D961BF72EEF006EEC4A /* WizardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Pilots.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
@@ -179,6 +191,27 @@
 			path = Winter;
 			sourceTree = "<group>";
 		};
+		04F34D8A1BF72A60006EEC4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04F34D8B1BF72A60006EEC4A /* Wizard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04F34D8B1BF72A60006EEC4A /* Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */,
+				04F34D8C1BF72A6D006EEC4A /* Wizard.storyboard */,
+				04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */,
+				04F34D941BF72D1E006EEC4A /* WizardType.swift */,
+				04F34D961BF72EEF006EEC4A /* WizardView.swift */,
+				04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */,
+			);
+			path = Wizard;
+			sourceTree = "<group>";
+		};
 		0849EF3C681534567BD45BB6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +290,7 @@
 		626D23841BBA69A90055D8FC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04F34D8A1BF72A60006EEC4A /* Common */,
 				04D04F9C1BF3578300F33F1F /* Launch */,
 				047CE30C1BF3743300ACF7E0 /* Settings */,
 				04F34D851BF72576006EEC4A /* Winter */,
@@ -381,6 +415,7 @@
 				04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */,
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
+				04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */,
 				047CE30E1BF3776500ACF7E0 /* Settings.storyboard in Resources */,
 				04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */,
 			);
@@ -461,16 +496,21 @@
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
 				047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */,
 				04F34D891BF72668006EEC4A /* WinterViewController.swift in Sources */,
+				04F34D921BF72B85006EEC4A /* ChildSelectionViewController.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,
 				04D04FA91BF35D6F00F33F1F /* UIWindow+Badge.swift in Sources */,
 				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Pilot.swift in Sources */,
+				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
 				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
+				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
+				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
+				04F34D951BF72D1E006EEC4A /* WizardType.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
