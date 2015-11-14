@@ -82,6 +82,34 @@ class SBSyncService: NSObject {
                 }
             }
             callback(error: response.error)
+//            self.syncPilotImages(callback: callback)
+        }
+    }
+    
+    private func syncPilotImages(callback callback: (error: NSError?) -> ()) {
+        let group = dispatch_group_create()
+        
+            let realm = try! Realm()
+            let pilots = realm.objects(Pilot).map { $0 }
+            for pilot in pilots {
+                dispatch_group_enter(group)
+                self.downloadPilotImage(pilot: pilot, dispatch_group: group)
+            }
+            dispatch_group_wait(group, DISPATCH_TIME_FOREVER)
+            dispatch_main {
+                print("🚀 Finished downloading")
+                callback(error: nil)
+            }
+    }
+    
+    private func downloadPilotImage(pilot pilot: Pilot, dispatch_group: dispatch_group_t) {
+        service.fetchPilotImage(pilot) { response in
+            if let data = response.data as? NSData {
+                try! self.realm.write {
+                    pilot.image = data
+                }
+            }
+            dispatch_group_leave(dispatch_group)
         }
     }
     

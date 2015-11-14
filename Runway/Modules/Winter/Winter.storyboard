@@ -32,10 +32,30 @@
                                     <segue destination="eMF-fW-UHy" kind="unwind" unwindAction="unwindToDashboard:" id="NZq-Rg-6It"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-6v-sX9">
+                                <rect key="frame" x="30" y="92" width="267" height="56"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="START WORKING">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Cy1-pr-S9R" kind="presentation" identifier="Start" id="7vq-aH-cTd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Iid-6v-sX9" firstAttribute="leading" secondItem="DNn-xG-PEn" secondAttribute="leading" id="Ib4-qC-t6J"/>
+                            <constraint firstItem="Iid-6v-sX9" firstAttribute="top" secondItem="DNn-xG-PEn" secondAttribute="bottom" constant="10" id="Tv1-eg-rYG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BG4-iq-9It" secondAttribute="trailing" constant="10" id="U9a-Zw-vj3"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="top" secondItem="YAG-UT-x6U" secondAttribute="topMargin" constant="10" id="iu5-oU-6dP"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leadingMargin" constant="10" id="mlZ-qw-3zP"/>
@@ -48,6 +68,14 @@
                 <exit id="eMF-fW-UHy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1355" y="110"/>
+        </scene>
+        <!--Wizard-->
+        <scene sceneID="UJJ-SF-Aji">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Wizard" id="Cy1-pr-S9R" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tw-3r-LWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.5" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KYM-hx-nHg">
