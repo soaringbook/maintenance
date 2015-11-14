@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol WizardViewControllerDelegate {
+@objc protocol WizardViewControllerDelegate {
     func wizardControllerShouldDismiss(controller: WizardViewController)
     func wizardControllerWillComplete(controller: WizardViewController, fromController: WizardChildViewController)
-    func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController)
+    optional func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController)
 }
 
 protocol WizardViewControllerDateSource {
@@ -100,7 +100,7 @@ class WizardViewController: UIViewController {
         let newController = controllers[index]
         
         if navigateForward {
-            delegate?.wizardController(self, toController: oldController, fromController: newController)
+            delegate?.wizardController?(self, toController: oldController, fromController: newController)
         }
         
         // Set the new current index.

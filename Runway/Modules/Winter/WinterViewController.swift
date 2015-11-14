@@ -41,9 +41,6 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController) {
-    }
-    
     // MARK: - Time
     
     private func startTimeRegistration(forPilot pilot: Pilot) {
