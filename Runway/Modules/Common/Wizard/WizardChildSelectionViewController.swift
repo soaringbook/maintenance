@@ -60,6 +60,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     private let collectionViewHeight: CGFloat = 220.0
     private var collectionView: UICollectionView?
+    private var placeholderLabel: UILabel?
     private var searchField: UITextField?
     private var itemSize: CGFloat?
     
@@ -84,6 +85,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         
         prepareSearchField()
         prepareCollectionView()
+        preparePlaceholder()
         prepareLogo()
     }
     
@@ -114,6 +116,8 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     private func prepareContent(query query: String? = nil) {
         reloadData(query: query)
+        placeholderLabel?.hidden = !selectionItems.isEmpty
+        searchField?.hidden = selectionItems.isEmpty
         collectionView?.reloadData()
         (self.collectionView?.collectionViewLayout as! SBCollectionViewDynamicFlowLayout).resetLayout()
         self.collectionView?.scrollRectToVisible(CGRectMake(0, 0, 10, 10), animated: false)
@@ -198,6 +202,20 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(itemSize ?? 0.0, itemSize ?? 0.0)
+    }
+    
+    // MARK: - Placeholder
+    
+    private func preparePlaceholder() {
+        placeholderLabel = UILabel()
+        placeholderLabel?.text = "No data available"
+        placeholderLabel?.textAlignment = .Center
+        placeholderLabel?.font = UIFont.systemFontOfSize(20.0, weight: UIFontWeightMedium)
+        view.addSubview(placeholderLabel!)
+        placeholderLabel?.autoPinEdge(.Top, toEdge: .Top, ofView: searchField!)
+        placeholderLabel?.autoPinEdge(.Right, toEdge: .Right, ofView: collectionView!)
+        placeholderLabel?.autoPinEdge(.Bottom, toEdge: .Bottom, ofView: collectionView!)
+        placeholderLabel?.autoPinEdge(.Left, toEdge: .Left, ofView: collectionView!)
     }
     
     // MARK: - Data
