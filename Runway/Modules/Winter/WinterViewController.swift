@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate {
     
@@ -34,12 +35,23 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     }
     
     func wizardControllerWillComplete(controller: WizardViewController, fromController: WizardChildViewController) {
-        print("🏁 from \(fromController)")
+        if let fromController = fromController as? WinterPilotSelectionChildViewController, let pilot = fromController.selectedPilot {
+            startTimeRegistration(forPilot: pilot)
+        }
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController) {
-        print("🚃 from \(fromController) to \(toController)")
+    }
+    
+    // MARK: - Time
+    
+    private func startTimeRegistration(forPilot pilot: Pilot) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(WorkRegistration(value: ["pilot" : pilot]))
+            print("💾 \(pilot.displayName) registration start")
+        }
     }
 
     // MARK: - Status bar

@@ -11,6 +11,8 @@ import RealmSwift
 
 class WinterPilotSelectionChildViewController: WizardChildSelectionViewController {
     
+    var selectedPilot: Pilot?
+    
     // MARK: Getters
     
     override var wizardTitle: String {
@@ -29,6 +31,7 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     }
     
     override func selectItem(item: WizardSelectionItem) {
+        selectedPilot = item as? Pilot
         wizardViewController?.presentNextController()
     }
 }
