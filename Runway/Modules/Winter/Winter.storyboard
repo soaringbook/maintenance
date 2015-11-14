@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ON6-NM-AOy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="93R-gI-00u">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -42,11 +42,29 @@
                             <constraint firstItem="BG4-iq-9It" firstAttribute="centerY" secondItem="DNn-xG-PEn" secondAttribute="centerY" id="te0-v2-D0U"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eMF-fW-UHy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="404"/>
+            <point key="canvasLocation" x="1355" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KYM-hx-nHg">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="93R-gI-00u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DHV-9K-aAN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ON6-NM-AOy" kind="relationship" relationship="rootViewController" id="6R1-fy-WON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMC-TT-zh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="110"/>
         </scene>
     </scenes>
     <resources>
