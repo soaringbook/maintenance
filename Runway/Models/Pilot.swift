@@ -13,6 +13,11 @@ class Pilot: Object, WizardSelectionItem {
     dynamic var first_name: String = ""
     dynamic var last_name: String = ""
     
+    dynamic var retina_image: String?
+    dynamic var non_retina_image: String?
+    dynamic var image: NSData?
+    dynamic var shouldDownload: Bool = false
+    
     override static func primaryKey() -> String? {
         return "id"
     }
