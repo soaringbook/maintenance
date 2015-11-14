@@ -258,6 +258,9 @@
                                 <state key="normal" title="WINTER" backgroundImage="DashboardWinter">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="waO-J3-MG9" kind="presentation" id="qsQ-Nv-5dL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBZ-aj-e05">
                                 <rect key="frame" x="530" y="20" width="50" height="50"/>
@@ -314,7 +317,15 @@
                 <viewControllerPlaceholder storyboardName="Settings" id="u91-kM-b72" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPg-J5-PlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2345.5" y="120"/>
+            <point key="canvasLocation" x="2340.5" y="245"/>
+        </scene>
+        <!--Winter-->
+        <scene sceneID="54v-ix-8op">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Winter" id="waO-J3-MG9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-CU-8oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340.5" y="549"/>
         </scene>
     </scenes>
     <resources>
