@@ -75,15 +75,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         return ""
     }
     
-    private lazy var lazySelectionItems: [WizardSelectionItem] = {
-        [unowned self] in
-        return self.selectionItems
-    }()
-    
-    var selectionItems: [WizardSelectionItem] {
-        assertionFailure("Should be overwritten set by subclass.")
-        return [WizardSelectionItem]()
-    }
+    var selectionItems = [WizardSelectionItem]()
     
     // MARK: - View flow
     
@@ -120,8 +112,9 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     // MARK: - Data
     
-    private func prepareContent(query: NSString? = nil) {
-        self.collectionView?.reloadData()
+    private func prepareContent(query query: String? = nil) {
+        reloadData(query: query)
+        collectionView?.reloadData()
         (self.collectionView?.collectionViewLayout as! SBCollectionViewDynamicFlowLayout).resetLayout()
         self.collectionView?.scrollRectToVisible(CGRectMake(0, 0, 10, 10), animated: false)
     }
@@ -155,8 +148,8 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        let query: NSString = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        prepareContent(query)
+        let query = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        prepareContent(query: query)
         return true
     }
     
@@ -188,18 +181,18 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lazySelectionItems.count
+        return selectionItems.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Selection", forIndexPath: indexPath) as! WizardChildImageSelectionViewCell
-        let item = lazySelectionItems[indexPath.item]
+        let item = selectionItems[indexPath.item]
         cell.configure(item: item)
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let item = lazySelectionItems[indexPath.item]
+        let item = selectionItems[indexPath.item]
         selectItem(item)
     }
     
@@ -208,6 +201,10 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     // MARK: - Data
+    
+    func reloadData(query query: String? = nil) {
+        assertionFailure("Should be overwritten set by subclass.")
+    }
     
     func selectItem(item: WizardSelectionItem) {
         assertionFailure("Should be overwritten set by subclass.")

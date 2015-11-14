@@ -21,12 +21,12 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
         return "Search for a pilot"
     }
     
-    override var selectionItems: [WizardSelectionItem] {
-        let realm = try! Realm()
-        return Pilot.selectablePilots(realm: realm).map { $0 }
-    }
-    
     // MARK: - Data
+    
+    override func reloadData(query query: String? = nil) {
+        let realm = try! Realm()
+        self.selectionItems = Pilot.selectablePilots(query: query, realm: realm).map { $0 }
+    }
     
     override func selectItem(item: WizardSelectionItem) {
         print("👱 Selected \(item.displayName)")

@@ -23,8 +23,13 @@ class Pilot: Object, WizardSelectionItem {
     
     // MARK: - Queries
     
-    static func selectablePilots(realm realm: Realm) -> Results<Pilot> {
-        return realm.objects(Pilot).sorted("last_name")
+    static func selectablePilots(query query: String?, realm: Realm) -> Results<Pilot> {
+        var objects = realm.objects(Pilot)
+        if let query = query {
+            let filter = NSPredicate(format: "first_name contains[c] '\(query)' OR last_name contains[c] '\(query)'")
+            objects = objects.filter(filter)
+        }
+        return objects.sorted("last_name")
     }
     
     static func filterPilotsToDelete(ids ids: [Int], realm: Realm) -> Results<Pilot> {
