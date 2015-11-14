@@ -32,6 +32,15 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func wizardControllerShouldDismiss(controller: WizardViewController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func wizardControllerWillComplete(controller: WizardViewController, fromController: WizardChildViewController) {
+        print("🏁 from \(fromController)")
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController) {
+        print("🚃 from \(fromController) to \(toController)")
+    }
 
     // MARK: - Status bar
     

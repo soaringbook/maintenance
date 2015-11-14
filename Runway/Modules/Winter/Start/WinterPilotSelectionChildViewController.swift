@@ -29,6 +29,6 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     }
     
     override func selectItem(item: WizardSelectionItem) {
-        print("👱 Selected \(item.displayName)")
+        wizardViewController?.presentNextController()
     }
 }

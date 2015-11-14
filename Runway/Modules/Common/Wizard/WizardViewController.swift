@@ -10,6 +10,8 @@ import UIKit
 
 protocol WizardViewControllerDelegate {
     func wizardControllerShouldDismiss(controller: WizardViewController)
+    func wizardControllerWillComplete(controller: WizardViewController, fromController: WizardChildViewController)
+    func wizardController(controller: WizardViewController, toController: WizardChildViewController, fromController: WizardChildViewController)
 }
 
 protocol WizardViewControllerDateSource {
@@ -88,7 +90,7 @@ class WizardViewController: UIViewController {
         // Ignore when out of bounds.
         if index < 0 || index >= controllers.count {
             if navigateForward {
-//                createFlight()
+                delegate?.wizardControllerWillComplete(self, fromController: controllers[currentIndex])
             }
             return
         }
@@ -96,6 +98,10 @@ class WizardViewController: UIViewController {
         // Fetch the controllers.
         let oldController = controllers[currentIndex]
         let newController = controllers[index]
+        
+        if navigateForward {
+            delegate?.wizardController(self, toController: oldController, fromController: newController)
+        }
         
         // Set the new current index.
         currentIndex = index
@@ -123,11 +129,11 @@ class WizardViewController: UIViewController {
         wizardView.updateProgressView(currentIndex: currentIndex, total: controllers.count)
         UIView.animateWithDuration(0.35, animations: { () -> Void in
             self.view.layoutIfNeeded()
-            }, completion: { (finished) -> Void in
-                // Remove the old view from the container.
-                oldController.view.removeFromSuperview()
-                oldController.removeFromParentViewController()
-                newController.didMoveToParentViewController(self)
+        }, completion: { (finished) -> Void in
+            // Remove the old view from the container.
+            oldController.view.removeFromSuperview()
+            oldController.removeFromParentViewController()
+            newController.didMoveToParentViewController(self)
         })
     }
     
