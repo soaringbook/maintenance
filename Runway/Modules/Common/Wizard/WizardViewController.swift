@@ -21,7 +21,6 @@ class WizardViewController: UIViewController {
     
     var dataSource: WizardViewControllerDateSource?
     var delegate: WizardViewControllerDelegate?
-    var type: WizardType!
     
     private var controllers = [WizardChildViewController]()
     private var currentIndex = 0
@@ -60,15 +59,6 @@ class WizardViewController: UIViewController {
         presentPreviousController()
     }
     
-    // MARK: - RWFlightSegueDelegate
-    
-//    func flightSegueWillCancel(segue: RWFlightSegue) {
-//        flight.MR_deleteEntity()
-//        
-//        let controller = controllers[currentIndex]
-//        controller.viewWillDisappear(true)
-//    }
-    
     // MARK: - View controllers
     
     func presentNextController() {
@@ -78,19 +68,6 @@ class WizardViewController: UIViewController {
     func presentPreviousController() {
         presentViewController(currentIndex - 1)
     }
-    
-//    func addPassengerControllerIfNeeded() {
-//        if flight.glider?.doubleSeater.boolValue ?? false {
-//            controllers.append(PassengerSelectionViewController(wizardViewController: self))
-//            updateProgressView()
-//        }
-//    }
-//    
-//    private func createFlight() {
-//        creationContext.MR_saveToPersistentStoreAndWait()
-//        delegate?.wizardViewControllerDidAddFlight(self)
-//        self.performSegueWithIdentifier("Dismiss Flight", sender: nil)
-//    }
     
     private func presentInitialController() {
         if currentIndex >= 0 && currentIndex < controllers.count {
@@ -119,14 +96,6 @@ class WizardViewController: UIViewController {
         // Fetch the controllers.
         let oldController = controllers[currentIndex]
         let newController = controllers[index]
-//        
-//        // Remove dynamically added controllers.
-//        if !navigateForward {
-////            if let oldController = oldController as? PassengerSelectionViewController {
-////                controllers.removeAtIndex(currentIndex)
-////                updateProgressView()
-////            }
-//        }
         
         // Set the new current index.
         currentIndex = index

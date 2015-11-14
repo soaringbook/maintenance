@@ -16,7 +16,6 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         if let controller = segue.destinationViewController as? WizardViewController where segue.identifier == "Start" {
             controller.dataSource = self
             controller.delegate = self
-            controller.type = WizardType.WinterRegistration
         }
     }
     

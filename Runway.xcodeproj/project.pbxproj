@@ -25,7 +25,6 @@
 		04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */; };
 		04F34D921BF72B85006EEC4A /* ChildSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */; };
 		04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */; };
-		04F34D951BF72D1E006EEC4A /* WizardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D941BF72D1E006EEC4A /* WizardType.swift */; };
 		04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D961BF72EEF006EEC4A /* WizardView.swift */; };
 		04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */; };
@@ -78,7 +77,6 @@
 		04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardViewController.swift; sourceTree = "<group>"; };
 		04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildSelectionViewController.swift; sourceTree = "<group>"; };
 		04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardChildViewController.swift; sourceTree = "<group>"; };
-		04F34D941BF72D1E006EEC4A /* WizardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardType.swift; sourceTree = "<group>"; };
 		04F34D961BF72EEF006EEC4A /* WizardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
 		04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterPilotSelectionChildViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Pilots.swift"; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				04F34D901BF72B85006EEC4A /* ChildSelectionViewController.swift */,
 				04F34D8C1BF72A6D006EEC4A /* Wizard.storyboard */,
 				04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */,
-				04F34D941BF72D1E006EEC4A /* WizardType.swift */,
 				04F34D961BF72EEF006EEC4A /* WizardView.swift */,
 				04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */,
 			);
@@ -521,7 +518,6 @@
 				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
-				04F34D951BF72D1E006EEC4A /* WizardType.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
