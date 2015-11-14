@@ -9,6 +9,7 @@
 import UIKit
 
 class WinterPilotSelectionChildViewController: WizardChildViewController {
+    
     // MARK: Getters
     
     override var wizardTitle: String {

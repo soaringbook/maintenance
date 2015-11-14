@@ -148,7 +148,7 @@ class WizardViewController: UIViewController {
         // Animate the swipe navigation.
         leftConstraint.constant = 0
         if let leftConstraint = oldController.leftConstraint {
-            wizardView.positionOffscreen(leftConstraint: leftConstraint, navigateForward: navigateForward)
+            wizardView.positionOffscreen(leftConstraint: leftConstraint, navigateForward: !navigateForward)
         }
         wizardView.positionBackButton(currentIndex: currentIndex)
         wizardView.updateProgressView(currentIndex: currentIndex, total: controllers.count)

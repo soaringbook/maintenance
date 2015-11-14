@@ -30,6 +30,9 @@ class WizardView: UIView {
     // MARK: - Progress
     
     func updateProgressView(currentIndex index: Int, total: Int) {
+        // Hide the progressView when total = 1
+        progressView.hidden = total <= 1
+        
         // We add 1 to both properties in order to get an initial progress.
         let total = Float(total) + 1.0
         let current = Float(index) + 1.0
