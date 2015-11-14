@@ -17,7 +17,7 @@ class WizardChildViewController: UIViewController {
     
     // MARK: Getters
     
-    var wizardTitle: NSString {
+    var wizardTitle: String {
         assertionFailure("Should be overwritten set by subclass.")
         return ""
     }

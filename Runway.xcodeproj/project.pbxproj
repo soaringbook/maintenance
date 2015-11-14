@@ -27,6 +27,7 @@
 		04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */; };
 		04F34D951BF72D1E006EEC4A /* WizardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D941BF72D1E006EEC4A /* WizardType.swift */; };
 		04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D961BF72EEF006EEC4A /* WizardView.swift */; };
+		04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */; };
 		620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */; };
 		622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */; };
 		623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */; };
@@ -79,6 +80,7 @@
 		04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardChildViewController.swift; sourceTree = "<group>"; };
 		04F34D941BF72D1E006EEC4A /* WizardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardType.swift; sourceTree = "<group>"; };
 		04F34D961BF72EEF006EEC4A /* WizardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
+		04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterPilotSelectionChildViewController.swift; sourceTree = "<group>"; };
 		620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Pilots.swift"; sourceTree = "<group>"; };
 		622D75101BBABE8D00D8949F /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		04F34D851BF72576006EEC4A /* Winter */ = {
 			isa = PBXGroup;
 			children = (
+				04F34D981BF736A5006EEC4A /* Start */,
 				04F34D861BF72582006EEC4A /* Winter.storyboard */,
 				04F34D881BF72667006EEC4A /* WinterViewController.swift */,
 			);
@@ -210,6 +213,14 @@
 				04F34D8E1BF72B08006EEC4A /* WizardViewController.swift */,
 			);
 			path = Wizard;
+			sourceTree = "<group>";
+		};
+		04F34D981BF736A5006EEC4A /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		0849EF3C681534567BD45BB6 /* Pods */ = {
@@ -516,6 +527,7 @@
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */,
+				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

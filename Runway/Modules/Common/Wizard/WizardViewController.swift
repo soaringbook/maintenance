@@ -8,12 +8,22 @@
 
 import UIKit
 
+protocol WizardViewControllerDelegate {
+    func wizardControllerShouldDismiss(controller: WizardViewController)
+}
+
+protocol WizardViewControllerDateSource {
+    func controllersForWizard(controller: WizardViewController) -> [WizardChildViewController]
+}
+
 class WizardViewController: UIViewController {
     var wizardView: WizardView! { return self.view as! WizardView }
     
+    var dataSource: WizardViewControllerDateSource?
+    var delegate: WizardViewControllerDelegate?
     var type: WizardType!
     
-    private var controllers = [UIViewController]()
+    private var controllers = [WizardChildViewController]()
     private var currentIndex = 0
     
     // MARK: - View flow
@@ -24,9 +34,8 @@ class WizardViewController: UIViewController {
         // Otherwise the hidden back button is shown during the animation.
         view.clipsToBounds = true
         
-//        controllers.append(TypeSelectionViewController(wizardViewController: self))
-//        controllers.append(GliderSelectionViewController(wizardViewController: self))
-//        controllers.append(PilotSelectionViewController(wizardViewController: self))
+        // Fetch the controllers from the dataSource.
+        controllers = dataSource?.controllersForWizard(self) ?? [WizardChildViewController]()
         
         // Enlarge the progress view.
         wizardView.updateProgressView(currentIndex: currentIndex, total: controllers.count)
@@ -90,10 +99,8 @@ class WizardViewController: UIViewController {
             let leftConstraint = wizardView.addControllerView(view: controller.view)
             controller.didMoveToParentViewController(self)
             
-            if let controller = controller as? WizardChildViewController {
-                controller.leftConstraint = leftConstraint
-                wizardView.titleText = controller.wizardTitle as String
-            }
+            controller.leftConstraint = leftConstraint
+            wizardView.titleText = controller.wizardTitle
         }
     }
     
@@ -133,16 +140,14 @@ class WizardViewController: UIViewController {
         wizardView.positionOffscreen(leftConstraint: leftConstraint, navigateForward: navigateForward)
         
         // Set the new title and add the left constraint to the child.
-        if let newController = newController as? WizardChildViewController {
-            newController.leftConstraint = leftConstraint
-            wizardView.titleText = newController.wizardTitle as String
-        }
+        newController.leftConstraint = leftConstraint
+        wizardView.titleText = newController.wizardTitle as String
         
         // Set the initial position of the views before animating.
         view.layoutIfNeeded()
         // Animate the swipe navigation.
         leftConstraint.constant = 0
-        if let oldController = oldController as? WizardChildViewController, let leftConstraint = oldController.leftConstraint {
+        if let leftConstraint = oldController.leftConstraint {
             wizardView.positionOffscreen(leftConstraint: leftConstraint, navigateForward: navigateForward)
         }
         wizardView.positionBackButton(currentIndex: currentIndex)
@@ -155,6 +160,12 @@ class WizardViewController: UIViewController {
                 oldController.removeFromParentViewController()
                 newController.didMoveToParentViewController(self)
         })
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func dismiss(sender: AnyObject) {
+        delegate?.wizardControllerShouldDismiss(self)
     }
     
     // MARK: - Status bar

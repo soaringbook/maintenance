@@ -51,7 +51,6 @@
                                 <state key="normal" title="Button" image="Dismiss">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="Back-Highlighted"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="tB7-r0-hE2"/>
@@ -76,15 +75,18 @@
                                 <rect key="frame" x="530" y="46" width="40" height="40"/>
                                 <animations/>
                                 <state key="normal" image="Dismiss"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="yUv-1H-5zn" eventType="touchUpInside" id="Oww-VW-Z7W"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-Ld-fQa" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="112" width="600" height="488"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aCN-a4-Kzv" firstAttribute="leading" secondItem="6ek-oa-IOi" secondAttribute="trailing" constant="20" id="00T-Jt-9XA"/>
                             <constraint firstItem="OuD-Ld-fQa" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" id="1xK-44-aFN"/>
@@ -117,7 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back-Highlighted" width="80" height="80"/>
         <image name="Dismiss" width="40" height="40"/>
     </resources>
 </document>

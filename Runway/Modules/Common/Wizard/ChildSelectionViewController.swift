@@ -62,12 +62,12 @@ class ChildSelectionViewController: WizardChildViewController, UICollectionViewD
     
     // MARK: Getters
     
-    override var wizardTitle: NSString {
+    override var wizardTitle: String {
         assertionFailure("Should be overwritten set by subclass.")
         return ""
     }
     
-    var searchPlaceholderTitle: NSString {
+    var searchPlaceholderTitle: String {
         assertionFailure("Should be overwritten set by subclass.")
         return ""
     }
