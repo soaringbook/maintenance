@@ -14,7 +14,9 @@ platform :ios do
     # Build the application.
     gym(
       scheme: 'Runway',
-      configuration: 'Release'
+      configuration: 'Release',
+      clean: true,
+      use_legacy_build_api: true
     )
 
     # Upload to HockeyApp.
