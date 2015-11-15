@@ -22,12 +22,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIWindow.applyBadge()
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     

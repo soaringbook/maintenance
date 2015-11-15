@@ -6,5 +6,4 @@ use_frameworks!
 pod 'SSKeychain',   '~> 1.2'
 pod 'PureLayout',   '~> 3.0'
 pod 'RealmSwift',   '~> 0.96'
-pod 'AGWindowView', '~> 0.1'
 pod 'HockeySDK',    '~> 3.8'

@@ -1,5 +1,4 @@
 PODS:
-  - AGWindowView (0.1.9)
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
@@ -12,14 +11,12 @@ PODS:
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
-  - AGWindowView (~> 0.1)
   - HockeySDK (~> 3.8)
   - PureLayout (~> 3.0)
   - RealmSwift (~> 0.96)
   - SSKeychain (~> 1.2)
 
 SPEC CHECKSUMS:
-  AGWindowView: 08dc8d448b8c96430e78b3945a9c2cf5b0fde754
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Realm: 3ce8448151c571e90b85002d984d7f93f54fc8a3

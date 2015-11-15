@@ -10,8 +10,6 @@
 	<string></string>
 	<key>HOCKEY_APP_IDENTIFIER</key>
 	<string></string>
-	<key>BADGE_IMAGE_NAME</key>
-	<string>$(BADGE_IMAGE_NAME)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
