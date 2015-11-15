@@ -17,4 +17,8 @@ extension SBWebService {
         }
         fetchRequest(path: path, callback: callback)
     }
+    
+    func fetchPilotImage(pilot: Pilot, callback: (SBWebServiceResponse) -> ()) {
+        self.fetchImageRequest(path: pilot.imageURL, callback: callback)
+    }
 }

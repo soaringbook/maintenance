@@ -52,9 +52,9 @@ class SBSyncService: NSObject {
     
     private func syncPilots(callback callback: (error: NSError?) -> ()) {
         service.fetchPilots { response in
-            if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
+            if let objects = (response.data as! NSDictionary?)?["pilots"] as? [[String:AnyObject]] {
                 print("🚁 Fetched \(objects.count) pilots")
-                self.updateObjects(Pilot.self, objects: objects)
+                Pilot.update(fromResponse: objects)
                 SBConfiguration.sharedInstance.pilotsLastUpdatedAt = NSDate()
                 
                 self.syncDeletedPilots(callback: callback)
@@ -81,7 +81,36 @@ class SBSyncService: NSObject {
                     }
                 }
             }
-            callback(error: response.error)
+            self.syncNextPilotImage(callback: callback)
+        }
+    }
+    
+    private func syncNextPilotImage(callback callback: (error: NSError?) -> ()) {
+        dispatch_main({ () -> Void in
+
+        let realm = try! Realm()
+        if let pilot = Pilot.filterPilotsToDownload(realm: realm).last {
+            print("🚁 Download \(pilot.displayName)'s image")
+            self.downloadPilotImage(pilot: pilot) {
+                self.syncNextPilotImage(callback: callback)
+            }
+        } else {
+            callback(error: nil)
+        }
+        })
+    }
+    
+    private func downloadPilotImage(pilot pilot: Pilot, callback: () -> ()) {
+        service.fetchPilotImage(pilot) { response in
+            if let data = response.data as? NSData {
+                dispatch_main({ () -> Void in
+                    try! self.realm.write {
+                        pilot.imageData = data
+                        pilot.shouldDownloadImage = false
+                    }
+                })
+            }
+            callback()
         }
     }
     
@@ -95,16 +124,5 @@ class SBSyncService: NSObject {
             }
             callback(updatedPilots: count)
         }
-    }
-    
-    // MARK: - Importing
-    
-    private func updateObjects<T: Object>(type: T.Type, objects: [AnyObject]) {
-        let realm = try! Realm()
-        realm.beginWrite()
-        for object in objects {
-            realm.create(type, value: object, update: true)
-        }
-        try! realm.commitWrite()
     }
 }

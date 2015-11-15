@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
     func fetchUpdates() {
         updatesTimer?.invalidate()
         service.fetchUpdates { updatedPilots in
-            dispatch_main {
+            dispatch_sync(dispatch_get_main_queue()) {
                 self.settingsView.setupUpdateText(updatedPilots: updatedPilots)
                 self.scheduleFetchUpdates()
             }

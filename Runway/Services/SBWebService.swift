@@ -121,10 +121,27 @@ class SBWebService: NSObject {
     func fetchRequest(path path: String, callback: (SBWebServiceResponse) -> ()) {
         let request = authenticatedRequest(path: path)
         
-        let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
+        let task = session.dataTaskWithRequest(request) { data, response, error in
             callback(SBWebServiceResponse(error: error, data: data))
-        })
+        }
         task.resume()
+    }
+    
+    func fetchImageRequest(path path: String?, callback: (SBWebServiceResponse) -> ()) {
+        if let path = path {
+            let request = unauthenticatedRequest(path: path)
+            let task = session.downloadTaskWithRequest(request) { url, response, error in
+                callback(SBWebServiceResponse(error: error, url: url))
+            }
+            task.resume()
+        } else {
+            callback(SBWebServiceResponse.NotAvailable)
+        }
+    }
+    
+    private func unauthenticatedRequest(path path: String) -> NSURLRequest {
+        let URL = NSURL(string: path)
+        return NSURLRequest(URL: URL!)
     }
     
     private func authenticatedRequest(path path: String, method: String = "GET", token: String? = nil) -> NSMutableURLRequest {
