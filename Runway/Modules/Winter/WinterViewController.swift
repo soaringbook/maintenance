@@ -9,6 +9,9 @@
 import UIKit
 import RealmSwift
 
+private let SelectionCellSpacing: CGFloat = 10.0
+private let CollectionViewSpacing: CGFloat = 20.0
+
 class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
@@ -21,6 +24,16 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         super.viewDidLoad()
         
         collectionView.registerNib(UINib(nibName: "WizardChildImageSelectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
     }
     
     // MARK: - Segues
