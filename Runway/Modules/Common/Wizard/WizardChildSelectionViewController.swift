@@ -95,6 +95,8 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         super.viewWillAppear(animated)
         
         prepareContent()
+        placeholderLabel?.hidden = !selectionItems.isEmpty
+        searchField?.hidden = selectionItems.isEmpty
         
         dispatch_main_after(0.4) {
             self.searchField?.becomeFirstResponder()
@@ -118,8 +120,6 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     private func prepareContent(query query: String? = nil) {
         reloadData(query: query)
-        placeholderLabel?.hidden = !selectionItems.isEmpty
-        searchField?.hidden = selectionItems.isEmpty
         collectionView?.reloadData()
         (self.collectionView?.collectionViewLayout as! SBCollectionViewDynamicFlowLayout).resetLayout()
         self.collectionView?.scrollRectToVisible(CGRectMake(0, 0, 10, 10), animated: false)
