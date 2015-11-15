@@ -50,19 +50,42 @@
                                     <segue destination="Cy1-pr-S9R" kind="presentation" identifier="Start" id="7vq-aH-cTd"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-Ay-vRT">
+                                <rect key="frame" x="0.0" y="158" width="600" height="442"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FYY-wC-SuR">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ON6-NM-AOy" id="Wbu-2g-IJq"/>
+                                    <outlet property="delegate" destination="ON6-NM-AOy" id="fg6-ph-52d"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="XNr-Ay-vRT" firstAttribute="top" secondItem="Iid-6v-sX9" secondAttribute="bottom" constant="10" id="7kq-hT-XVC"/>
+                            <constraint firstItem="XNr-Ay-vRT" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leading" id="Hv7-p6-eMU"/>
                             <constraint firstItem="Iid-6v-sX9" firstAttribute="leading" secondItem="DNn-xG-PEn" secondAttribute="leading" id="Ib4-qC-t6J"/>
                             <constraint firstItem="Iid-6v-sX9" firstAttribute="top" secondItem="DNn-xG-PEn" secondAttribute="bottom" constant="10" id="Tv1-eg-rYG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BG4-iq-9It" secondAttribute="trailing" constant="10" id="U9a-Zw-vj3"/>
+                            <constraint firstAttribute="trailing" secondItem="XNr-Ay-vRT" secondAttribute="trailing" id="Wc0-rZ-SHf"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="top" secondItem="YAG-UT-x6U" secondAttribute="topMargin" constant="10" id="iu5-oU-6dP"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leadingMargin" constant="10" id="mlZ-qw-3zP"/>
+                            <constraint firstItem="dIL-5J-rtH" firstAttribute="top" secondItem="XNr-Ay-vRT" secondAttribute="bottom" id="oWw-dZ-296"/>
                             <constraint firstItem="BG4-iq-9It" firstAttribute="centerY" secondItem="DNn-xG-PEn" secondAttribute="centerY" id="te0-v2-D0U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XNr-Ay-vRT" id="GiQ-Fl-fgr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eMF-fW-UHy" userLabel="Exit" sceneMemberID="exit"/>
