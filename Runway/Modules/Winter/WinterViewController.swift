@@ -9,7 +9,32 @@
 import UIKit
 import RealmSwift
 
-class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate {
+private let SelectionCellSpacing: CGFloat = 10.0
+private let CollectionViewSpacing: CGFloat = 20.0
+
+class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
+    private let registrationItems = try! Realm().objects(WorkRegistration)
+    
+    // MARK: - View flow
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView.registerNib(UINib(nibName: "WizardChildImageSelectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
+    }
     
     // MARK: - Segues
     
@@ -18,6 +43,24 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
             controller.dataSource = self
             controller.delegate = self
         }
+    }
+    
+    // MARK: - UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    }
+    
+    // MARK: - UICollectionViewDataSource
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return registrationItems.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! WizardChildImageSelectionViewCell
+        let item = registrationItems[indexPath.item]
+        cell.configure(item: item.pilot!)
+        return cell
     }
     
     // MARK: - WizardViewControllerDateSource
