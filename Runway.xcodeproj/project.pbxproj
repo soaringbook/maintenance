@@ -661,7 +661,6 @@
 				INFOPLIST_FILE = Runway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
-				PROVISIONING_PROFILE = "b592f2cb-916f-4683-a32e-b44f11f2cd16";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
