@@ -10,23 +10,28 @@ import UIKit
 
 class SBConfiguration: NSObject {
     
-    private let SBConfigurationApiHostKey =              "API_HOST"
-    private let SBConfigurationApiProtocolKey =          "API_PROTOCOL"
-    private let SBConfigurationApiVersionKey =           "API_VERSION"
-    private let SBConfigurationPilotsLastUpdatedAtKey =  "PILOTS_LAST_UPDATED_AT"
+    private let SBConfigurationApiHostKey =             "API_HOST"
+    private let SBConfigurationApiProtocolKey =         "API_PROTOCOL"
+    private let SBConfigurationApiVersionKey =          "API_VERSION"
+    private let SBConfigurationHockeyAppIdentifierKey = "HOCKEY_APP_IDENTIFIER"
+    private let SBConfigurationPilotsLastUpdatedAtKey = "PILOTS_LAST_UPDATED_AT"
     
     // MARK: - Getter
     
-    var apiHost: NSString {
+    var apiHost: String {
         return getConfiguration(key: SBConfigurationApiHostKey)
     }
     
-    var apiProtocol: NSString {
+    var apiProtocol: String {
         return getConfiguration(key: SBConfigurationApiProtocolKey)
     }
     
-    var apiVersion: NSString {
+    var apiVersion: String {
         return getConfiguration(key: SBConfigurationApiVersionKey)
+    }
+    
+    var hockeyAppIdentifier: String {
+        return getConfiguration(key: SBConfigurationHockeyAppIdentifierKey)
     }
     
     var pilotsLastUpdatedAt: NSDate? {
@@ -59,17 +64,17 @@ class SBConfiguration: NSObject {
     
     // MARK: - Utilies
     
-    private func getConfiguration(key key: NSString) -> NSString {
-        return removeQuotes(self.configuration[key]! as! NSString)
+    private func getConfiguration(key key: String) -> String {
+        return removeQuotes(self.configuration[key]! as! String)
     }
     
-    private func removeQuotes(text: NSString) -> NSString {
-        return text.stringByReplacingOccurrencesOfString("\"", withString: "")
+    private func removeQuotes(text: String) -> String {
+        return (text as NSString).stringByReplacingOccurrencesOfString("\"", withString: "")
     }
     
     // MARK: - Updated at
     
-    private func storeUpdatedAt(key key: NSString, date: NSDate?) {
+    private func storeUpdatedAt(key key: String, date: NSDate?) {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let date = date {
             defaults.setObject(date, forKey: key as String)
@@ -79,9 +84,9 @@ class SBConfiguration: NSObject {
         defaults.synchronize()
     }
     
-    private func fetchUpdatedAt(key key: NSString) -> NSDate? {
+    private func fetchUpdatedAt(key key: String) -> NSDate? {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.synchronize()
-        return defaults.objectForKey(key as String) as! NSDate?
+        return defaults.objectForKey(key) as! NSDate?
     }
 }
