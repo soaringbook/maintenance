@@ -81,35 +81,36 @@ class SBSyncService: NSObject {
                     }
                 }
             }
-            callback(error: response.error)
-//            self.syncPilotImages(callback: callback)
+            self.syncNextPilotImage(callback: callback)
         }
     }
     
-    private func syncPilotImages(callback callback: (error: NSError?) -> ()) {
-        let group = dispatch_group_create()
-        
-            let realm = try! Realm()
-            let pilots = realm.objects(Pilot).map { $0 }
-            for pilot in pilots {
-                dispatch_group_enter(group)
-                self.downloadPilotImage(pilot: pilot, dispatch_group: group)
+    private func syncNextPilotImage(callback callback: (error: NSError?) -> ()) {
+        dispatch_main({ () -> Void in
+
+        let realm = try! Realm()
+        if let pilot = Pilot.filterPilotsToDownload(realm: realm).last {
+            print("🚁 Download \(pilot.displayName)'s image")
+            self.downloadPilotImage(pilot: pilot) {
+                self.syncNextPilotImage(callback: callback)
             }
-            dispatch_group_wait(group, DISPATCH_TIME_FOREVER)
-            dispatch_main {
-                print("🚀 Finished downloading")
-                callback(error: nil)
-            }
+        } else {
+            callback(error: nil)
+        }
+        })
     }
     
-    private func downloadPilotImage(pilot pilot: Pilot, dispatch_group: dispatch_group_t) {
+    private func downloadPilotImage(pilot pilot: Pilot, callback: () -> ()) {
         service.fetchPilotImage(pilot) { response in
             if let data = response.data as? NSData {
-                try! self.realm.write {
-                    pilot.image = data
-                }
+                dispatch_main({ () -> Void in
+                    try! self.realm.write {
+                        pilot.imageData = data
+                        pilot.shouldDownloadImage = false
+                    }
+                })
             }
-            dispatch_group_leave(dispatch_group)
+            callback()
         }
     }
     

@@ -14,11 +14,16 @@ class Pilot: Object, WizardSelectionItem {
     dynamic var lastName: String = ""
     
     dynamic var imageURL: String?
-    dynamic var image: NSData?
+    dynamic var imageData: NSData?
+    dynamic var image: UIImage?
     dynamic var shouldDownloadImage: Bool = false
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    override static func ignoredProperties() -> [String] {
+        return ["image"]
     }
     
     var displayName: String {
@@ -44,7 +49,7 @@ class Pilot: Object, WizardSelectionItem {
         
         var shouldUpdate = pilotObject["imageURL"] != nil
         if let existingPilot = realm.objectForPrimaryKey(Pilot.self, key: pilotObject["id"]!) where shouldUpdate {
-            shouldUpdate = ((existingPilot.image?.length ?? 0) == 0 || pilotObject["imageURL"] as? String != existingPilot.imageURL)
+            shouldUpdate = ((existingPilot.imageData?.length ?? 0) == 0 || pilotObject["imageURL"] as? String != existingPilot.imageURL)
         }
         pilotObject["shouldDownloadImage"] = shouldUpdate
         
@@ -64,6 +69,11 @@ class Pilot: Object, WizardSelectionItem {
     
     static func filterPilotsToDelete(ids ids: [Int], realm: Realm) -> Results<Pilot> {
         let filter = NSPredicate(format: "NOT (id in %@)", ids)
+        return realm.objects(Pilot).filter(filter)
+    }
+    
+    static func filterPilotsToDownload(realm realm: Realm) -> Results<Pilot> {
+        let filter = NSPredicate(format: "shouldDownloadImage == 1")
         return realm.objects(Pilot).filter(filter)
     }
 }
