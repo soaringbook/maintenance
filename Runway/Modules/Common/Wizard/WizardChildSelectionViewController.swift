@@ -13,6 +13,8 @@ private let CollectionViewSpacing: CGFloat = 20.0
 
 protocol WizardSelectionItem {
     var displayName: String { get }
+    var imageData: NSData? { get }
+    var image: UIImage? { get }
 }
 
 enum ChildSelectionMessage {

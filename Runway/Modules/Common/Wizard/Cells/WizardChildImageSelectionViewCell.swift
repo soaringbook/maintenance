@@ -54,14 +54,14 @@ class WizardChildImageSelectionViewCell: UICollectionViewCell {
     func configure(item item: WizardSelectionItem) {
         // Set text label.
         textLabel.text = item.displayName
-//        
-//        // Fill image.
-//        if let imageData = item.rawImageData {
-//            let image = UIImage(data: imageData)
-//            fillImage(image)
-//        } else {
-//            fillImage(item.image, contentMode: .Center)
-//        }
+        
+        // Fill image.
+        if let imageData = item.imageData {
+            let image = UIImage(data: imageData)
+            fillImage(image)
+        } else {
+            fillImage(item.image, contentMode: .Center)
+        }
     }
     
     private func fillImage(image: UIImage?, contentMode: UIViewContentMode = .ScaleAspectFill) {

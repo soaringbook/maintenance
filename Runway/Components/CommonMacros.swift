@@ -14,7 +14,7 @@ func dispatch_main_after(interval: NSTimeInterval, block: dispatch_block_t!) {
 }
 
 func dispatch_main(block: dispatch_block_t!) {
-    dispatch_sync(dispatch_get_main_queue(), block)
+    dispatch_async(dispatch_get_main_queue(), block)
 }
 
 func localize(string: NSString) -> NSString {
