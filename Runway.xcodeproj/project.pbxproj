@@ -46,19 +46,6 @@
 		A9DC59F91BA47B078BBE4B10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC19AA8EFBEA7923232DB0EF /* Pods.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		62F1F3AD1BBC074C001FF957 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
@@ -404,7 +391,6 @@
 				626D23511BBA696C0055D8FC /* Resources */,
 				F3DE284F1FBF3EE700B64129 /* Embed Pods Frameworks */,
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
-				62F1F3AD1BBC074C001FF957 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
