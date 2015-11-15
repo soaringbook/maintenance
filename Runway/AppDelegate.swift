@@ -25,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - HockeyApp
     
     private func configureHockeyApp() {
+        guard isDebug() else {
+            // Don't use hockey app configuration in debug mode.
+            return
+        }
+        
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier(SBConfiguration.sharedInstance.hockeyAppIdentifier)
         BITHockeyManager.sharedHockeyManager().startManager()
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()

@@ -20,3 +20,11 @@ func dispatch_main(block: dispatch_block_t!) {
 func localize(string: NSString) -> NSString {
     return NSLocalizedString(string as String, comment: string as String)
 }
+
+func isDebug() -> Bool {
+    #if DEBUG
+        return true
+    #else
+        return false
+    #endif
+}
