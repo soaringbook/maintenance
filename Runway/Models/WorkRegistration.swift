@@ -22,19 +22,22 @@ class WorkRegistration: NSManagedObject  {
     
     // MARK: - Creation
     
-    static func create(fromPilot pilot: Pilot, context: NSManagedObjectContext? = AERecord.mainContext) -> WorkRegistration {
-//        let registration = WorkRegistration(value: ["pilot" : pilot])
-//        try! realm.write {
-//            realm.add(registration)
-//        }
-//        return registration
-        return WorkRegistration()
+    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.mainContext) -> WorkRegistration {
+        let registration = WorkRegistration.create(context: context)
+        registration.pilot = pilot
+        registration.startedAt = NSDate()
+        AERecord.saveContextAndWait()
+        
+        return registration
     }
     
     // MARK: - Queries
     
-    static func registrationsInProgress(context: NSManagedObjectContext? = AERecord.mainContext) -> [WorkRegistration] {
-//        return realm.objects(WorkRegistration)
-        return [WorkRegistration]()
+    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.mainContext) -> [WorkRegistration] {
+        let predicate = NSPredicate(format: "startedAt != nil")
+        let descriptors = [
+            NSSortDescriptor(key: "startedAt", ascending: true)
+        ]
+        return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [WorkRegistration]
     }
 }

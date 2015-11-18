@@ -88,7 +88,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     private func startTimeRegistration(forPilot pilot: Pilot) {
         print("💾 \(pilot.displayName) registration start")
-        WorkRegistration.create(fromPilot: pilot)
+        WorkRegistration.start(fromPilot: pilot)
     }
 
     // MARK: - Status bar
