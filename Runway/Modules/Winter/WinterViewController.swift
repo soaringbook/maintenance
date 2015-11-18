@@ -16,7 +16,11 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     @IBOutlet var collectionView: UICollectionView!
     
-    private let registrationItems = try! Realm().objects(WorkRegistration)
+    private let realm = try! Realm()
+    private lazy var registrationItems: Results<WorkRegistration> = {
+        [unowned self] in
+        return WorkRegistration.registrationsInProgress(realm: self.realm)
+    }()
     
     // MARK: - View flow
     
