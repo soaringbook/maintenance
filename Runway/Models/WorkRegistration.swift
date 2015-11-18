@@ -6,24 +6,35 @@
 //  Copyright © 2015 Soaring Book. All rights reserved.
 //
 
-import RealmSwift
+import CoreData
+import AERecord
 
-class WorkRegistration: Object  {
-    dynamic var pilot: Pilot?
+class WorkRegistration: NSManagedObject  {
+    
+    // MARK: - Core Data properties
+    
+    @NSManaged var startedAt: NSDate?
+    @NSManaged var endedAt: NSDate?
+    
+    // MARK: - Core Data relations
+    
+    @NSManaged var pilot: Pilot?
     
     // MARK: - Creation
     
-    static func create(fromPilot pilot: Pilot, realm: Realm) -> WorkRegistration {
-        let registration = WorkRegistration(value: ["pilot" : pilot])
-        try! realm.write {
-            realm.add(registration)
-        }
-        return registration
+    static func create(fromPilot pilot: Pilot, context: NSManagedObjectContext? = AERecord.mainContext) -> WorkRegistration {
+//        let registration = WorkRegistration(value: ["pilot" : pilot])
+//        try! realm.write {
+//            realm.add(registration)
+//        }
+//        return registration
+        return WorkRegistration()
     }
     
     // MARK: - Queries
     
-    static func registrationsInProgress(realm realm: Realm) -> Results<WorkRegistration> {
-        return realm.objects(WorkRegistration)
+    static func registrationsInProgress(context: NSManagedObjectContext? = AERecord.mainContext) -> [WorkRegistration] {
+//        return realm.objects(WorkRegistration)
+        return [WorkRegistration]()
     }
 }

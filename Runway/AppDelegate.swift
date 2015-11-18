@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+import AERecord
 import HockeySDK
 
 @UIApplicationMain
@@ -19,7 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         configureHockeyApp()
+        configureCoreData()
+        
         return true
+    }
+    
+    // MARK: - Core Data
+    
+    private func configureCoreData() {
+        do {
+            try AERecord.loadCoreDataStack()
+        } catch {
+            printError("Failed to load the Core Data stack.")
+        }
     }
     
     // MARK: - HockeyApp
@@ -29,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Don't use hockey app configuration in debug mode.
             return
         }
+        
+        printVerbose("Loading HockeyApp configuration.")
         
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier(SBConfiguration.sharedInstance.hockeyAppIdentifier)
         BITHockeyManager.sharedHockeyManager().startManager()
