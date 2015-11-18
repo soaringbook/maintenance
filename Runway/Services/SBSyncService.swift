@@ -51,7 +51,7 @@ class SBSyncService: NSObject {
         service.fetchPilots { response in
             if let objects = (response.data as! NSDictionary?)?["pilots"] as? [[String:AnyObject]] {
                 print("🚁 Fetched \(objects.count) pilots")
-                Pilot.update(fromResponse: objects)
+                Pilot.updateObjects(fromResponse: objects)
                 SBConfiguration.sharedInstance.pilotsLastUpdatedAt = NSDate()
                 
                 self.syncDeletedPilots(callback: callback)

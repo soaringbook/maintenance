@@ -15,7 +15,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     @IBOutlet var collectionView: UICollectionView!
     
-    private var registrationItems: [WorkRegistration] = [WorkRegistration]()
+    private var registrationItems: [Registration] = [Registration]()
     
     // MARK: - View flow
     
@@ -32,7 +32,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        registrationItems = WorkRegistration.registrationsInProgress()
+        registrationItems = Registration.registrationsInProgress()
         collectionView.reloadData()
     }
     
@@ -88,7 +88,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     private func startTimeRegistration(forPilot pilot: Pilot) {
         print("💾 \(pilot.displayName) registration start")
-        WorkRegistration.start(fromPilot: pilot)
+        Registration.start(fromPilot: pilot)
     }
 
     // MARK: - Status bar

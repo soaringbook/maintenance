@@ -9,7 +9,7 @@
 import CoreData
 import AERecord
 
-class WorkRegistration: NSManagedObject  {
+class Registration: NSManagedObject  {
     
     // MARK: - Core Data properties
     
@@ -22,22 +22,22 @@ class WorkRegistration: NSManagedObject  {
     
     // MARK: - Creation
     
-    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.mainContext) -> WorkRegistration {
-        let registration = WorkRegistration.create(context: context)
+    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.mainContext) -> Registration {
+        let registration = Registration.create(context: context)
         registration.pilot = pilot
         registration.startedAt = NSDate()
-        AERecord.saveContextAndWait()
+        AERecord.saveContextAndWait(context)
         
         return registration
     }
     
     // MARK: - Queries
     
-    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.mainContext) -> [WorkRegistration] {
+    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.mainContext) -> [Registration] {
         let predicate = NSPredicate(format: "startedAt != nil")
         let descriptors = [
             NSSortDescriptor(key: "startedAt", ascending: true)
         ]
-        return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [WorkRegistration]
+        return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Registration]? ?? [Registration]()
     }
 }

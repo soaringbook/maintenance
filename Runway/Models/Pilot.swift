@@ -20,6 +20,10 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     @NSManaged var imageURL: String?
     @NSManaged var imageData: NSData?
     @NSManaged var shouldDownloadImage: Bool
+    
+    // MARK: - Core Data relationships
+    
+    @NSManaged var registrations: NSSet
 
     // MARK: - Transient properties
     
@@ -33,29 +37,21 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     
     // MARK: - Creation
     
-    static func update(fromResponse objects: [[String:AnyObject]]) {
-//        let realm = try! Realm()
-//        realm.beginWrite()
-//        for object in objects {
-//            createObject(object: object)
-//        }
-//        try! realm.commitWrite()
+    static func updateObjects(fromResponse objects: [[String:AnyObject]], context: NSManagedObjectContext = AERecord.mainContext) {
+        for object in objects {
+            updateObject(fromResponse: object, context: context)
+        }
     }
     
-//    static func createObject(object: [String:AnyObject], context: NSManagedObjectContext? = AERecord.mainContext) {
-//        var pilotObject = object
-//        pilotObject["firstName"] = pilotObject.removeValueForKey("first_name")
-//        pilotObject["lastName"] = pilotObject.removeValueForKey("last_name")
-//        pilotObject["imageURL"] = pilotObject.removeValueForKey("retina_image")
-//        
-//        var shouldUpdate = pilotObject["imageURL"] != nil
-//        if let existingPilot = realm.objectForPrimaryKey(Pilot.self, key: pilotObject["id"]!) where shouldUpdate {
-//            shouldUpdate = ((existingPilot.imageData?.length ?? 0) == 0 || pilotObject["imageURL"] as? String != existingPilot.imageURL)
-//        }
-//        pilotObject["shouldDownloadImage"] = shouldUpdate
-//        
-//        realm.create(Pilot.self, value: pilotObject, update: true)
-//    }
+    static func updateObject(fromResponse object: [String:AnyObject], context: NSManagedObjectContext = AERecord.mainContext) {
+        let pilot = firstOrCreateWithAttribute("id", value: object["id"] as! Int, context: context) as! Pilot
+        pilot.firstName           = object["first_name"] as! String?
+        pilot.lastName            = object["first_name"] as! String?
+        pilot.imageURL            = object["retina_image"] as! String?
+        pilot.shouldDownloadImage = object["retina_image"] != nil
+                                    && (pilot.imageData == nil || pilot.imageURL != object["retina_image"] as! String?)
+        AERecord.saveContextAndWait(context)
+    }
     
     // MARK: - Deleting
     
@@ -67,12 +63,16 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     // MARK: - Queries
     
     static func selectablePilotsForRegistration(query: String?, context: NSManagedObjectContext = AERecord.mainContext) -> [Pilot] {
-//        if let query = query {
-//            let filter = NSPredicate(format: "firstName contains[c] '\(query)' OR lastName contains[c] '\(query)'")
-//            objects = objects.filter(filter)
-//        }
-//        return objects.sorted("lastName")
-        return [Pilot]()
+        var predicate = NSPredicate(format: "(SUBQUERY(registrations, $registration, $registration.endedAt == nil).@count == 0 OR registrations.@count == 0)")
+        if let query = query {
+            let queryPredicate = NSPredicate(format: "firstName contains[c] '\(query)' OR lastName contains[c] '\(query)'")
+            predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, queryPredicate])
+        }
+        let descriptors = [
+            NSSortDescriptor(key: "lastName", ascending: true),
+            NSSortDescriptor(key: "firstName", ascending: true)
+        ]
+        return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Pilot]? ?? [Pilot]()
     }
     
     static func fetchNextPilotToDownload(context: NSManagedObjectContext = AERecord.mainContext) -> Pilot? {
