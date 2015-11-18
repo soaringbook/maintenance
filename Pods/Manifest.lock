@@ -1,26 +1,21 @@
 PODS:
+  - AERecord (2.0.0)
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
   - PureLayout (3.0.1)
-  - Realm (0.96.2):
-    - Realm/Headers (= 0.96.2)
-  - Realm/Headers (0.96.2)
-  - RealmSwift (0.96.2):
-    - Realm (= 0.96.2)
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
+  - AERecord (~> 2.0)
   - HockeySDK (~> 3.8)
   - PureLayout (~> 3.0)
-  - RealmSwift (~> 0.96)
   - SSKeychain (~> 1.2)
 
 SPEC CHECKSUMS:
+  AERecord: 63313541906da457a51d808c1e0244b494dbb59f
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
-  Realm: 3ce8448151c571e90b85002d984d7f93f54fc8a3
-  RealmSwift: 485599fe54e35461c4a0daa7d01d8fbf11424873
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
 
 COCOAPODS: 0.39.0
