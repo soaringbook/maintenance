@@ -91,11 +91,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     // MARK: - Time
     
     private func startTimeRegistration(forPilot pilot: Pilot) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(WorkRegistration(value: ["pilot" : pilot]))
-            print("💾 \(pilot.displayName) registration start")
-        }
+        print("💾 \(pilot.displayName) registration start")
+        WorkRegistration.create(fromPilot: pilot, realm: realm)
     }
 
     // MARK: - Status bar
