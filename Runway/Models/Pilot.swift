@@ -58,7 +58,7 @@ class Pilot: Object, WizardSelectionItem {
     
     // MARK: - Queries
     
-    static func selectablePilots(query query: String?, realm: Realm) -> Results<Pilot> {
+    static func selectablePilotsForRegistration(realm realm: Realm, query: String?) -> Results<Pilot> {
         var objects = realm.objects(Pilot)
         if let query = query {
             let filter = NSPredicate(format: "firstName contains[c] '\(query)' OR lastName contains[c] '\(query)'")

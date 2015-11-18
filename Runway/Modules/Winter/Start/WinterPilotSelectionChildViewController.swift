@@ -13,6 +13,8 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     
     var selectedPilot: Pilot?
     
+    private let realm = try! Realm()
+    
     // MARK: Getters
     
     override var wizardTitle: String {
@@ -26,8 +28,7 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     // MARK: - Data
     
     override func reloadData(query query: String? = nil) {
-        let realm = try! Realm()
-        self.selectionItems = Pilot.selectablePilots(query: query, realm: realm).map { $0 }
+        self.selectionItems = Pilot.selectablePilotsForRegistration(realm: self.realm, query: query).map { $0 }
     }
     
     override func selectItem(item: WizardSelectionItem) {
