@@ -40,9 +40,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     // MARK: - Timer
     
-    func updateTimer() {
-//        timeLabel.text = RWDateFormatter.sharedInstance.timeFormatter.stringFromDate(NSDate())
-        
+    func updateTimer() {        
         for cell in collectionView.visibleCells() as! [NamedImageCollectionViewCell] {
             if let indexPath = collectionView.indexPathForCell(cell) {
                 let registrationItem = registrationItems[indexPath.item]
@@ -63,6 +61,15 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     // MARK: - UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let alertController = UIAlertController(title: "Actions", message: "Do you want to stop working?", preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Stop", style: .Cancel) { action in
+            let registration = self.registrationItems[indexPath.row]
+            registration.stop()
+            self.registrationItems.removeAtIndex(indexPath.row)
+            self.collectionView.deleteItemsAtIndexPaths([indexPath])
+        })
+        alertController.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     // MARK: - UICollectionViewDataSource

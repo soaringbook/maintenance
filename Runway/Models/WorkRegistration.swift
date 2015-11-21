@@ -31,6 +31,13 @@ class Registration: NSManagedObject  {
         return registration
     }
     
+    // MARK: - Actions
+    
+    func stop(context context: NSManagedObjectContext = AERecord.defaultContext) {
+        endedAt = NSDate()
+        AERecord.saveContextAndWait(context)
+    }
+    
     // MARK: - Queries
     
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
