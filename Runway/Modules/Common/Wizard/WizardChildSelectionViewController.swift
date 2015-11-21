@@ -11,7 +11,7 @@ import UIKit
 private let SelectionCellSpacing: CGFloat = 10.0
 private let CollectionViewSpacing: CGFloat = 20.0
 
-protocol WizardSelectionItem {
+@objc protocol WizardSelectionItem {
     var displayName: String { get }
     var imageData: NSData? { get }
     var image: UIImage? { get }
