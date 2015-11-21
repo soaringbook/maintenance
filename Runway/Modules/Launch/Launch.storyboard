@@ -39,6 +39,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j2-u2-1qv">
                                         <rect key="frame" x="50" y="210" width="500" height="181"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="181"/>
+                                                <animations/>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5s1-H0-bvV" userLabel="Token Title View">
                                                 <rect key="frame" x="220" y="0.0" width="280" height="181"/>
                                                 <subviews>
@@ -72,6 +76,11 @@
                                                             <constraint firstAttribute="trailing" secondItem="gUQ-7M-MZq" secondAttribute="trailing" id="zX9-pf-OuX"/>
                                                         </constraints>
                                                     </view>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
+                                                        <rect key="frame" x="121" y="150" width="37" height="37"/>
+                                                        <animations/>
+                                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </activityIndicatorView>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in your club token..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="une-Ug-bUB" customClass="BottomBorderedTextField" customModule="Runway" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="157" width="280" height="24"/>
                                                         <animations/>
@@ -91,17 +100,15 @@
                                                             <outlet property="delegate" destination="y30-gr-TNe" id="2lb-wc-GIF"/>
                                                         </connections>
                                                     </textField>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
-                                                        <rect key="frame" x="121" y="150" width="37" height="37"/>
-                                                        <animations/>
-                                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <animations/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="une-Ug-bUB" secondAttribute="bottom" id="4l0-wF-xOu"/>
                                                     <constraint firstAttribute="trailing" secondItem="ucz-ps-aYX" secondAttribute="trailing" id="5yZ-nR-Hth"/>
+                                                    <constraint firstItem="une-Ug-bUB" firstAttribute="top" secondItem="ucz-ps-aYX" secondAttribute="bottom" constant="75" id="Au3-Zr-VM7">
+                                                        <variation key="widthClass=compact" constant="20"/>
+                                                    </constraint>
                                                     <constraint firstItem="ucz-ps-aYX" firstAttribute="top" secondItem="5s1-H0-bvV" secondAttribute="top" id="KlZ-T7-c4Z"/>
                                                     <constraint firstItem="une-Ug-bUB" firstAttribute="leading" secondItem="5s1-H0-bvV" secondAttribute="leading" id="L3K-5c-Y5Y"/>
                                                     <constraint firstItem="q05-Ii-aWB" firstAttribute="centerY" secondItem="une-Ug-bUB" secondAttribute="centerY" id="LZe-ml-61V"/>
@@ -109,23 +116,55 @@
                                                     <constraint firstItem="q05-Ii-aWB" firstAttribute="centerX" secondItem="une-Ug-bUB" secondAttribute="centerX" id="Vc8-Jl-PcQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="une-Ug-bUB" secondAttribute="trailing" id="g4t-QQ-pg0"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Au3-Zr-VM7"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Au3-Zr-VM7"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="181"/>
-                                                <animations/>
-                                            </imageView>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="5s1-H0-bvV" firstAttribute="top" secondItem="zsP-M0-XHl" secondAttribute="bottom" constant="94" id="3k6-nb-b3f">
+                                                <variation key="widthClass=compact" constant="30"/>
+                                            </constraint>
                                             <constraint firstItem="5s1-H0-bvV" firstAttribute="leading" secondItem="zsP-M0-XHl" secondAttribute="trailing" constant="20" id="4Z0-oC-X30"/>
+                                            <constraint firstAttribute="bottom" secondItem="5s1-H0-bvV" secondAttribute="bottom" id="5Ud-HF-AQa"/>
                                             <constraint firstItem="5s1-H0-bvV" firstAttribute="height" secondItem="zsP-M0-XHl" secondAttribute="height" id="5fj-Ek-OkX"/>
+                                            <constraint firstItem="5s1-H0-bvV" firstAttribute="leading" secondItem="0j2-u2-1qv" secondAttribute="leading" id="IoB-z4-Nd6"/>
                                             <constraint firstItem="5s1-H0-bvV" firstAttribute="centerY" secondItem="zsP-M0-XHl" secondAttribute="centerY" id="Pau-20-hbl"/>
                                             <constraint firstAttribute="bottom" secondItem="zsP-M0-XHl" secondAttribute="bottom" id="aoh-N4-DdW"/>
                                             <constraint firstItem="zsP-M0-XHl" firstAttribute="leading" secondItem="0j2-u2-1qv" secondAttribute="leading" id="gbr-kM-nuJ"/>
                                             <constraint firstItem="zsP-M0-XHl" firstAttribute="top" secondItem="0j2-u2-1qv" secondAttribute="top" id="lxe-BI-J44"/>
+                                            <constraint firstAttribute="trailing" secondItem="zsP-M0-XHl" secondAttribute="trailing" id="oGL-OV-3P9"/>
                                             <constraint firstAttribute="trailing" secondItem="5s1-H0-bvV" secondAttribute="trailing" id="qex-XI-6jT"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="oGL-OV-3P9"/>
+                                                <exclude reference="3k6-nb-b3f"/>
+                                                <exclude reference="5Ud-HF-AQa"/>
+                                                <exclude reference="IoB-z4-Nd6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="aoh-N4-DdW"/>
+                                                <include reference="oGL-OV-3P9"/>
+                                                <include reference="3k6-nb-b3f"/>
+                                                <exclude reference="4Z0-oC-X30"/>
+                                                <include reference="5Ud-HF-AQa"/>
+                                                <exclude reference="5fj-Ek-OkX"/>
+                                                <include reference="IoB-z4-Nd6"/>
+                                                <exclude reference="Pau-20-hbl"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="zsP-M0-XHl"/>
@@ -176,7 +215,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1138" y="380"/>
+            <point key="canvasLocation" x="1137" y="380"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="sji-X3-rYP">
