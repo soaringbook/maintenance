@@ -34,7 +34,7 @@ class Registration: NSManagedObject  {
     // MARK: - Queries
     
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
-        let predicate = NSPredicate(format: "startedAt != nil")
+        let predicate = NSPredicate(format: "startedAt != nil AND endedAt == nil")
         let descriptors = [
             NSSortDescriptor(key: "startedAt", ascending: false)
         ]
