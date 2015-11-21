@@ -46,12 +46,16 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     
     static func updateObject(fromResponse object: [String:AnyObject], context: NSManagedObjectContext = AERecord.defaultContext) {
         let pilot = firstOrCreateWithAttribute("id", value: object["id"] as! Int, context: context) as! Pilot
-        pilot.firstName           = object["first_name"] as! String?
-        pilot.lastName            = object["last_name"] as! String?
-        pilot.imageURL            = object["retina_image"] as! String?
-        pilot.shouldDownloadImage = object["retina_image"] != nil
-                                    && (pilot.imageData == nil || pilot.imageURL != object["retina_image"] as! String?)
+        pilot.updateObject(fromResponse: object)
         AERecord.saveContextAndWait(context)
+    }
+    
+    func updateObject(fromResponse object: [String:AnyObject]) {
+        firstName           = object["first_name"] as! String?
+        lastName            = object["last_name"] as! String?
+        imageURL            = object["retina_image"] as! String?
+        shouldDownloadImage = object["retina_image"] != nil
+            && (imageData == nil || imageURL != object["retina_image"] as! String?)
     }
     
     // MARK: - Deleting
