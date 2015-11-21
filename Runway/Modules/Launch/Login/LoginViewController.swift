@@ -25,10 +25,10 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     
-        if SBKeychain.sharedInstance.token == nil {
-            loginView.animateIn()
-        } else {
-            dispatch_main_after(0.5) {
+        dispatch_main_after(1.0) {
+            if SBKeychain.sharedInstance.token == nil {
+                self.loginView.animateIn()
+            } else {
                 self.presentDashboard()
             }
         }
