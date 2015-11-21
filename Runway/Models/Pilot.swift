@@ -32,7 +32,8 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     // MARK: - Utilties
     
     var displayName: String {
-        return "\(firstName) \(lastName)"
+        let components = [firstName, lastName].flatMap { $0 }
+        return components.joinWithSeparator(" ")
     }
     
     // MARK: - Creation
