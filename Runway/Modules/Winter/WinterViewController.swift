@@ -27,6 +27,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
         }
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -34,6 +36,19 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         
         registrationItems = Registration.registrationsInProgress()
         collectionView.reloadData()
+    }
+    
+    // MARK: - Timer
+    
+    func updateTimer() {
+//        timeLabel.text = RWDateFormatter.sharedInstance.timeFormatter.stringFromDate(NSDate())
+        
+        for cell in collectionView.visibleCells() as! [NamedImageCollectionViewCell] {
+            if let indexPath = collectionView.indexPathForCell(cell) {
+                let registrationItem = registrationItems[indexPath.item]
+                cell.update(time: registrationItem.startedAt)
+            }
+        }
     }
     
     // MARK: - Segues

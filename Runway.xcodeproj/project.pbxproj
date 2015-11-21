@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
 		0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5621BF543A800D87FB8 /* SettingsView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
 		0456C5621BF543A800D87FB8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */,
+				04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */,
 				623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */,
 			);
 			path = Extensions;
@@ -541,6 +544,7 @@
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
 				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
+				04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */,
 				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,

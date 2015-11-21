@@ -13,6 +13,7 @@ class NamedImageCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet private var textLabel: UILabel!
+    @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private var imageView: UIImageView!
     
     // MARK: Privates
@@ -60,6 +61,16 @@ class NamedImageCollectionViewCell: UICollectionViewCell {
             fillImage(image)
         } else {
             fillImage(item.image, contentMode: .Center)
+        }
+        
+        timeLabel.hidden = true
+    }
+    
+    func update(time time: NSDate?) {
+        timeLabel.hidden = time == nil
+        if let time = time {
+            let difference = NSDate().timeIntervalSinceDate(time)
+            timeLabel.text = difference.formatTimeDifference()
         }
     }
     

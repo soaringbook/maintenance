@@ -17,7 +17,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="ybj-Ag-XY5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -33,10 +33,20 @@
                         </mask>
                     </variation>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-8j-syI" userLabel="Time Label">
+                    <rect key="frame" x="0.0" y="0.0" width="43" height="21"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="BGh-8j-syI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cb7-62-dqD"/>
+                <constraint firstItem="BGh-8j-syI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FDv-pM-yUe"/>
                 <constraint firstItem="dWy-Xr-R6T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KKt-Dw-bl5"/>
                 <constraint firstItem="lJq-Mv-mld" firstAttribute="top" secondItem="dWy-Xr-R6T" secondAttribute="bottom" id="LvV-wW-g2d"/>
                 <constraint firstAttribute="centerX" secondItem="dWy-Xr-R6T" secondAttribute="centerX" id="NVe-w0-UI6"/>
@@ -55,6 +65,7 @@
             <connections>
                 <outlet property="imageView" destination="dWy-Xr-R6T" id="pLV-Ba-WpZ"/>
                 <outlet property="textLabel" destination="lJq-Mv-mld" id="84a-wi-eaN"/>
+                <outlet property="timeLabel" destination="BGh-8j-syI" id="Ufn-jG-LnM"/>
             </connections>
         </view>
     </objects>
