@@ -36,7 +36,7 @@ class Registration: NSManagedObject  {
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
         let predicate = NSPredicate(format: "startedAt != nil")
         let descriptors = [
-            NSSortDescriptor(key: "startedAt", ascending: true)
+            NSSortDescriptor(key: "startedAt", ascending: false)
         ]
         return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Registration]? ?? [Registration]()
     }
