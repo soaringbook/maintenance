@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
+		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
 		0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5621BF543A800D87FB8 /* SettingsView.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
+		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
 		0456C5621BF543A800D87FB8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				04F34D981BF736A5006EEC4A /* Start */,
 				04F34D861BF72582006EEC4A /* Winter.storyboard */,
+				04484A551C006F4D00965B5F /* WinterView.swift */,
 				04F34D881BF72667006EEC4A /* WinterViewController.swift */,
 			);
 			path = Winter;
@@ -555,6 +558,7 @@
 				047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */,
+				04484A561C006F4D00965B5F /* WinterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

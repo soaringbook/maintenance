@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="dDf-v4-U3J"/>
                         <viewControllerLayoutGuide type="bottom" id="dIL-5J-rtH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YAG-UT-x6U">
+                    <view key="view" contentMode="scaleToFill" id="YAG-UT-x6U" customClass="WinterView" customModule="Runway" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -62,8 +62,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="ON6-NM-AOy" id="Wbu-2g-IJq"/>
-                                    <outlet property="delegate" destination="ON6-NM-AOy" id="fg6-ph-52d"/>
+                                    <outlet property="dataSource" destination="YAG-UT-x6U" id="DdX-1a-Q9v"/>
+                                    <outlet property="delegate" destination="YAG-UT-x6U" id="Eqc-Yi-7pY"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -81,11 +81,11 @@
                             <constraint firstItem="dIL-5J-rtH" firstAttribute="top" secondItem="XNr-Ay-vRT" secondAttribute="bottom" id="oWw-dZ-296"/>
                             <constraint firstItem="BG4-iq-9It" firstAttribute="centerY" secondItem="DNn-xG-PEn" secondAttribute="centerY" id="te0-v2-D0U"/>
                         </constraints>
+                        <connections>
+                            <outlet property="collectionView" destination="XNr-Ay-vRT" id="4kR-hW-Z6H"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
-                    <connections>
-                        <outlet property="collectionView" destination="XNr-Ay-vRT" id="GiQ-Fl-fgr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eMF-fW-UHy" userLabel="Exit" sceneMemberID="exit"/>
