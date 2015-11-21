@@ -178,7 +178,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         collectionView!.autoPinEdgeToSuperviewEdge(.Left)
         collectionView!.autoPinEdgeToSuperviewEdge(.Right)
         collectionView!.autoSetDimension(.Height, toSize: collectionViewHeight)
-        let nib = UINib(nibName: "WizardChildImageSelectionViewCell", bundle: nil)
+        let nib = UINib(nibName: "NamedImageCollectionViewCell", bundle: nil)
         collectionView!.registerNib(nib, forCellWithReuseIdentifier: "Selection")
         collectionView!.backgroundColor = UIColor.clearColor()
         collectionView!.delegate = self
@@ -191,7 +191,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Selection", forIndexPath: indexPath) as! WizardChildImageSelectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Selection", forIndexPath: indexPath) as! NamedImageCollectionViewCell
         let item = selectionItems[indexPath.item]
         cell.configure(item: item)
         return cell

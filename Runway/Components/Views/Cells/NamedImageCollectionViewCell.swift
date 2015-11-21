@@ -1,5 +1,5 @@
 //
-//  ImageSelectionViewCell.swift
+//  NamedImageCollectionViewCell.swift
 //  Soaringbook Runway
 //
 //  Created by Jelle Vandenbeeck on 06/01/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WizardChildImageSelectionViewCell: UICollectionViewCell {
+class NamedImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets
     
@@ -34,7 +34,6 @@ class WizardChildImageSelectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        self.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.96, alpha:1)
         self.textLabel.textColor = color
         self.textLabel.backgroundColor = self.backgroundColor
         self.textLabel.opaque = true

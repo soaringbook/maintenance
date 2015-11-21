@@ -22,7 +22,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.registerNib(UINib(nibName: "WizardChildImageSelectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        collectionView.registerNib(UINib(nibName: "NamedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
@@ -57,7 +57,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! WizardChildImageSelectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
         let item = registrationItems[indexPath.item]
         cell.configure(item: item.pilot!)
         return cell
