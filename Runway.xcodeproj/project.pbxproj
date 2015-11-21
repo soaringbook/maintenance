@@ -153,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				047CE3001BF3634C00ACF7E0 /* Dashboard */,
-				04D04FA61BF35CD100F33F1F /* Launch.storyboard */,
 				04D04F9D1BF3578300F33F1F /* Login */,
+				04D04FA61BF35CD100F33F1F /* Launch.storyboard */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				04F34D901BF72B85006EEC4A /* WizardChildSelectionViewController.swift */,
 				04F34D911BF72B85006EEC4A /* WizardChildViewController.swift */,
 			);
-			name = Children;
+			path = Children;
 			sourceTree = "<group>";
 		};
 		04F34DA01BF74254006EEC4A /* Layouts */ = {
@@ -284,16 +284,16 @@
 				04D04FAA1BF35E4500F33F1F /* Configurations */,
 				626D23621BBA696C0055D8FC /* Info.plist */,
 			);
-			name = Support;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		626D234A1BBA696C0055D8FC = {
 			isa = PBXGroup;
 			children = (
-				626D23551BBA696C0055D8FC /* Runway */,
-				626D23541BBA696C0055D8FC /* Products */,
-				0849EF3C681534567BD45BB6 /* Pods */,
 				00D9145E98BCAC1F7C60EA90 /* Frameworks */,
+				0849EF3C681534567BD45BB6 /* Pods */,
+				626D23541BBA696C0055D8FC /* Products */,
+				626D23551BBA696C0055D8FC /* Runway */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,13 +308,13 @@
 		626D23551BBA696C0055D8FC /* Runway */ = {
 			isa = PBXGroup;
 			children = (
-				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
 				626D239B1BBA8D510055D8FC /* Components */,
 				623728A81BBECB9B00948D0D /* Models */,
 				626D23841BBA69A90055D8FC /* Modules */,
 				626D23911BBA72350055D8FC /* Services */,
 				623728A91BBECBA500948D0D /* Support */,
 				626D23851BBA69A90055D8FC /* UI */,
+				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
 			);
 			path = Runway;
 			sourceTree = "<group>";
@@ -345,8 +345,8 @@
 				626D23941BBA73200055D8FC /* SBConfiguration.swift */,
 				626D23961BBA7E290055D8FC /* SBKeychain.swift */,
 				0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */,
-				626D23921BBA72690055D8FC /* SBWebService.swift */,
 				620D3FF71BBA94F300751D86 /* SBWebService+Pilots.swift */,
+				626D23921BBA72690055D8FC /* SBWebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -354,11 +354,11 @@
 		626D239B1BBA8D510055D8FC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				626D239F1BBA8F200055D8FC /* CommonMacros.swift */,
 				626D239C1BBA8D510055D8FC /* Controllers */,
 				62F1F3B21BBC1DF2001FF957 /* Extensions */,
 				0456C55F1BF5328B00D87FB8 /* Formatters */,
 				622D750C1BBABE7400D8949F /* Views */,
+				626D239F1BBA8F200055D8FC /* CommonMacros.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -648,7 +648,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 23;
-				INFOPLIST_FILE = Runway/Info.plist;
+				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -662,7 +662,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
 				CURRENT_PROJECT_VERSION = 23;
-				INFOPLIST_FILE = Runway/Info.plist;
+				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
 				TARGETED_DEVICE_FAMILY = 2;
