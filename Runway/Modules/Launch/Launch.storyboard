@@ -76,11 +76,6 @@
                                                             <constraint firstAttribute="trailing" secondItem="gUQ-7M-MZq" secondAttribute="trailing" id="zX9-pf-OuX"/>
                                                         </constraints>
                                                     </view>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
-                                                        <rect key="frame" x="121" y="143" width="37" height="37"/>
-                                                        <animations/>
-                                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </activityIndicatorView>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in your club token..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="une-Ug-bUB" customClass="BottomBorderedTextField" customModule="Runway" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="141" width="280" height="40"/>
                                                         <animations/>
@@ -101,32 +96,40 @@
                                                             <outlet property="delegate" destination="y30-gr-TNe" id="2lb-wc-GIF"/>
                                                         </connections>
                                                     </textField>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
+                                                        <rect key="frame" x="121" y="143" width="37" height="37"/>
+                                                        <animations/>
+                                                        <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="une-Ug-bUB" secondAttribute="bottom" priority="750" id="4l0-wF-xOu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="une-Ug-bUB" secondAttribute="bottom" priority="700" id="4l0-wF-xOu"/>
                                                     <constraint firstAttribute="trailing" secondItem="ucz-ps-aYX" secondAttribute="trailing" id="5yZ-nR-Hth"/>
-                                                    <constraint firstItem="une-Ug-bUB" firstAttribute="top" secondItem="ucz-ps-aYX" secondAttribute="bottom" constant="75" id="Au3-Zr-VM7">
-                                                        <variation key="widthClass=compact" constant="20"/>
-                                                    </constraint>
                                                     <constraint firstItem="ucz-ps-aYX" firstAttribute="top" secondItem="5s1-H0-bvV" secondAttribute="top" priority="750" id="KlZ-T7-c4Z"/>
                                                     <constraint firstItem="une-Ug-bUB" firstAttribute="leading" secondItem="5s1-H0-bvV" secondAttribute="leading" id="L3K-5c-Y5Y"/>
                                                     <constraint firstItem="q05-Ii-aWB" firstAttribute="centerY" secondItem="une-Ug-bUB" secondAttribute="centerY" id="LZe-ml-61V"/>
+                                                    <constraint firstAttribute="height" constant="140" id="MiV-gj-v6N"/>
                                                     <constraint firstItem="ucz-ps-aYX" firstAttribute="leading" secondItem="5s1-H0-bvV" secondAttribute="leading" id="PID-ND-5v9"/>
                                                     <constraint firstItem="ucz-ps-aYX" firstAttribute="centerY" secondItem="5s1-H0-bvV" secondAttribute="centerY" priority="250" id="VUl-Bh-Wj8"/>
                                                     <constraint firstItem="q05-Ii-aWB" firstAttribute="centerX" secondItem="une-Ug-bUB" secondAttribute="centerX" id="Vc8-Jl-PcQ"/>
                                                     <constraint firstItem="une-Ug-bUB" firstAttribute="centerY" secondItem="5s1-H0-bvV" secondAttribute="centerY" priority="250" id="acu-1O-Wto"/>
                                                     <constraint firstAttribute="trailing" secondItem="une-Ug-bUB" secondAttribute="trailing" id="g4t-QQ-pg0"/>
+                                                    <constraint firstItem="une-Ug-bUB" firstAttribute="centerY" secondItem="ucz-ps-aYX" secondAttribute="centerY" priority="250" id="zs2-jj-5k6"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="Au3-Zr-VM7"/>
+                                                        <exclude reference="MiV-gj-v6N"/>
+                                                        <exclude reference="zs2-jj-5k6"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact">
+                                                <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
-                                                        <include reference="Au3-Zr-VM7"/>
+                                                        <include reference="MiV-gj-v6N"/>
+                                                        <exclude reference="VUl-Bh-Wj8"/>
+                                                        <exclude reference="acu-1O-Wto"/>
+                                                        <include reference="zs2-jj-5k6"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -145,12 +148,10 @@
                                             <constraint firstAttribute="bottom" secondItem="zsP-M0-XHl" secondAttribute="bottom" id="aoh-N4-DdW"/>
                                             <constraint firstItem="zsP-M0-XHl" firstAttribute="leading" secondItem="0j2-u2-1qv" secondAttribute="leading" id="gbr-kM-nuJ"/>
                                             <constraint firstItem="zsP-M0-XHl" firstAttribute="top" secondItem="0j2-u2-1qv" secondAttribute="top" id="lxe-BI-J44"/>
-                                            <constraint firstAttribute="trailing" secondItem="zsP-M0-XHl" secondAttribute="trailing" id="oGL-OV-3P9"/>
                                             <constraint firstAttribute="trailing" secondItem="5s1-H0-bvV" secondAttribute="trailing" id="qex-XI-6jT"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="oGL-OV-3P9"/>
                                                 <exclude reference="3k6-nb-b3f"/>
                                                 <exclude reference="5Ud-HF-AQa"/>
                                                 <exclude reference="IoB-z4-Nd6"/>
@@ -159,7 +160,6 @@
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="aoh-N4-DdW"/>
-                                                <include reference="oGL-OV-3P9"/>
                                                 <include reference="3k6-nb-b3f"/>
                                                 <exclude reference="4Z0-oC-X30"/>
                                                 <include reference="5Ud-HF-AQa"/>
@@ -205,6 +205,7 @@
                             <outlet property="titleCenterConstraint" destination="VUl-Bh-Wj8" id="8Iy-CM-DSW"/>
                             <outlet property="tokenField" destination="une-Ug-bUB" id="8uL-fw-kk1"/>
                             <outlet property="tokenFieldCenterConstraint" destination="acu-1O-Wto" id="1BC-8S-UI7"/>
+                            <outlet property="tokenFieldTitleCenterConstraint" destination="zs2-jj-5k6" id="LBT-TN-DY5"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>

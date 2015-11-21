@@ -11,6 +11,7 @@ import UIKit
 class LoginView: UIView {
     @IBOutlet var titleCenterConstraint: NSLayoutConstraint!
     @IBOutlet var tokenFieldCenterConstraint: NSLayoutConstraint!
+    @IBOutlet var tokenFieldTitleCenterConstraint: NSLayoutConstraint!
     @IBOutlet var containerBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet var imageView: UIImageView!
@@ -49,6 +50,7 @@ class LoginView: UIView {
         activityView.stopAnimating()
         tokenField.text = nil
         
+        tokenFieldTitleCenterConstraint.priority = UILayoutPriorityDefaultHigh
         tokenFieldCenterConstraint.priority = UILayoutPriorityDefaultHigh
         titleCenterConstraint.priority = UILayoutPriorityDefaultHigh
     }
@@ -56,6 +58,7 @@ class LoginView: UIView {
     // MARK: - Animations
     
     func animateIn() {
+        tokenFieldTitleCenterConstraint.priority = UILayoutPriorityDefaultLow
         tokenFieldCenterConstraint.priority = UILayoutPriorityDefaultLow
         titleCenterConstraint.priority = UILayoutPriorityDefaultLow
         UIView.animateWithDuration(0.35, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
