@@ -22,7 +22,7 @@ class Registration: NSManagedObject  {
     
     // MARK: - Creation
     
-    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.mainContext) -> Registration {
+    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.defaultContext) -> Registration {
         let registration = Registration.create(context: context)
         registration.pilot = pilot
         registration.startedAt = NSDate()
@@ -33,7 +33,7 @@ class Registration: NSManagedObject  {
     
     // MARK: - Queries
     
-    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.mainContext) -> [Registration] {
+    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
         let predicate = NSPredicate(format: "startedAt != nil")
         let descriptors = [
             NSSortDescriptor(key: "startedAt", ascending: true)

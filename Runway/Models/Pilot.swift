@@ -38,13 +38,13 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     
     // MARK: - Creation
     
-    static func updateObjects(fromResponse objects: [[String:AnyObject]], context: NSManagedObjectContext = AERecord.mainContext) {
+    static func updateObjects(fromResponse objects: [[String:AnyObject]], context: NSManagedObjectContext = AERecord.defaultContext) {
         for object in objects {
             updateObject(fromResponse: object, context: context)
         }
     }
     
-    static func updateObject(fromResponse object: [String:AnyObject], context: NSManagedObjectContext = AERecord.mainContext) {
+    static func updateObject(fromResponse object: [String:AnyObject], context: NSManagedObjectContext = AERecord.defaultContext) {
         let pilot = firstOrCreateWithAttribute("id", value: object["id"] as! Int, context: context) as! Pilot
         pilot.firstName           = object["first_name"] as! String?
         pilot.lastName            = object["last_name"] as! String?
@@ -56,14 +56,14 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     
     // MARK: - Deleting
     
-    static func deleteUnkownPilots(ids ids: [Int], context: NSManagedObjectContext = AERecord.mainContext) {
+    static func deleteUnkownPilots(ids ids: [Int], context: NSManagedObjectContext = AERecord.defaultContext) {
         let predicate = NSPredicate(format: "NOT (id in %@)", ids)
         deleteAllWithPredicate(predicate, context: context)
     }
 
     // MARK: - Queries
     
-    static func selectablePilotsForRegistration(query: String?, context: NSManagedObjectContext = AERecord.mainContext) -> [Pilot] {
+    static func selectablePilotsForRegistration(query: String?, context: NSManagedObjectContext = AERecord.defaultContext) -> [Pilot] {
         var predicate = NSPredicate(format: "(SUBQUERY(registrations, $registration, $registration.endedAt == nil).@count == 0 OR registrations.@count == 0)")
         if let query = query {
             let queryPredicate = NSPredicate(format: "firstName contains[c] '\(query)' OR lastName contains[c] '\(query)'")
@@ -76,7 +76,7 @@ class Pilot: NSManagedObject, WizardSelectionItem {
         return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Pilot]? ?? [Pilot]()
     }
     
-    static func fetchNextPilotToDownload(context: NSManagedObjectContext = AERecord.mainContext) -> Pilot? {
+    static func fetchNextPilotToDownload(context: NSManagedObjectContext = AERecord.defaultContext) -> Pilot? {
         let predicate = NSPredicate(format: "shouldDownloadImage == 1")
         let descriptors = [
             NSSortDescriptor(key: "lastName", ascending: true),
