@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import RealmSwift
 
 class WinterPilotSelectionChildViewController: WizardChildSelectionViewController {
     
     var selectedPilot: Pilot?
-    
-    private let realm = try! Realm()
-    
+        
     // MARK: Getters
     
     override var wizardTitle: String {
@@ -28,7 +25,7 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     // MARK: - Data
     
     override func reloadData(query query: String? = nil) {
-        self.selectionItems = Pilot.selectablePilotsForRegistration(realm: self.realm, query: query).map { $0 }
+        self.selectionItems = Pilot.selectablePilotsForRegistration(query)
     }
     
     override func selectItem(item: WizardSelectionItem) {

@@ -6,24 +6,38 @@
 //  Copyright © 2015 Soaring Book. All rights reserved.
 //
 
-import RealmSwift
+import CoreData
+import AERecord
 
-class WorkRegistration: Object  {
-    dynamic var pilot: Pilot?
+class Registration: NSManagedObject  {
+    
+    // MARK: - Core Data properties
+    
+    @NSManaged var startedAt: NSDate?
+    @NSManaged var endedAt: NSDate?
+    
+    // MARK: - Core Data relations
+    
+    @NSManaged var pilot: Pilot?
     
     // MARK: - Creation
     
-    static func create(fromPilot pilot: Pilot, realm: Realm) -> WorkRegistration {
-        let registration = WorkRegistration(value: ["pilot" : pilot])
-        try! realm.write {
-            realm.add(registration)
-        }
+    static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.mainContext) -> Registration {
+        let registration = Registration.create(context: context)
+        registration.pilot = pilot
+        registration.startedAt = NSDate()
+        AERecord.saveContextAndWait(context)
+        
         return registration
     }
     
     // MARK: - Queries
     
-    static func registrationsInProgress(realm realm: Realm) -> Results<WorkRegistration> {
-        return realm.objects(WorkRegistration)
+    static func registrationsInProgress(context: NSManagedObjectContext = AERecord.mainContext) -> [Registration] {
+        let predicate = NSPredicate(format: "startedAt != nil")
+        let descriptors = [
+            NSSortDescriptor(key: "startedAt", ascending: true)
+        ]
+        return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Registration]? ?? [Registration]()
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 private let SelectionCellSpacing: CGFloat = 10.0
 private let CollectionViewSpacing: CGFloat = 20.0
@@ -16,11 +15,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     @IBOutlet var collectionView: UICollectionView!
     
-    private let realm = try! Realm()
-    private lazy var registrationItems: Results<WorkRegistration> = {
-        [unowned self] in
-        return WorkRegistration.registrationsInProgress(realm: self.realm)
-    }()
+    private var registrationItems: [Registration] = [Registration]()
     
     // MARK: - View flow
     
@@ -37,6 +32,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        registrationItems = Registration.registrationsInProgress()
         collectionView.reloadData()
     }
     
@@ -92,7 +88,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     private func startTimeRegistration(forPilot pilot: Pilot) {
         print("💾 \(pilot.displayName) registration start")
-        WorkRegistration.create(fromPilot: pilot, realm: realm)
+        Registration.start(fromPilot: pilot)
     }
 
     // MARK: - Status bar

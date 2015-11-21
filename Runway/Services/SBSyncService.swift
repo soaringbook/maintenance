@@ -7,19 +7,18 @@
 //
 
 import Foundation
-import RealmSwift
+import CoreData
+import AERecord
 
 class SBSyncService: NSObject {
     
     private let service: SBWebService
-    private let realm: Realm
     private var cancelSync: Bool = false
     
     // MARK: - Init
     
     override init() {
         service = SBWebService()
-        realm = try! Realm()
         
         super.init()
     }
@@ -38,9 +37,7 @@ class SBSyncService: NSObject {
     func deleteData() {
         print("🚁 Delete all data")
         SBConfiguration.sharedInstance.pilotsLastUpdatedAt = nil
-        try! realm.write {
-            self.realm.deleteAll()
-        }
+        AERecord.truncateAllData()
     }
     
     func cancel() {
@@ -54,7 +51,7 @@ class SBSyncService: NSObject {
         service.fetchPilots { response in
             if let objects = (response.data as! NSDictionary?)?["pilots"] as? [[String:AnyObject]] {
                 print("🚁 Fetched \(objects.count) pilots")
-                Pilot.update(fromResponse: objects)
+                Pilot.updateObjects(fromResponse: objects)
                 SBConfiguration.sharedInstance.pilotsLastUpdatedAt = NSDate()
                 
                 self.syncDeletedPilots(callback: callback)
@@ -73,23 +70,15 @@ class SBSyncService: NSObject {
         service.fetchPilots(handleUpdatedAt: false) { response in
             if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
                 let ids = objects.map { $0["id"] as! Int }
-                dispatch_main {
-                    let pilots = Pilot.filterPilotsToDelete(ids: ids, realm: self.realm)
-                    print("🚁 Fetched \(pilots.count) pilots to delete")
-                    try! self.realm.write {
-                        self.realm.delete(pilots)
-                    }
-                }
+                Pilot.deleteUnkownPilots(ids: ids)
+                print("🚁 Deleted unkown pilots")
             }
             self.syncNextPilotImage(callback: callback)
         }
     }
     
     private func syncNextPilotImage(callback callback: (error: NSError?) -> ()) {
-        dispatch_main({ () -> Void in
-
-        let realm = try! Realm()
-        if let pilot = Pilot.filterPilotsToDownload(realm: realm).last {
+        if let pilot = Pilot.fetchNextPilotToDownload() {
             print("🚁 Download \(pilot.displayName)'s image")
             self.downloadPilotImage(pilot: pilot) {
                 self.syncNextPilotImage(callback: callback)
@@ -97,18 +86,14 @@ class SBSyncService: NSObject {
         } else {
             callback(error: nil)
         }
-        })
     }
     
     private func downloadPilotImage(pilot pilot: Pilot, callback: () -> ()) {
         service.fetchPilotImage(pilot) { response in
             if let data = response.data as? NSData {
-                dispatch_main({ () -> Void in
-                    try! self.realm.write {
-                        pilot.imageData = data
-                        pilot.shouldDownloadImage = false
-                    }
-                })
+                pilot.imageData = data
+                pilot.shouldDownloadImage = false
+                AERecord.saveContextAndWait()
             }
             callback()
         }
