@@ -154,6 +154,20 @@ class SBWebService: NSObject {
         }
     }
     
+    func createRequest(path path: String, body: [String:AnyObject], callback: (SBWebServiceResponse) -> ()) {
+        guard sessionActive else {
+            // When the session is cancelled just return.
+            return
+        }
+        
+        let request = authenticatedRequest(path: path, method: "POST")
+        let data = try? NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(rawValue: 0))
+        let task = session.uploadTaskWithRequest(request, fromData: data) { data, response, error in
+            callback(SBWebServiceResponse(error: error, data: data))
+        }
+        task.resume()
+    }
+    
     private func unauthenticatedRequest(path path: String) -> NSURLRequest {
         let URL = NSURL(string: path)
         return NSURLRequest(URL: URL!)
@@ -168,6 +182,8 @@ class SBWebService: NSObject {
         request.HTTPMethod = method
         
         let tokenToEncode = token ?? SBKeychain.sharedInstance.token ?? ""
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("Token token=\(tokenToEncode)", forHTTPHeaderField: "Authorization")
         request.addValue("application/vnd.soaringbook.v\(SBConfiguration.sharedInstance.apiVersion)", forHTTPHeaderField: "Accept")
         

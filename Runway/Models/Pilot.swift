@@ -80,7 +80,7 @@ class Pilot: NSManagedObject, WizardSelectionItem {
         return allWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! [Pilot]? ?? [Pilot]()
     }
     
-    static func fetchNextPilotToDownload(context: NSManagedObjectContext = AERecord.defaultContext) -> Pilot? {
+    static func nextPilotToDownload(context: NSManagedObjectContext = AERecord.defaultContext) -> Pilot? {
         let predicate = NSPredicate(format: "shouldDownloadImage == 1")
         let descriptors = [
             NSSortDescriptor(key: "lastName", ascending: true),

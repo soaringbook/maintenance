@@ -79,13 +79,13 @@ class SBSyncService: NSObject {
     }
     
     private func syncNextPilotImage(callback callback: (error: NSError?) -> ()) {
-        if let pilot = Pilot.fetchNextPilotToDownload() {
+        if let pilot = Pilot.nextPilotToDownload() {
             print("🚁 Download \(pilot.displayName)'s image")
             self.downloadPilotImage(pilot: pilot) {
                 self.syncNextPilotImage(callback: callback)
             }
         } else {
-            callback(error: nil)
+            syncNextRegistration(callback: callback)
         }
     }
     
@@ -96,7 +96,25 @@ class SBSyncService: NSObject {
                 pilot.shouldDownloadImage = false
                 AERecord.saveContextAndWait()
             }
-            callback()
+        }
+    }
+    
+    // MARK: - Registrations
+    
+    private func syncNextRegistration(callback callback: (error: NSError?) -> ()) {
+        if let registration = Registration.nextRegistrationToUpload() {
+            print("🚁 Upload \(registration.pilot?.displayName)'s registration")
+            service.upload(registration: registration) { response in
+                if let error = response.error {
+                    callback(error: error)
+                } else {
+                    registration.deleteRegistration()
+                    print("💾 Delete \(registration.pilot?.displayName)'s registration")
+                    self.syncNextRegistration(callback: callback)
+                }
+            }
+        } else {
+            callback(error: nil)
         }
     }
     

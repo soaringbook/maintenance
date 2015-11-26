@@ -20,6 +20,19 @@ class Registration: NSManagedObject  {
     
     @NSManaged var pilot: Pilot?
     
+    // MARK: - JSON
+    
+    var json: [String:[String:AnyObject]] {
+        return [
+            "work_registration" : [
+                "pilot_id" :   Int(pilot!.id),
+                "started_at" : SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(startedAt!),
+                "ended_at" :   SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(endedAt!),
+                "comment" :    ""
+            ]
+        ]
+    }
+    
     // MARK: - Creation
     
     static func start(fromPilot pilot: Pilot, context: NSManagedObjectContext = AERecord.defaultContext) -> Registration {
@@ -29,6 +42,12 @@ class Registration: NSManagedObject  {
         AERecord.saveContextAndWait(context)
         
         return registration
+    }
+    
+    // MARK: - Deleting
+    
+    func deleteRegistration(context context: NSManagedObjectContext = AERecord.defaultContext) {
+        deleteFromContext(context)
     }
     
     // MARK: - Actions
@@ -42,6 +61,18 @@ class Registration: NSManagedObject  {
     
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
         let predicate = NSPredicate(format: "startedAt != nil AND endedAt == nil")
+        return registrations(fromPredicate: predicate, context: context)
+    }
+    
+    static func nextRegistrationToUpload(context: NSManagedObjectContext = AERecord.defaultContext) -> Registration? {
+        let predicate = NSPredicate(format: "startedAt != nil AND endedAt != nil")
+        let descriptors = [
+            NSSortDescriptor(key: "startedAt", ascending: false)
+        ]
+        return firstWithPredicate(predicate, sortDescriptors: descriptors, context: context) as! Registration?
+    }
+    
+    private static func registrations(fromPredicate predicate: NSPredicate, context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
         let descriptors = [
             NSSortDescriptor(key: "startedAt", ascending: false)
         ]
