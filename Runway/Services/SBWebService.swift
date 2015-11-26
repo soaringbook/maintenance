@@ -81,6 +81,7 @@ class SBWebService: NSObject {
     // MARK: - Privates
     
     private var session: NSURLSession
+    private var sessionActive: Bool = true
     
     // MARK: - Initialization
     
@@ -94,7 +95,12 @@ class SBWebService: NSObject {
     
     // MARK: - Actions
     
+    func resume() {
+        sessionActive = true
+    }
+    
     func cancel() {
+        sessionActive = false
         session.invalidateAndCancel()
     }
     
@@ -119,8 +125,12 @@ class SBWebService: NSObject {
     // MARK: - Requests
     
     func fetchRequest(path path: String, callback: (SBWebServiceResponse) -> ()) {
-        let request = authenticatedRequest(path: path)
+        guard sessionActive else {
+            // When the session is cancelled just return.
+            return
+        }
         
+        let request = authenticatedRequest(path: path)
         let task = session.dataTaskWithRequest(request) { data, response, error in
             callback(SBWebServiceResponse(error: error, data: data))
         }
@@ -128,6 +138,11 @@ class SBWebService: NSObject {
     }
     
     func fetchImageRequest(path path: String?, callback: (SBWebServiceResponse) -> ()) {
+        guard sessionActive else {
+            // When the session is cancelled just return.
+            return
+        }
+        
         if let path = path {
             let request = unauthenticatedRequest(path: path)
             let task = session.downloadTaskWithRequest(request) { url, response, error in

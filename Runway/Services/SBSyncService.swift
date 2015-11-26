@@ -28,6 +28,7 @@ class SBSyncService: NSObject {
     func sync(callback callback: (error: NSError?) -> ()) {
         print("🚁 Start syncing")
         cancelSync = false
+        service.resume()
         syncPilots { error in
             print("🚁 Stop syncing")
             callback(error: error)
