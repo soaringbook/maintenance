@@ -15,6 +15,7 @@ class Registration: NSManagedObject  {
     
     @NSManaged var startedAt: NSDate?
     @NSManaged var endedAt: NSDate?
+    @NSManaged var comment: String?
     
     // MARK: - Core Data relations
     
@@ -28,7 +29,7 @@ class Registration: NSManagedObject  {
                 "pilot_id" :   Int(pilot!.id),
                 "started_at" : SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(startedAt!),
                 "ended_at" :   SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(endedAt!),
-                "comment" :    ""
+                "comment" :    comment ?? ""
             ]
         ]
     }
@@ -52,8 +53,9 @@ class Registration: NSManagedObject  {
     
     // MARK: - Actions
     
-    func stop(context context: NSManagedObjectContext = AERecord.defaultContext) {
+    func stop(withComment comment: String, context: NSManagedObjectContext = AERecord.defaultContext) {
         endedAt = NSDate()
+        self.comment = comment
         AERecord.saveContextAndWait(context)
     }
     
