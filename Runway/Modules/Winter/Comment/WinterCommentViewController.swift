@@ -17,6 +17,14 @@ class WinterCommentViewController: UIViewController {
     
     @IBOutlet var textView: UITextView!
     
+    // MARK: - View flow
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        textView.becomeFirstResponder()
+    }
+    
     // MARK: - Actions
     
     @IBAction func stopRegistration(sender: AnyObject) {

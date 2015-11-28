@@ -13,7 +13,6 @@
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
 		0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5621BF543A800D87FB8 /* SettingsView.swift */; };
 		047CE3021BF3635900ACF7E0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */; };
-		047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE3041BF363F900ACF7E0 /* DashboardButton.swift */; };
 		047CE30B1BF3695C00ACF7E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */; };
 		047CE30E1BF3776500ACF7E0 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CE30D1BF3776500ACF7E0 /* Settings.storyboard */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
@@ -58,7 +57,6 @@
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
 		0456C5621BF543A800D87FB8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		047CE3041BF363F900ACF7E0 /* DashboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
 		047CE30A1BF3695C00ACF7E0 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		047CE30D1BF3776500ACF7E0 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
@@ -137,14 +135,6 @@
 				047CE3011BF3635900ACF7E0 /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		047CE3031BF363E700ACF7E0 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				047CE3041BF363F900ACF7E0 /* DashboardButton.swift */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		047CE30C1BF3743300ACF7E0 /* Settings */ = {
@@ -270,7 +260,6 @@
 		622D750C1BBABE7400D8949F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				047CE3031BF363E700ACF7E0 /* Buttons */,
 				04F34DA81BF7452A006EEC4A /* Cells */,
 				04F34DA01BF74254006EEC4A /* Layouts */,
 				622D750D1BBABE7400D8949F /* TextFields */,
@@ -548,7 +537,6 @@
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,
-				047CE3051BF363F900ACF7E0 /* DashboardButton.swift in Sources */,
 				04F34D891BF72668006EEC4A /* WinterViewController.swift in Sources */,
 				04F34D921BF72B85006EEC4A /* WizardChildSelectionViewController.swift in Sources */,
 				626D23931BBA72690055D8FC /* SBWebService.swift in Sources */,

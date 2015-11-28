@@ -84,14 +84,9 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     // MARK: - WinterViewDelegate
     
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
-        let alertController = UIAlertController(title: "Actions", message: "Do you want to stop working?", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Stop", style: .Cancel) { action in
-            self.activeRegistration = registration
-            self.activeRegistrationIndexPath = indexPath
-            self.performSegueWithIdentifier("Comment", sender: nil)
-        })
-        alertController.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
-        presentViewController(alertController, animated: true, completion: nil)
+        activeRegistration = registration
+        activeRegistrationIndexPath = indexPath
+        performSegueWithIdentifier("Comment", sender: nil)
     }
     
     // MARK: - Time
