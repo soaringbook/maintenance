@@ -11,8 +11,11 @@ import UIKit
 private let SelectionCellSpacing: CGFloat = 10.0
 private let CollectionViewSpacing: CGFloat = 20.0
 
-class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate {
+class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate, WinterCommentViewControllerDelegate {
     var winterView: WinterView! { return self.view as! WinterView }
+    
+    private var activeRegistration: Registration?
+    private var activeRegistrationIndexPath: NSIndexPath?
     
     // MARK: - View flow
     
@@ -36,10 +39,15 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         if let controller = segue.destinationViewController as? WizardViewController where segue.identifier == "Start" {
             controller.dataSource = self
             controller.delegate = self
+        } else if let controller = segue.destinationViewController as? WinterCommentViewController {
+            controller.delegate = self
         }
     }
     
     @IBAction func unwindToWinter(segue: UIStoryboardSegue) {
+        // Cleanup the active registration when comming back to this controller.
+        activeRegistration = nil
+        activeRegistrationIndexPath = nil
     }
     
     // MARK: - WizardViewControllerDateSource
@@ -48,6 +56,16 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         return [
             WinterPilotSelectionChildViewController(wizardViewController: controller)
         ]
+    }
+    
+    // MARK: - WinterCommentViewControllerDelegate
+    
+    func winterCommentViewController(controller: WinterCommentViewController, didAddComment comment: String) {
+        if let registration = activeRegistration, let indexPath = activeRegistrationIndexPath {
+            print("💾 \(registration.pilot!.displayName) registration stop")
+            registration.stop(withComment: comment)
+            winterView.removeRegistration(atIndexPath: indexPath)
+        }
     }
     
     // MARK: - WizardViewControllerDelegate
@@ -68,8 +86,9 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
         let alertController = UIAlertController(title: "Actions", message: "Do you want to stop working?", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Stop", style: .Cancel) { action in
+            self.activeRegistration = registration
+            self.activeRegistrationIndexPath = indexPath
             self.performSegueWithIdentifier("Comment", sender: nil)
-//            self.stopTimeRegistration(forRegistration: registration, atIndexPath: indexPath)
         })
         alertController.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
@@ -81,12 +100,6 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         print("💾 \(pilot.displayName) registration start")
         Registration.start(fromPilot: pilot)
         reloadData()
-    }
-    
-    private func stopTimeRegistration(forRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
-        print("💾 \(registration.pilot!.displayName) registration stop")
-        registration.stop()
-        winterView.removeRegistration(atIndexPath: indexPath)
     }
 
     // MARK: - Status bar

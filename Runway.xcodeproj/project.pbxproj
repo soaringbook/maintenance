@@ -20,6 +20,7 @@
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
 		04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA61BF35CD100F33F1F /* Launch.storyboard */; };
+		04E1F4CB1C09AA7B00159ABF /* WinterCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1F4CA1C09AA7B00159ABF /* WinterCommentViewController.swift */; };
 		04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE42B81BF3D65E0022651C /* SettingsViewController.swift */; };
 		04F1F01C1C07A11800BAB0B9 /* SBWebService+Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F01B1C07A11800BAB0B9 /* SBWebService+Registrations.swift */; };
 		04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F34D861BF72582006EEC4A /* Winter.storyboard */; };
@@ -66,6 +67,7 @@
 		04D04FA61BF35CD100F33F1F /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		04E1F4CA1C09AA7B00159ABF /* WinterCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterCommentViewController.swift; sourceTree = "<group>"; };
 		04EE42B81BF3D65E0022651C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04F1F01B1C07A11800BAB0B9 /* SBWebService+Registrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SBWebService+Registrations.swift"; sourceTree = "<group>"; };
 		04F34D861BF72582006EEC4A /* Winter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Winter.storyboard; sourceTree = "<group>"; };
@@ -183,9 +185,18 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		04E1F4C91C09AA6E00159ABF /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				04E1F4CA1C09AA7B00159ABF /* WinterCommentViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		04F34D851BF72576006EEC4A /* Winter */ = {
 			isa = PBXGroup;
 			children = (
+				04E1F4C91C09AA6E00159ABF /* Comment */,
 				04F34D981BF736A5006EEC4A /* Start */,
 				04F34D861BF72582006EEC4A /* Winter.storyboard */,
 				04484A551C006F4D00965B5F /* WinterView.swift */,
@@ -533,6 +544,7 @@
 				0456C5631BF543A800D87FB8 /* SettingsView.swift in Sources */,
 				04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */,
 				04F34DA21BF74258006EEC4A /* SBCollectionViewDynamicFlowLayout.swift in Sources */,
+				04E1F4CB1C09AA7B00159ABF /* WinterCommentViewController.swift in Sources */,
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,

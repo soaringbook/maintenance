@@ -53,8 +53,9 @@ class Registration: NSManagedObject  {
     
     // MARK: - Actions
     
-    func stop(context context: NSManagedObjectContext = AERecord.defaultContext) {
+    func stop(withComment comment: String, context: NSManagedObjectContext = AERecord.defaultContext) {
         endedAt = NSDate()
+        self.comment = comment
         AERecord.saveContextAndWait(context)
     }
     
