@@ -39,6 +39,9 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         }
     }
     
+    @IBAction func unwindToWinter(segue: UIStoryboardSegue) {
+    }
+    
     // MARK: - WizardViewControllerDateSource
     
     func controllersForWizard(controller: WizardViewController) -> [WizardChildViewController] {
@@ -65,8 +68,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
         let alertController = UIAlertController(title: "Actions", message: "Do you want to stop working?", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Stop", style: .Cancel) { action in
-            registration.stop()
-            view.removeRegistration(atIndexPath: indexPath)
+            self.performSegueWithIdentifier("Comment", sender: nil)
+//            self.stopTimeRegistration(forRegistration: registration, atIndexPath: indexPath)
         })
         alertController.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
@@ -78,6 +81,12 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         print("💾 \(pilot.displayName) registration start")
         Registration.start(fromPilot: pilot)
         reloadData()
+    }
+    
+    private func stopTimeRegistration(forRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
+        print("💾 \(registration.pilot!.displayName) registration stop")
+        registration.stop()
+        winterView.removeRegistration(atIndexPath: indexPath)
     }
 
     // MARK: - Status bar
