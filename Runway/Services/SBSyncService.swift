@@ -81,7 +81,7 @@ class SBSyncService: NSObject {
     private func syncNextPilotImage(callback callback: (error: NSError?) -> ()) {
         if let pilot = Pilot.nextPilotToDownload() {
             print("🚁 Download \(pilot.displayName)'s image")
-            self.downloadPilotImage(pilot: pilot) {
+            self.downloadPilotImage(pilot: pilot) { error in
                 self.syncNextPilotImage(callback: callback)
             }
         } else {
@@ -89,13 +89,14 @@ class SBSyncService: NSObject {
         }
     }
     
-    private func downloadPilotImage(pilot pilot: Pilot, callback: () -> ()) {
+    private func downloadPilotImage(pilot pilot: Pilot, callback: (error: NSError?) -> ()) {
         service.fetchPilotImage(pilot) { response in
             if let data = response.data as? NSData {
                 pilot.imageData = data
                 pilot.shouldDownloadImage = false
                 AERecord.saveContextAndWait()
             }
+            callback(error: response.error)
         }
     }
     
