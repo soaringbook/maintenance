@@ -74,7 +74,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     // MARK: - Navigation
     
     private func presentCorrectFlow() {
-//        performSegueWithIdentifier("Dashboard", sender: nil)
+        performSegueWithIdentifier("Application", sender: nil)
     }
     
     // MARK: - Status bar

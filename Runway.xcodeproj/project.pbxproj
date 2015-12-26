@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E3E1C2E9A98004917AE /* SBDefaults.swift */; };
+		041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */; };
 		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
+		041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainerViewController.swift; sourceTree = "<group>"; };
 		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		041D8E401C2E9E7B004917AE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		0456C55F1BF5328B00D87FB8 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +143,9 @@
 		04D04F9C1BF3578300F33F1F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				04D04F9D1BF3578300F33F1F /* Login */,
+				041D8E401C2E9E7B004917AE /* Application */,
 				04D04FA61BF35CD100F33F1F /* Launch.storyboard */,
+				04D04F9D1BF3578300F33F1F /* Login */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -537,6 +548,7 @@
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
+				041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */,
 				0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */,
 				04F1F01C1C07A11800BAB0B9 /* SBWebService+Registrations.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,

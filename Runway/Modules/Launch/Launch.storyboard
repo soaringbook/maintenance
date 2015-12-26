@@ -198,6 +198,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>
+                    <connections>
+                        <segue destination="3hn-D0-lny" kind="show" identifier="Application" id="1Do-RG-IoW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzj-T5-JOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wnB-mM-ur9">
@@ -207,6 +210,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1137" y="380"/>
+        </scene>
+        <!--Application Container View Controller-->
+        <scene sceneID="e08-rU-EXa">
+            <objects>
+                <viewController id="3hn-D0-lny" customClass="ApplicationContainerViewController" customModule="Runway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aM2-fm-nfj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ant-D2-w2J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3uO-Sp-I92">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7na-0c-u5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="380"/>
         </scene>
     </scenes>
     <resources>
