@@ -18,9 +18,13 @@ class SBKeychain: NSObject {
     
     var token: String? {
         get {
+            guard SBDefaults.useKeychain else {
+                return nil
+            }
             return SSKeychain.passwordForService(SBTokenService, account: SBAccountName)
         }
         set {
+            SBDefaults.useKeychain = true
             if let newValue = newValue {
                 SSKeychain.setPassword(newValue, forService: SBTokenService, account: SBAccountName)
             } else {

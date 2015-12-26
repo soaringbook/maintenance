@@ -29,7 +29,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
             if SBKeychain.sharedInstance.token == nil {
                 self.loginView.animateIn()
             } else {
-                self.presentDashboard()
+                self.presentCorrectFlow()
             }
         }
     }
@@ -65,7 +65,7 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
                     self.loginView.stopAnimating()
                 } else {
                     textField.resignFirstResponder()
-                    self.presentDashboard()
+                    self.presentCorrectFlow()
                 }
             }
         }
@@ -73,18 +73,13 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     
     // MARK: - Navigation
     
-    private func presentDashboard() {
-        performSegueWithIdentifier("Dashboard", sender: nil)
+    private func presentCorrectFlow() {
+        performSegueWithIdentifier("Application", sender: nil)
     }
     
     // MARK: - Status bar
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    // MARK: - Segue
-    
-    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
     }
 }

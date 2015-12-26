@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="93R-gI-00u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="93R-gI-00u">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,22 +19,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-xG-PEn">
                                 <rect key="frame" x="30" y="10" width="202" height="72"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-iq-9It">
-                                <rect key="frame" x="530" y="26" width="40" height="40"/>
-                                <animations/>
-                                <state key="normal" image="Dismiss"/>
-                                <connections>
-                                    <segue destination="eMF-fW-UHy" kind="unwind" unwindAction="unwindToDashboard:" id="NZq-Rg-6It"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-6v-sX9">
                                 <rect key="frame" x="30" y="92" width="267" height="56"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
@@ -47,7 +37,6 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-Ay-vRT">
                                 <rect key="frame" x="0.0" y="158" width="600" height="442"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FYY-wC-SuR">
                                     <size key="itemSize" width="200" height="200"/>
@@ -62,19 +51,16 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XNr-Ay-vRT" firstAttribute="top" secondItem="Iid-6v-sX9" secondAttribute="bottom" constant="10" id="7kq-hT-XVC"/>
                             <constraint firstItem="XNr-Ay-vRT" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leading" id="Hv7-p6-eMU"/>
                             <constraint firstItem="Iid-6v-sX9" firstAttribute="leading" secondItem="DNn-xG-PEn" secondAttribute="leading" id="Ib4-qC-t6J"/>
                             <constraint firstItem="Iid-6v-sX9" firstAttribute="top" secondItem="DNn-xG-PEn" secondAttribute="bottom" constant="10" id="Tv1-eg-rYG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BG4-iq-9It" secondAttribute="trailing" constant="10" id="U9a-Zw-vj3"/>
                             <constraint firstAttribute="trailing" secondItem="XNr-Ay-vRT" secondAttribute="trailing" id="Wc0-rZ-SHf"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="top" secondItem="YAG-UT-x6U" secondAttribute="topMargin" constant="10" id="iu5-oU-6dP"/>
                             <constraint firstItem="DNn-xG-PEn" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leadingMargin" constant="10" id="mlZ-qw-3zP"/>
                             <constraint firstItem="dIL-5J-rtH" firstAttribute="top" secondItem="XNr-Ay-vRT" secondAttribute="bottom" id="oWw-dZ-296"/>
-                            <constraint firstItem="BG4-iq-9It" firstAttribute="centerY" secondItem="DNn-xG-PEn" secondAttribute="centerY" id="te0-v2-D0U"/>
                         </constraints>
                         <connections>
                             <outlet property="collectionView" destination="XNr-Ay-vRT" id="4kR-hW-Z6H"/>
@@ -86,7 +72,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="eMF-fW-UHy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1355" y="110"/>
         </scene>
@@ -112,14 +97,12 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-ah-caP">
                                 <rect key="frame" x="20" y="76" width="560" height="434"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccz-eF-Msb">
                                 <rect key="frame" x="20" y="530" width="145" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Q7h-LD-k5o"/>
@@ -133,14 +116,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Tell us what you did today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-TW-SgG">
                                 <rect key="frame" x="20" y="20" width="560" height="36"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-Tm-riZ">
                                 <rect key="frame" x="435" y="530" width="145" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZWN-nE-l4v"/>
@@ -153,7 +134,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gCK-ah-caP" secondAttribute="trailing" constant="20" id="0eK-GS-7da"/>
@@ -186,7 +166,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DHV-9K-aAN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="ON6-NM-AOy" kind="relationship" relationship="rootViewController" id="6R1-fy-WON"/>
@@ -197,7 +176,4 @@
             <point key="canvasLocation" x="613" y="110"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Dismiss" width="40" height="40"/>
-    </resources>
 </document>

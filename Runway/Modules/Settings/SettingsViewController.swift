@@ -9,8 +9,6 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    var settingsView: SettingsView! { return self.view as! SettingsView }
-    
     private let service: SBSyncService = SBSyncService()
     private var updatesTimer: NSTimer?
     
@@ -19,7 +17,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settingsView.setupUpdateText(updatedPilots: 0)
         fetchUpdates()
     }
     
@@ -40,7 +37,6 @@ class SettingsViewController: UIViewController {
         updatesTimer?.invalidate()
         service.fetchUpdates { updatedPilots in
             dispatch_sync(dispatch_get_main_queue()) {
-                self.settingsView.setupUpdateText(updatedPilots: updatedPilots)
                 self.scheduleFetchUpdates()
             }
         }
@@ -50,18 +46,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func disconnect(sender: AnyObject) {
         SBKeychain.sharedInstance.token = nil
-        SBSyncService().deleteData()
-        performSegueWithIdentifier("Disconnect", sender: nil)
     }
     
     @IBAction func synchronise(sender: AnyObject) {
         updatesTimer?.invalidate()
-        settingsView.startAnimating()
         service.sync { error in
             dispatch_main {
                 self.updatesTimer?.invalidate()
                 self.fetchUpdates()
-                self.settingsView.stopAnimating()
             }
         }
     }
