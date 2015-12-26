@@ -199,7 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>
                     <connections>
-                        <segue destination="3hn-D0-lny" kind="show" identifier="Application" customClass="SBSlideSegue" customModule="Runway" customModuleProvider="target" id="1Do-RG-IoW"/>
+                        <segue destination="3hn-D0-lny" kind="show" identifier="Application" id="1Do-RG-IoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzj-T5-JOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
