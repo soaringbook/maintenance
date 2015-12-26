@@ -27,11 +27,16 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         
         collectionView.registerNib(UINib(nibName: "NamedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         collectionView.registerNib(UINib(nibName: "IconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Add")
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
-        }
+        invalidateLayout()
         
-        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+    }
+    
+    func invalidateLayout() {
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = UIEdgeInsetsMake(0.0, 20.0, 20.0, 20.0)
+        }
     }
     
     // MARK: - Data
