@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E3E1C2E9A98004917AE /* SBDefaults.swift */; };
 		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
 		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			children = (
 				62F1F3B31BBC1DFF001FF957 /* NSError+Custom.swift */,
 				04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */,
+				041D8E3E1C2E9A98004917AE /* SBDefaults.swift */,
 				623728A61BBEC8CB00948D0D /* UIColor+Palette.swift */,
 			);
 			path = Extensions;
@@ -523,6 +526,7 @@
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				04F34DAB1BF7452A006EEC4A /* NamedImageCollectionViewCell.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Pilot.swift in Sources */,
+				041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */,
 				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
