@@ -35,12 +35,6 @@ class SBSyncService: NSObject {
         }
     }
     
-    func deleteData() {
-        print("🚁 Delete all data")
-        SBConfiguration.sharedInstance.pilotsLastUpdatedAt = nil
-        AERecord.truncateAllData()
-    }
-    
     func cancel() {
         cancelSync = true
         service.cancel()

@@ -46,8 +46,6 @@ class SettingsViewController: UIViewController {
     
     @IBAction func disconnect(sender: AnyObject) {
         SBKeychain.sharedInstance.token = nil
-        SBSyncService().deleteData()
-        performSegueWithIdentifier("Disconnect", sender: nil)
     }
     
     @IBAction func synchronise(sender: AnyObject) {
