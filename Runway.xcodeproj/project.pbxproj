@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E3E1C2E9A98004917AE /* SBDefaults.swift */; };
 		041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */; };
+		041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */; };
+		041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D8E471C2EA45B004917AE /* IconCollectionViewCell.xib */; };
 		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
 		041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainerViewController.swift; sourceTree = "<group>"; };
+		041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		041D8E471C2EA45B004917AE /* IconCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconCollectionViewCell.xib; sourceTree = "<group>"; };
 		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		04F34DA81BF7452A006EEC4A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */,
+				041D8E471C2EA45B004917AE /* IconCollectionViewCell.xib */,
 				04F34DA91BF7452A006EEC4A /* NamedImageCollectionViewCell.swift */,
 				04F34DAA1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib */,
 			);
@@ -450,6 +456,7 @@
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */,
 				04F34DAC1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib in Resources */,
+				041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */,
 				04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +543,7 @@
 				04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */,
 				626D23951BBA73200055D8FC /* SBConfiguration.swift in Sources */,
 				04F34DAB1BF7452A006EEC4A /* NamedImageCollectionViewCell.swift in Sources */,
+				041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Pilot.swift in Sources */,
 				041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */,
 				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,

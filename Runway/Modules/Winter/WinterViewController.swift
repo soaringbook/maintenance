@@ -33,6 +33,14 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         winterView.reloadData()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func sync(sender: AnyObject) {
+        let service = SBSyncService()
+        service.sync { error in
+        }
+    }
+    
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -87,6 +95,10 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         activeRegistration = registration
         activeRegistrationIndexPath = indexPath
         performSegueWithIdentifier("Comment", sender: nil)
+    }
+    
+    func winterViewWillStartRegistration(view: WinterView) {
+        performSegueWithIdentifier("Start", sender: nil)
     }
     
     // MARK: - Time

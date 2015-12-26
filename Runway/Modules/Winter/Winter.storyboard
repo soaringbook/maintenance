@@ -17,26 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-xG-PEn">
-                                <rect key="frame" x="30" y="10" width="202" height="72"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-6v-sX9">
-                                <rect key="frame" x="30" y="92" width="267" height="56"/>
-                                <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                <state key="normal" title="START WORKING">
-                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Cy1-pr-S9R" kind="presentation" identifier="Start" id="7vq-aH-cTd"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-Ay-vRT">
-                                <rect key="frame" x="0.0" y="158" width="600" height="442"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="508"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FYY-wC-SuR">
                                     <size key="itemSize" width="200" height="200"/>
@@ -50,17 +32,34 @@
                                     <outlet property="delegate" destination="YAG-UT-x6U" id="Eqc-Yi-7pY"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-xG-PEn">
+                                <rect key="frame" x="20" y="20" width="202" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-5G-wXd">
+                                <rect key="frame" x="536" y="34" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="4fK-DV-U6q"/>
+                                    <constraint firstAttribute="height" constant="44" id="rbs-f2-ddU"/>
+                                </constraints>
+                                <state key="normal" image="Sync"/>
+                                <connections>
+                                    <action selector="sync:" destination="ON6-NM-AOy" eventType="touchUpInside" id="C6C-di-g8x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XNr-Ay-vRT" firstAttribute="top" secondItem="Iid-6v-sX9" secondAttribute="bottom" constant="10" id="7kq-hT-XVC"/>
+                            <constraint firstItem="DNn-xG-PEn" firstAttribute="top" secondItem="dDf-v4-U3J" secondAttribute="bottom" id="B9P-dG-1gu"/>
                             <constraint firstItem="XNr-Ay-vRT" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leading" id="Hv7-p6-eMU"/>
-                            <constraint firstItem="Iid-6v-sX9" firstAttribute="leading" secondItem="DNn-xG-PEn" secondAttribute="leading" id="Ib4-qC-t6J"/>
-                            <constraint firstItem="Iid-6v-sX9" firstAttribute="top" secondItem="DNn-xG-PEn" secondAttribute="bottom" constant="10" id="Tv1-eg-rYG"/>
+                            <constraint firstItem="XNr-Ay-vRT" firstAttribute="top" secondItem="DNn-xG-PEn" secondAttribute="bottom" id="KV6-UW-Icf"/>
                             <constraint firstAttribute="trailing" secondItem="XNr-Ay-vRT" secondAttribute="trailing" id="Wc0-rZ-SHf"/>
-                            <constraint firstItem="DNn-xG-PEn" firstAttribute="top" secondItem="YAG-UT-x6U" secondAttribute="topMargin" constant="10" id="iu5-oU-6dP"/>
-                            <constraint firstItem="DNn-xG-PEn" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leadingMargin" constant="10" id="mlZ-qw-3zP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FGW-5G-wXd" secondAttribute="trailing" id="ilD-fy-IyF"/>
+                            <constraint firstItem="DNn-xG-PEn" firstAttribute="leading" secondItem="YAG-UT-x6U" secondAttribute="leadingMargin" id="mlZ-qw-3zP"/>
                             <constraint firstItem="dIL-5J-rtH" firstAttribute="top" secondItem="XNr-Ay-vRT" secondAttribute="bottom" id="oWw-dZ-296"/>
+                            <constraint firstItem="FGW-5G-wXd" firstAttribute="centerY" secondItem="DNn-xG-PEn" secondAttribute="centerY" id="yS0-gy-SOK"/>
                         </constraints>
                         <connections>
                             <outlet property="collectionView" destination="XNr-Ay-vRT" id="4kR-hW-Z6H"/>
@@ -69,6 +68,7 @@
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
                     <connections>
                         <segue destination="kol-EC-gub" kind="presentation" identifier="Comment" modalPresentationStyle="formSheet" id="9vc-TM-3jQ"/>
+                        <segue destination="n7J-hw-QyJ" kind="presentation" identifier="Start" id="Kpi-fN-xNw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,12 +76,12 @@
             <point key="canvasLocation" x="1355" y="110"/>
         </scene>
         <!--Wizard-->
-        <scene sceneID="UJJ-SF-Aji">
+        <scene sceneID="nO5-3e-cKO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Wizard" id="Cy1-pr-S9R" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tw-3r-LWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Wizard" id="n7J-hw-QyJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lA-Gp-lFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828.5" y="110"/>
+            <point key="canvasLocation" x="1886.5" y="110"/>
         </scene>
         <!--Winter Comment View Controller-->
         <scene sceneID="JR0-7Y-zNX">
@@ -176,4 +176,7 @@
             <point key="canvasLocation" x="613" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sync" width="37" height="37"/>
+    </resources>
 </document>

@@ -10,9 +10,10 @@ import UIKit
 
 protocol WinterViewDelegate {
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath)
+    func winterViewWillStartRegistration(view: WinterView)
 }
 
-class WinterView: UIView {
+class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     
     var delegate: WinterViewDelegate?
@@ -25,6 +26,7 @@ class WinterView: UIView {
         super.awakeFromNib()
         
         collectionView.registerNib(UINib(nibName: "NamedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        collectionView.registerNib(UINib(nibName: "IconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Add")
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsetsMake(0.0, 30.0, 30.0, 30.0)
         }
@@ -46,10 +48,12 @@ class WinterView: UIView {
     // MARK: - Timer
     
     func updateTimer() {
-        for cell in collectionView.visibleCells() as! [NamedImageCollectionViewCell] {
+        for cell in collectionView.visibleCells() {
             if let indexPath = collectionView.indexPathForCell(cell) {
-                let registration = registrations[indexPath.item]
-                cell.update(time: registration.startedAt)
+                if let cell = cell as? NamedImageCollectionViewCell {
+                    let registration = registrations[indexPath.item - 1]
+                    cell.update(time: registration.startedAt)
+                }
             }
         }
     }
@@ -57,20 +61,30 @@ class WinterView: UIView {
     // MARK: - UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let registration = registrations[indexPath.row]
-        delegate?.winterView(self, didSelectRegistration: registration, atIndexPath: indexPath)
+        if indexPath.row == 0 {
+            delegate?.winterViewWillStartRegistration(self)
+        } else {
+            let registration = registrations[indexPath.row - 1]
+            delegate?.winterView(self, didSelectRegistration: registration, atIndexPath: indexPath)
+        }
     }
     
     // MARK: - UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return registrations.count
+        // Add an extra add cell.
+        return registrations.count + 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
-        let item = registrations[indexPath.item]
-        cell.configure(item: item.pilot!)
-        return cell
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Add", forIndexPath: indexPath)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
+            let item = registrations[indexPath.item - 1]
+            cell.configure(item: item.pilot!)
+            return cell
+        }
     }
 }
