@@ -96,10 +96,4 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         Registration.start(fromPilot: pilot)
         reloadData()
     }
-
-    // MARK: - Status bar
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 }

@@ -8,8 +8,6 @@
 	<string></string>
 	<key>API_VERSION</key>
 	<string></string>
-	<key>HOCKEY_APP_IDENTIFIER</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -28,6 +26,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>23</string>
+	<key>HOCKEY_APP_IDENTIFIER</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -41,6 +41,11 @@
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
+			<key>soaringbook.10.0.0.2.xip.io</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>soaringbook.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
@@ -49,11 +54,6 @@
 				<true/>
 			</dict>
 			<key>soaringbook.dev</key>
-			<dict>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-			<key>soaringbook.10.0.0.2.xip.io</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
@@ -72,6 +72,8 @@
 	<false/>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIStatusBarHidden~ipad</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>

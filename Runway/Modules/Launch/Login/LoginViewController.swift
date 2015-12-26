@@ -76,10 +76,4 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
     private func presentCorrectFlow() {
         performSegueWithIdentifier("Application", sender: nil)
     }
-    
-    // MARK: - Status bar
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 }

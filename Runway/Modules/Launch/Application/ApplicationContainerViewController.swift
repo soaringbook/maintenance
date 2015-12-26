@@ -43,10 +43,4 @@ class ApplicationContainerViewController: UIViewController {
         controller.view.removeFromSuperview()
         controller.removeFromParentViewController()
     }
-    
-    // MARK: - Status bar
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 }
