@@ -55,7 +55,7 @@ class Registration: NSManagedObject  {
     // MARK: - Actions
     
     func stop(withComment comment: String, context: NSManagedObjectContext = AERecord.defaultContext) {
-        duration = NSNumber(integer: Int(NSDate().timeIntervalSince1970 - startedAt!.timeIntervalSince1970))
+        duration = NSNumber(integer: Int(NSDate().timeIntervalSince1970 - startedAt!.timeIntervalSince1970) / 60)
         self.comment = comment
         AERecord.saveContextAndWait(context)
     }
