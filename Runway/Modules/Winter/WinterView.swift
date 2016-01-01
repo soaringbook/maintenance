@@ -46,7 +46,7 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func removeRegistration(atIndexPath indexPath: NSIndexPath) {
-        registrations.removeAtIndex(indexPath.item - 1)
+        registrations.removeAtIndex(rowForRegistration(atIndexPath: indexPath))
         collectionView.deleteItemsAtIndexPaths([indexPath])
     }
     
@@ -56,7 +56,7 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         for cell in collectionView.visibleCells() {
             if let indexPath = collectionView.indexPathForCell(cell) {
                 if let cell = cell as? NamedImageCollectionViewCell {
-                    let registration = registrations[indexPath.item - 1]
+                    let registration = registrations[rowForRegistration(atIndexPath: indexPath)]
                     cell.update(time: registration.startedAt)
                 }
             }
@@ -69,7 +69,7 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         if indexPath.row == 0 {
             delegate?.winterViewWillStartRegistration(self)
         } else {
-            let registration = registrations[indexPath.row - 1]
+            let registration = registrations[rowForRegistration(atIndexPath: indexPath)]
             delegate?.winterView(self, didSelectRegistration: registration, atIndexPath: indexPath)
         }
     }
@@ -83,13 +83,29 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Add", forIndexPath: indexPath)
-            return cell
+            return addCell(forIndexPath: indexPath)
         } else {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
-            let item = registrations[indexPath.item - 1]
-            cell.configure(item: item.pilot!)
-            return cell
+            return registrationCell(forIndexPath: indexPath)
         }
+    }
+    
+    // MARK: - Cells
+    
+    private func addCell(forIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Add", forIndexPath: indexPath)
+        return cell
+    }
+    
+    private func registrationCell(forIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
+        let item = registrations[rowForRegistration(atIndexPath: indexPath)]
+        cell.configure(item: item.pilot!)
+        return cell
+    }
+    
+    // MARK: - Index path
+    
+    private func rowForRegistration(atIndexPath indexPath: NSIndexPath) -> Int {
+        return indexPath.item - 1
     }
 }
