@@ -103,8 +103,8 @@ class SBSyncService: NSObject {
                 if let error = response.error {
                     callback(error: error)
                 } else {
-                    registration.deleteRegistration()
                     print("💾 Delete \(registration.pilot?.displayName)'s registration")
+                    registration.deleteRegistration()
                     self.syncNextRegistration(callback: callback)
                 }
             }
