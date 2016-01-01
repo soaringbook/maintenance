@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15C47a" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D9c" minimumToolsVersion="Xcode 7.0">
     <entity name="Pilot" representedClassName=".Pilot" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -11,7 +11,7 @@
     </entity>
     <entity name="Registration" representedClassName=".Registration" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="endedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" syncable="YES"/>
         <attribute name="startedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="pilot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pilot" inverseName="registrations" inverseEntity="Pilot" syncable="YES"/>
     </entity>

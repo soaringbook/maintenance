@@ -14,7 +14,7 @@ class Registration: NSManagedObject  {
     // MARK: - Core Data properties
     
     @NSManaged var startedAt: NSDate?
-    @NSManaged var endedAt: NSDate?
+    @NSManaged var duration: NSNumber?
     @NSManaged var comment: String?
     
     // MARK: - Core Data relations
@@ -28,7 +28,7 @@ class Registration: NSManagedObject  {
             "work_registration" : [
                 "pilot_id" :   Int(pilot!.id),
                 "started_at" : SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(startedAt!),
-                "ended_at" :   SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(endedAt!),
+                "duration" :   String(duration ?? 0),
                 "comment" :    comment ?? ""
             ]
         ]
@@ -49,12 +49,13 @@ class Registration: NSManagedObject  {
     
     func deleteRegistration(context context: NSManagedObjectContext = AERecord.defaultContext) {
         deleteFromContext(context)
+        AERecord.saveContextAndWait(context)
     }
     
     // MARK: - Actions
     
     func stop(withComment comment: String, context: NSManagedObjectContext = AERecord.defaultContext) {
-        endedAt = NSDate()
+        duration = NSNumber(integer: Int(NSDate().timeIntervalSince1970 - startedAt!.timeIntervalSince1970))
         self.comment = comment
         AERecord.saveContextAndWait(context)
     }
@@ -62,12 +63,12 @@ class Registration: NSManagedObject  {
     // MARK: - Queries
     
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
-        let predicate = NSPredicate(format: "startedAt != nil AND endedAt == nil")
+        let predicate = NSPredicate(format: "startedAt != nil AND duration == nil")
         return registrations(fromPredicate: predicate, context: context)
     }
     
     static func nextRegistrationToUpload(context: NSManagedObjectContext = AERecord.defaultContext) -> Registration? {
-        let predicate = NSPredicate(format: "startedAt != nil AND endedAt != nil")
+        let predicate = NSPredicate(format: "startedAt != nil AND duration != nil")
         let descriptors = [
             NSSortDescriptor(key: "startedAt", ascending: false)
         ]

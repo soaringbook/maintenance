@@ -95,62 +95,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-ah-caP">
-                                <rect key="frame" x="20" y="76" width="560" height="434"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-8t-lbF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Tell us what you did today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-TW-SgG">
+                                        <rect key="frame" x="20" y="20" width="496" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-ah-caP">
+                                        <rect key="frame" x="20" y="80" width="560" height="430"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRl-rJ-t91">
+                                        <rect key="frame" x="536" y="16" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="1ad-cI-emC"/>
+                                            <constraint firstAttribute="height" constant="44" id="6cU-je-zu6"/>
+                                        </constraints>
+                                        <state key="normal" image="Dismiss"/>
+                                        <connections>
+                                            <segue destination="iyb-kp-YPd" kind="unwind" identifier="Dismiss" unwindAction="unwindToWinter:" id="6Rb-cx-9qL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-Tm-riZ">
+                                        <rect key="frame" x="194" y="530" width="213" height="50"/>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZWN-nE-l4v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="STOP WORKING"/>
+                                        <connections>
+                                            <action selector="stopRegistration:" destination="kol-EC-gub" eventType="touchUpInside" id="ZYf-CY-ogi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccz-eF-Msb">
-                                <rect key="frame" x="20" y="530" width="145" height="50"/>
-                                <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Q7h-LD-k5o"/>
+                                    <constraint firstAttribute="bottom" secondItem="T5e-Tm-riZ" secondAttribute="bottom" constant="20" id="97T-Tn-MSM"/>
+                                    <constraint firstItem="3Pr-TW-SgG" firstAttribute="top" secondItem="Tas-8t-lbF" secondAttribute="top" constant="20" id="D2d-nO-ang"/>
+                                    <constraint firstItem="3Pr-TW-SgG" firstAttribute="leading" secondItem="Tas-8t-lbF" secondAttribute="leading" constant="20" id="EaJ-wZ-b6K"/>
+                                    <constraint firstItem="gCK-ah-caP" firstAttribute="top" secondItem="zRl-rJ-t91" secondAttribute="bottom" constant="20" id="LPr-nf-A7s"/>
+                                    <constraint firstAttribute="trailing" secondItem="gCK-ah-caP" secondAttribute="trailing" constant="20" id="O0V-8z-EMM"/>
+                                    <constraint firstItem="T5e-Tm-riZ" firstAttribute="centerX" secondItem="Tas-8t-lbF" secondAttribute="centerX" id="WDc-yG-yQL"/>
+                                    <constraint firstAttribute="trailing" secondItem="zRl-rJ-t91" secondAttribute="trailing" constant="20" id="bST-e2-MxA"/>
+                                    <constraint firstItem="T5e-Tm-riZ" firstAttribute="top" secondItem="gCK-ah-caP" secondAttribute="bottom" constant="20" id="ifL-Vy-7V1"/>
+                                    <constraint firstItem="gCK-ah-caP" firstAttribute="leading" secondItem="Tas-8t-lbF" secondAttribute="leading" constant="20" id="jDA-ER-hP4"/>
+                                    <constraint firstItem="zRl-rJ-t91" firstAttribute="leading" secondItem="3Pr-TW-SgG" secondAttribute="trailing" constant="20" id="o9M-V6-HfI"/>
+                                    <constraint firstItem="zRl-rJ-t91" firstAttribute="centerY" secondItem="3Pr-TW-SgG" secondAttribute="centerY" id="ob4-bI-omb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="CONTINUE"/>
-                                <connections>
-                                    <segue destination="iyb-kp-YPd" kind="unwind" identifier="Dismiss" unwindAction="unwindToWinter:" id="EvC-7r-TqZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Tell us what you did today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-TW-SgG">
-                                <rect key="frame" x="20" y="20" width="560" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-Tm-riZ">
-                                <rect key="frame" x="435" y="530" width="145" height="50"/>
-                                <color key="backgroundColor" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZWN-nE-l4v"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="STOP"/>
-                                <connections>
-                                    <action selector="stopRegistration:" destination="kol-EC-gub" eventType="touchUpInside" id="ZYf-CY-ogi"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gCK-ah-caP" secondAttribute="trailing" constant="20" id="0eK-GS-7da"/>
-                            <constraint firstItem="cny-iX-kbU" firstAttribute="top" secondItem="T5e-Tm-riZ" secondAttribute="bottom" constant="20" id="7r5-Pj-EJd"/>
-                            <constraint firstAttribute="trailing" secondItem="3Pr-TW-SgG" secondAttribute="trailing" constant="20" id="9WG-q3-I67"/>
-                            <constraint firstItem="gCK-ah-caP" firstAttribute="leading" secondItem="gO4-vR-zOP" secondAttribute="leading" constant="20" id="DwQ-ng-FcR"/>
-                            <constraint firstItem="Ccz-eF-Msb" firstAttribute="top" secondItem="gCK-ah-caP" secondAttribute="bottom" constant="20" id="EGl-xs-3c6"/>
-                            <constraint firstAttribute="trailing" secondItem="T5e-Tm-riZ" secondAttribute="trailing" constant="20" id="K7M-Gp-gDR"/>
-                            <constraint firstItem="Ccz-eF-Msb" firstAttribute="leading" secondItem="gO4-vR-zOP" secondAttribute="leading" constant="20" id="Miq-7X-9sB"/>
-                            <constraint firstItem="3Pr-TW-SgG" firstAttribute="top" secondItem="Lvw-p0-WiJ" secondAttribute="bottom" constant="20" id="WYD-Pd-qf6"/>
-                            <constraint firstItem="cny-iX-kbU" firstAttribute="top" secondItem="Ccz-eF-Msb" secondAttribute="bottom" constant="20" id="hKP-NN-0rI"/>
-                            <constraint firstItem="T5e-Tm-riZ" firstAttribute="width" secondItem="Ccz-eF-Msb" secondAttribute="width" id="kAQ-BD-rHG"/>
-                            <constraint firstItem="3Pr-TW-SgG" firstAttribute="leading" secondItem="gO4-vR-zOP" secondAttribute="leading" constant="20" id="tru-MQ-a9b"/>
-                            <constraint firstItem="gCK-ah-caP" firstAttribute="top" secondItem="3Pr-TW-SgG" secondAttribute="bottom" constant="20" id="vVp-SF-LXn"/>
+                            <constraint firstItem="Tas-8t-lbF" firstAttribute="top" secondItem="Lvw-p0-WiJ" secondAttribute="bottom" id="6Yf-GP-Zes"/>
+                            <constraint firstAttribute="trailing" secondItem="Tas-8t-lbF" secondAttribute="trailing" id="K9L-jR-v8t"/>
+                            <constraint firstItem="Tas-8t-lbF" firstAttribute="leading" secondItem="gO4-vR-zOP" secondAttribute="leading" id="pD5-Ec-cn6"/>
+                            <constraint firstItem="cny-iX-kbU" firstAttribute="top" secondItem="Tas-8t-lbF" secondAttribute="bottom" id="wBR-hG-5gb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="wBR-hG-5gb" id="PqW-xV-36n"/>
+                        <outlet property="stopButton" destination="T5e-Tm-riZ" id="UiI-GF-xp5"/>
                         <outlet property="textView" destination="gCK-ah-caP" id="nOg-VT-EpO"/>
                     </connections>
                 </viewController>
@@ -177,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dismiss" width="40" height="40"/>
         <image name="Sync" width="37" height="37"/>
     </resources>
 </document>

@@ -46,7 +46,7 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func removeRegistration(atIndexPath indexPath: NSIndexPath) {
-        registrations.removeAtIndex(indexPath.row)
+        registrations.removeAtIndex(indexPath.item - 1)
         collectionView.deleteItemsAtIndexPaths([indexPath])
     }
     
