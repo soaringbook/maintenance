@@ -314,13 +314,13 @@
 		626D23551BBA696C0055D8FC /* Runway */ = {
 			isa = PBXGroup;
 			children = (
+				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
 				626D239B1BBA8D510055D8FC /* Components */,
 				623728A81BBECB9B00948D0D /* Models */,
 				626D23841BBA69A90055D8FC /* Modules */,
 				626D23911BBA72350055D8FC /* Services */,
 				623728A91BBECBA500948D0D /* Support */,
 				626D23851BBA69A90055D8FC /* UI */,
-				626D23561BBA696C0055D8FC /* AppDelegate.swift */,
 			);
 			path = Runway;
 			sourceTree = "<group>";

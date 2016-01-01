@@ -49,6 +49,7 @@ class Registration: NSManagedObject  {
     
     func deleteRegistration(context context: NSManagedObjectContext = AERecord.defaultContext) {
         deleteFromContext(context)
+        AERecord.saveContextAndWait(context)
     }
     
     // MARK: - Actions
