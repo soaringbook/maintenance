@@ -11,10 +11,15 @@ platform :ios do
     add_git_tag prefix: 'v'
     push_to_git_remote
 
+    match(
+      type: "adhoc",
+      app_identifier: "com.soaringbook.runway"
+    )
+
     # Build the application.
     gym(
       scheme: 'Runway',
-      configuration: 'Release',
+      configuration: 'Production',
       clean: true,
       use_legacy_build_api: true
     )
