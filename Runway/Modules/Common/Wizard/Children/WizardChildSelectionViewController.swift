@@ -64,7 +64,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     private let collectionViewHeight: CGFloat = 230.0
     private var collectionView: UICollectionView?
     private var placeholderLabel: UILabel?
-    private(set) var searchField: UITextField?
+    private(set) var searchField: SearchTextField?
     private var itemSize: CGFloat?
     
     // MARK: Getters
@@ -139,16 +139,23 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     private func prepareSearchField() {
         // Configure search field.
-        searchField = UITextField()
+        searchField = SearchTextField()
         searchField?.placeholder = searchPlaceholderTitle as String
         searchField!.autocorrectionType = .No
         searchField!.autocapitalizationType = .AllCharacters
         searchField?.delegate = self
-        searchField?.backgroundColor = view.backgroundColor
-        searchField?.opaque = true
+        searchField?.opaque = false
+        searchField?.tintColor = UIColor.SBGreenColor()
+        searchField?.textColor = UIColor.SBDarkGrayColor()
+        searchField?.font = UIFont.systemFontOfSize(20.0, weight: UIFontWeightLight)
+        searchField?.leftViewMode = .Always
+        searchField?.leftView = UIImageView(image: UIImage(named: "Search"))
         view.addSubview(searchField!)
         
-        searchField!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(0.0, 20.0, 0.0, 20.0), excludingEdge: .Bottom)
+        searchField!.autoPinEdge(.Top, toEdge: .Top, ofView: searchField!.superview!, withOffset: 0.0)
+        searchField!.autoPinEdge(.Left, toEdge: .Left, ofView: searchField!.superview!, withOffset: 20.0)
+        let widthConstraint = searchField!.autoMatchDimension(.Width, toDimension: .Width, ofView: searchField!.superview!, withMultiplier: 0.5)
+        widthConstraint.constant = -40
         searchField!.autoSetDimension(.Height, toSize: 50.0)
     }
     
