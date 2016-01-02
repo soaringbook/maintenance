@@ -198,6 +198,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        searchField?.resignFirstResponder()
         let item = selectionItems[indexPath.item]
         selectItem(item)
     }
