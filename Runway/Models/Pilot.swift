@@ -36,6 +36,10 @@ class Pilot: NSManagedObject, WizardSelectionItem {
         return components.joinWithSeparator(" ")
     }
     
+    var shortName: String? {
+        return firstName
+    }
+    
     // MARK: - Creation
     
     static func updateObjects(fromResponse objects: [[String:AnyObject]], context: NSManagedObjectContext = AERecord.defaultContext) {

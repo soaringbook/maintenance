@@ -13,6 +13,7 @@ private let CollectionViewSpacing: CGFloat = 20.0
 
 @objc protocol WizardSelectionItem {
     var displayName: String { get }
+    var shortName: String? { get }
     var imageData: NSData? { get }
     var image: UIImage? { get }
 }
@@ -63,7 +64,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     private let collectionViewHeight: CGFloat = 220.0
     private var collectionView: UICollectionView?
     private var placeholderLabel: UILabel?
-    private var searchField: UITextField?
+    private(set) var searchField: UITextField?
     private var itemSize: CGFloat?
     
     // MARK: Getters
