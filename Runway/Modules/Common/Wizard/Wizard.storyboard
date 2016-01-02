@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yUv-1H-5zn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yUv-1H-5zn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,6 @@
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-Xq-czV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="2"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="Gfw-Ur-Dv9">
                                         <variation key="widthClass=regular" constant="2"/>
@@ -40,27 +39,26 @@
                                 </variation>
                             </progressView>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-oa-IOi" userLabel="Back button">
-                                <rect key="frame" x="20" y="41" width="29" height="50"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="33" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="i1B-Wa-aYq"/>
                                     <constraint firstAttribute="width" constant="50" id="tB7-r0-hE2">
                                         <variation key="widthClass=regular" constant="29"/>
                                     </constraint>
                                 </constraints>
-                                <state key="normal" title="Button" image="Dismiss">
+                                <state key="normal" image="Dismiss">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="tB7-r0-hE2"/>
                                         <exclude reference="i1B-Wa-aYq"/>
+                                        <exclude reference="tB7-r0-hE2"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="tB7-r0-hE2"/>
                                         <include reference="i1B-Wa-aYq"/>
+                                        <include reference="tB7-r0-hE2"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -68,37 +66,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-a4-Kzv" userLabel="Title">
-                                <rect key="frame" x="69" y="30" width="139" height="72"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <rect key="frame" x="75" y="20" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzR-cf-nsd" userLabel="Dismiss button">
-                                <rect key="frame" x="530" y="46" width="40" height="40"/>
-                                <animations/>
+                                <rect key="frame" x="545" y="33" width="35" height="35"/>
                                 <state key="normal" image="Dismiss"/>
                                 <connections>
                                     <action selector="dismiss:" destination="yUv-1H-5zn" eventType="touchUpInside" id="Oww-VW-Z7W"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-Ld-fQa" userLabel="Container View">
-                                <rect key="frame" x="0.0" y="112" width="600" height="488"/>
-                                <animations/>
+                                <rect key="frame" x="0.0" y="90" width="600" height="510"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aCN-a4-Kzv" firstAttribute="leading" secondItem="6ek-oa-IOi" secondAttribute="trailing" constant="20" id="00T-Jt-9XA"/>
                             <constraint firstItem="OuD-Ld-fQa" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" id="1xK-44-aFN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AzR-cf-nsd" secondAttribute="trailing" constant="10" id="3mt-62-U3j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AzR-cf-nsd" secondAttribute="trailing" id="3mt-62-U3j"/>
                             <constraint firstItem="lFH-Ps-uqc" firstAttribute="top" secondItem="OuD-Ld-fQa" secondAttribute="bottom" id="7Op-DQ-0te"/>
                             <constraint firstItem="Ta4-Xq-czV" firstAttribute="top" secondItem="Rw3-n1-tDU" secondAttribute="top" id="J4X-mY-m98"/>
                             <constraint firstItem="6ek-oa-IOi" firstAttribute="centerY" secondItem="aCN-a4-Kzv" secondAttribute="centerY" id="LwM-Ti-8TC"/>
                             <constraint firstItem="AzR-cf-nsd" firstAttribute="centerY" secondItem="aCN-a4-Kzv" secondAttribute="centerY" id="YwG-A9-DRG"/>
-                            <constraint firstItem="aCN-a4-Kzv" firstAttribute="top" secondItem="mwk-Az-rCu" secondAttribute="bottom" constant="10" id="ZzJ-dc-8y5"/>
+                            <constraint firstItem="aCN-a4-Kzv" firstAttribute="top" secondItem="mwk-Az-rCu" secondAttribute="bottom" id="ZzJ-dc-8y5"/>
                             <constraint firstItem="Ta4-Xq-czV" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" id="aTl-go-5Yn"/>
                             <constraint firstItem="6ek-oa-IOi" firstAttribute="leading" secondItem="Rw3-n1-tDU" secondAttribute="leading" constant="20" id="dzG-MJ-Y7b"/>
                             <constraint firstAttribute="trailing" secondItem="OuD-Ld-fQa" secondAttribute="trailing" id="lr3-Dl-iUh"/>
@@ -122,6 +116,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dismiss" width="40" height="40"/>
+        <image name="Dismiss" width="35" height="35"/>
     </resources>
 </document>

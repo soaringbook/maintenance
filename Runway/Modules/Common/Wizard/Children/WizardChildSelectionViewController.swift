@@ -13,6 +13,7 @@ private let CollectionViewSpacing: CGFloat = 20.0
 
 @objc protocol WizardSelectionItem {
     var displayName: String { get }
+    var shortName: String? { get }
     var imageData: NSData? { get }
     var image: UIImage? { get }
 }
@@ -60,10 +61,10 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     // MARK: Privates
     
-    private let collectionViewHeight: CGFloat = 220.0
+    private let collectionViewHeight: CGFloat = 230.0
     private var collectionView: UICollectionView?
     private var placeholderLabel: UILabel?
-    private var searchField: UITextField?
+    private(set) var searchField: UITextField?
     private var itemSize: CGFloat?
     
     // MARK: Getters
@@ -97,10 +98,8 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         prepareContent()
         placeholderLabel?.hidden = !selectionItems.isEmpty
         searchField?.hidden = selectionItems.isEmpty
-        
-        dispatch_main_after(0.4) {
-            self.searchField?.becomeFirstResponder()
-            return
+        if !selectionItems.isEmpty {
+            searchField?.becomeFirstResponder()
         }
     }
     
@@ -198,6 +197,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        searchField?.resignFirstResponder()
         let item = selectionItems[indexPath.item]
         selectItem(item)
     }

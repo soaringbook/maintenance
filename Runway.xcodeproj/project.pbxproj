@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */; };
+		040CBAEE1C386DD400B093F5 /* WinterStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */; };
 		041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E3E1C2E9A98004917AE /* SBDefaults.swift */; };
 		041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */; };
 		041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */; };
@@ -15,6 +17,12 @@
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
+		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
+		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
+		0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */; };
+		0481AD761C37DF4700335453 /* ActionPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD751C37DF4700335453 /* ActionPresentationController.swift */; };
+		0481AD781C37E0F500335453 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD771C37E0F500335453 /* ActionView.swift */; };
+		0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
@@ -51,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402E7551C388B430046D0D7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.production.xcconfig"; sourceTree = "<group>"; };
+		040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterStartViewController.swift; sourceTree = "<group>"; };
+		040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterStartViewController.xib; sourceTree = "<group>"; };
 		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
 		041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainerViewController.swift; sourceTree = "<group>"; };
 		041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +71,12 @@
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
+		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
+		0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTransitioningDelegate.swift; sourceTree = "<group>"; };
+		0481AD751C37DF4700335453 /* ActionPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationController.swift; sourceTree = "<group>"; };
+		0481AD771C37E0F500335453 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
 		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04D04FA01BF3578300F33F1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +162,27 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		0481AD6D1C37DBB700335453 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				0481AD771C37E0F500335453 /* ActionView.swift */,
+				0481AD6E1C37DBFC00335453 /* ActionViewController.swift */,
+				0481AD6F1C37DBFC00335453 /* ActionViewController.xib */,
+				0481AD721C37DEE400335453 /* Transition */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		0481AD721C37DEE400335453 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */,
+				0481AD751C37DF4700335453 /* ActionPresentationController.swift */,
+				0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		04D04F9C1BF3578300F33F1F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */,
+				0402E7551C388B430046D0D7 /* Production.xcconfig */,
 				04D04FAC1BF35E9E00F33F1F /* Release.xcconfig */,
 			);
 			path = Configurations;
@@ -195,6 +235,7 @@
 		04F34D8A1BF72A60006EEC4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0481AD6D1C37DBB700335453 /* Action */,
 				04F34D8B1BF72A60006EEC4A /* Wizard */,
 			);
 			path = Common;
@@ -215,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */,
+				040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */,
+				040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -251,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */,
+				0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */,
 				715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
@@ -457,6 +501,8 @@
 				04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */,
 				04F34DAC1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib in Resources */,
 				041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */,
+				0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */,
+				040CBAEE1C386DD400B093F5 /* WinterStartViewController.xib in Resources */,
 				04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,20 +594,26 @@
 				041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */,
 				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
+				0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */,
+				0481AD761C37DF4700335453 /* ActionPresentationController.swift in Sources */,
 				623728A71BBEC8CB00948D0D /* UIColor+Palette.swift in Sources */,
 				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
+				0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */,
 				04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */,
 				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */,
+				0481AD781C37E0F500335453 /* ActionView.swift in Sources */,
 				0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */,
 				04F1F01C1C07A11800BAB0B9 /* SBWebService+Registrations.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
+				0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */,
+				040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */,
 				04484A561C006F4D00965B5F /* WinterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +621,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0402E7531C388AFC0046D0D7 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0402E7551C388B430046D0D7 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		0402E7541C388AFC0046D0D7 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
+				CURRENT_PROJECT_VERSION = 23;
+				INFOPLIST_FILE = Runway/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Runway;
+				PROVISIONING_PROFILE = "$(sigh_com.soaringbook.runway_adhoc)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Production;
+		};
 		626D23791BBA696C0055D8FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04D04FAB1BF35E4F00F33F1F /* Debug.xcconfig */;
@@ -663,6 +769,7 @@
 				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
+				PROVISIONING_PROFILE = "$(sigh_com.soaringbook.runway.debug_development)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -677,6 +784,7 @@
 				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
+				PROVISIONING_PROFILE = "$(sigh_com.soaringbook.runway.debug_adhoc)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -689,6 +797,7 @@
 			buildConfigurations = (
 				626D23791BBA696C0055D8FC /* Debug */,
 				626D237A1BBA696C0055D8FC /* Release */,
+				0402E7531C388AFC0046D0D7 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -698,6 +807,7 @@
 			buildConfigurations = (
 				626D237C1BBA696C0055D8FC /* Debug */,
 				626D237D1BBA696C0055D8FC /* Release */,
+				0402E7541C388AFC0046D0D7 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

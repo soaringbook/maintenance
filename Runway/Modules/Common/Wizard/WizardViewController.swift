@@ -142,10 +142,4 @@ class WizardViewController: UIViewController {
     @IBAction func dismiss(sender: AnyObject) {
         delegate?.wizardControllerShouldDismiss(self)
     }
-    
-    // MARK: - Status bar
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 }

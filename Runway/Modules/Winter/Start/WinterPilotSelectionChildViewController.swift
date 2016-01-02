@@ -8,7 +8,9 @@
 
 import UIKit
 
-class WinterPilotSelectionChildViewController: WizardChildSelectionViewController {
+class WinterPilotSelectionChildViewController: WizardChildSelectionViewController, WinterStartViewControllerDelegate {
+    
+    var actionTransitioningDelegate: ActionTransitioningDelegate?
     
     var selectedPilot: Pilot?
         
@@ -29,12 +31,22 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     }
     
     override func selectItem(item: WizardSelectionItem) {
-        let alertController = UIAlertController(title: "Start", message: "You just indicated that \(item.displayName) is going to start working.\n\nAre you sure?", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
-        alertController.addAction(UIAlertAction(title: "Yes", style: .Default) { action in
-            self.selectedPilot = item as? Pilot
+        let controller = WinterStartViewController(withItem: item)
+        controller.delegate = self
+        let actionViewController = ActionViewController(withController: controller)
+        presentViewController(actionViewController, animated: true, completion: nil)
+    }
+    
+    // MARK: - WinterStartViewControllerDelegate
+    
+    func winterStartViewController(controller: WinterStartViewController, didStartItem item: WizardSelectionItem) {
+        if let item = item as? Pilot {
+            self.selectedPilot = item
             self.wizardViewController?.presentNextController()
-        })
-        presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func winterStartViewControllerDidCancel(controller: WinterStartViewController) {
+        searchField?.becomeFirstResponder()
     }
 }

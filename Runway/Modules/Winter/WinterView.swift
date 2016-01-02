@@ -99,7 +99,7 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     private func registrationCell(forIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NamedImageCollectionViewCell
         let item = registrations[rowForRegistration(atIndexPath: indexPath)]
-        cell.configure(item: item.pilot!)
+        cell.configureTime(item: item.pilot!)
         return cell
     }
     
