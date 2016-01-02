@@ -12,6 +12,7 @@ class ActionView: UIView {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var contentView: UIView!
+    @IBOutlet var roundedView: UIView!
     
     // MARK: - Setters
     
@@ -29,6 +30,9 @@ class ActionView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        roundedView.layer.cornerRadius = 5.0
         imageView.layer.cornerRadius = imageView.frame.size.height / 2.0
+        imageView.layer.borderColor = UIColor.SBDarkGrayColor().CGColor
+        imageView.layer.borderWidth = 2.0
     }
 }

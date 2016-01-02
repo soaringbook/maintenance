@@ -53,4 +53,10 @@ class ActionViewController<Controller: UIViewController where Controller: Action
         
         actionView.image = controller.image
     }
+    
+    // MARK: - Status
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 }
