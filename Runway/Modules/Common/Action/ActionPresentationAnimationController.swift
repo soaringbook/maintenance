@@ -21,7 +21,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
     // MARK: - UIViewControllerAnimatedTransitioning
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1.0
+        return 0.5
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -52,5 +52,17 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
     }
     
     private func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        let containerView = transitionContext.containerView()!
+
+        // Calculate centers
+        let finalCenter = CGPointMake(containerView.center.x, containerView.center.y + containerView.frame.size.height)
+        
+        // Start animation
+        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
+            presentedControllerView.center = finalCenter
+            }, completion: { (completed) -> Void in
+                transitionContext.completeTransition(true)
+        })
     }
 }
