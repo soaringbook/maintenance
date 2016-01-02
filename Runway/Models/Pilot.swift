@@ -73,7 +73,7 @@ class Pilot: NSManagedObject, WizardSelectionItem {
     
     static func selectablePilotsForRegistration(query: String?, context: NSManagedObjectContext = AERecord.defaultContext) -> [Pilot] {
         var predicate = NSPredicate(format: "(SUBQUERY(registrations, $registration, $registration.duration == nil).@count == 0 OR registrations.@count == 0)")
-        if let query = query {
+        if let query = query where query.characters.count > 0 {
             let queryPredicate = NSPredicate(format: "firstName contains[c] '\(query)' OR lastName contains[c] '\(query)'")
             predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, queryPredicate])
         }
