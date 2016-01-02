@@ -60,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		0402E7551C388B430046D0D7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.production.xcconfig"; sourceTree = "<group>"; };
 		040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterStartViewController.swift; sourceTree = "<group>"; };
 		040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterStartViewController.xib; sourceTree = "<group>"; };
 		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
@@ -293,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D323FDE768EF7AD7A9CD42 /* Pods.debug.xcconfig */,
+				0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */,
 				715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
@@ -660,7 +662,7 @@
 		};
 		0402E7541C388AFC0046D0D7 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 715AF96366F6ED140963E8C0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
