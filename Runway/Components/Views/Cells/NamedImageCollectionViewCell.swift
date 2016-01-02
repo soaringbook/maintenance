@@ -16,11 +16,13 @@ class NamedImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private var imageView: UIImageView!
     
+    @IBOutlet private var textLabelTimeSpacingConstraint: NSLayoutConstraint!
+    
     // MARK: Privates
     
     private let borderSize: CGFloat = 3.0
     private let selectionColor = UIColor(red:0.19, green:0.27, blue:0.34, alpha:1)
-    private let color = UIColor(red:0.6, green:0.6, blue:0.6, alpha:1)
+    private let color = UIColor.SBDarkGrayColor()
     
     // MARK: Overrides
     
@@ -64,6 +66,24 @@ class NamedImageCollectionViewCell: UICollectionViewCell {
         }
         
         timeLabel.hidden = true
+        textLabel.textAlignment = .Center
+    }
+    
+    func configureTime(item item: WizardSelectionItem) {
+        // Set text label.
+        textLabel.text = item.shortName
+        
+        // Fill image.
+        if let imageData = item.imageData {
+            let image = UIImage(data: imageData)
+            fillImage(image)
+        } else {
+            fillImage(item.image, contentMode: .Center)
+        }
+        
+        timeLabel.hidden = true
+        textLabel.textAlignment = .Left
+        textLabelTimeSpacingConstraint.priority = 800
     }
     
     func update(time time: NSDate?) {

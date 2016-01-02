@@ -193,7 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dismiss" width="40" height="40"/>
+        <image name="Dismiss" width="35" height="35"/>
         <image name="SmallLogo" width="44" height="40"/>
         <image name="Sync" width="37" height="37"/>
     </resources>

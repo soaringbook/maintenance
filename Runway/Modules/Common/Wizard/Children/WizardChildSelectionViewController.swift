@@ -61,7 +61,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     // MARK: Privates
     
-    private let collectionViewHeight: CGFloat = 220.0
+    private let collectionViewHeight: CGFloat = 230.0
     private var collectionView: UICollectionView?
     private var placeholderLabel: UILabel?
     private(set) var searchField: UITextField?
@@ -99,7 +99,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         placeholderLabel?.hidden = !selectionItems.isEmpty
         searchField?.hidden = selectionItems.isEmpty
         
-        dispatch_main_after(0.4) {
+        dispatch_main_after(0.0) {
             self.searchField?.becomeFirstResponder()
             return
         }
