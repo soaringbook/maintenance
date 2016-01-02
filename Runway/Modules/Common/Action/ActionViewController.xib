@@ -16,10 +16,19 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hg-PR-3gy">
                     <rect key="frame" x="0.0" y="35" width="400" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lm7-V9-aNk" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="35" width="400" height="165"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="AiG-T2-wL1"/>
-                        <constraint firstAttribute="width" constant="400" id="VvF-Lj-A0j"/>
+                        <constraint firstAttribute="height" constant="200" placeholder="YES" id="AiG-T2-wL1"/>
+                        <constraint firstAttribute="trailing" secondItem="Lm7-V9-aNk" secondAttribute="trailing" id="Lng-sX-med"/>
+                        <constraint firstItem="Lm7-V9-aNk" firstAttribute="leading" secondItem="0hg-PR-3gy" secondAttribute="leading" id="OMl-vb-Okv"/>
+                        <constraint firstAttribute="width" constant="400" placeholder="YES" id="VvF-Lj-A0j"/>
+                        <constraint firstAttribute="bottom" secondItem="Lm7-V9-aNk" secondAttribute="bottom" id="gvy-CR-lgO"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-m2-SpP">
@@ -39,8 +48,13 @@
                 <constraint firstAttribute="bottom" secondItem="0hg-PR-3gy" secondAttribute="bottom" id="KZo-0H-ers"/>
                 <constraint firstItem="0hg-PR-3gy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="bDW-Qd-M3m"/>
                 <constraint firstAttribute="trailing" secondItem="0hg-PR-3gy" secondAttribute="trailing" id="ipq-23-Dix"/>
+                <constraint firstItem="Lm7-V9-aNk" firstAttribute="top" secondItem="z6p-m2-SpP" secondAttribute="bottom" id="jJf-36-EnL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="Lm7-V9-aNk" id="Yoo-t2-mJZ"/>
+                <outlet property="imageView" destination="z6p-m2-SpP" id="hru-IU-TPv"/>
+            </connections>
             <point key="canvasLocation" x="840" y="660.5"/>
         </view>
     </objects>

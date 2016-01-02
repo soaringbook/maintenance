@@ -31,7 +31,7 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     }
     
     override func selectItem(item: WizardSelectionItem) {
-        let actionViewController = ActionViewController()
+        let actionViewController = ActionViewController(withController: WinterStartViewController())
         
 //        let alertController = UIAlertController(title: "Start", message: "You just indicated that \(item.displayName) is going to start working.\n\nAre you sure?", preferredStyle: .Alert)
 //        alertController.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
@@ -39,10 +39,6 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
 //            self.selectedPilot = item as? Pilot
 //            self.wizardViewController?.presentNextController()
 //        })
-        
-        actionTransitioningDelegate = ActionTransitioningDelegate()
-        actionViewController.transitioningDelegate = actionTransitioningDelegate
-        actionViewController.modalPresentationStyle = .Custom
         presentViewController(actionViewController, animated: true, completion: nil)
     }
 }

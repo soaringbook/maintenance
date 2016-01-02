@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */; };
+		040CBAEE1C386DD400B093F5 /* WinterStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */; };
 		041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E3E1C2E9A98004917AE /* SBDefaults.swift */; };
 		041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */; };
 		041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterStartViewController.swift; sourceTree = "<group>"; };
+		040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterStartViewController.xib; sourceTree = "<group>"; };
 		041D8E3E1C2E9A98004917AE /* SBDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDefaults.swift; sourceTree = "<group>"; };
 		041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainerViewController.swift; sourceTree = "<group>"; };
 		041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */,
+				040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */,
+				040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				04F34DAC1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib in Resources */,
 				041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */,
 				0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */,
+				040CBAEE1C386DD400B093F5 /* WinterStartViewController.xib in Resources */,
 				04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +609,7 @@
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */,
+				040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */,
 				04484A561C006F4D00965B5F /* WinterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

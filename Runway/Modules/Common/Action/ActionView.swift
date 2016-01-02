@@ -10,9 +10,15 @@ import UIKit
 
 class ActionView: UIView {
     
-    // MARK: - Size
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var contentView: UIView!
     
-    override func intrinsicContentSize() -> CGSize {
-        return CGSizeMake(400.0, 235.0)
+    // MARK: - View flow
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        imageView.backgroundColor = UIColor.redColor()
+        imageView.layer.cornerRadius = imageView.frame.size.height / 2.0
     }
 }
