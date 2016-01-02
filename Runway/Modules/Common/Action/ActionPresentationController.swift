@@ -25,12 +25,13 @@ class ActionPresentationController: UIPresentationController {
         overlayView?.addGestureRecognizer(gesture)
 
         // Add the presented view to the heirarchy
-        overlayView?.frame = containerView!.bounds
+//        overlayView?.frame = containerView!.bounds
         containerView?.addSubview(presentedViewController.view)
         
         let transitionCoordinator = self.presentingViewController.transitionCoordinator()
         transitionCoordinator?.animateAlongsideTransition({(context: UIViewControllerTransitionCoordinatorContext!) -> Void in
             self.containerView?.insertSubview(self.overlayView!, belowSubview: self.presentedViewController.view)
+            self.overlayView?.autoPinEdgesToSuperviewEdges()
         }, completion:nil)
     }
     
@@ -65,7 +66,7 @@ class ActionPresentationController: UIPresentationController {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: transitionCoordinator)
         
         transitionCoordinator.animateAlongsideTransition({(context: UIViewControllerTransitionCoordinatorContext!) -> Void in
-            self.overlayView?.frame = self.containerView!.bounds
+//            self.overlayView?.frame = self.containerView!.bounds
         }, completion:nil)
     }
     

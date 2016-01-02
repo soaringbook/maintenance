@@ -38,14 +38,15 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         let containerView = transitionContext.containerView()!
         
-        // Calculate centers
-        let initialCenter = CGPointMake(containerView.center.x, containerView.center.y + containerView.frame.size.height)
-        let finalCenter = containerView.center
-        
+        let horizontalConstraint = presentedControllerView.autoAlignAxisToSuperviewAxis(.Horizontal)
+        horizontalConstraint.constant = containerView.frame.size.height
+        presentedControllerView.autoAlignAxisToSuperviewAxis(.Vertical)
+        presentedControllerView.superview?.layoutIfNeeded()
+
         // Start animation
-        presentedControllerView.center = initialCenter
+        horizontalConstraint.constant = 0
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
-            presentedControllerView.center = finalCenter
+            presentedControllerView.superview?.layoutIfNeeded()
         }, completion: { (completed) -> Void in
             transitionContext.completeTransition(true)
         })
@@ -55,14 +56,16 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let containerView = transitionContext.containerView()!
 
-        // Calculate centers
-        let finalCenter = CGPointMake(containerView.center.x, containerView.center.y + containerView.frame.size.height)
+        let horizontalConstraint = containerView.constraints.filter { (constraint) -> Bool in
+            constraint.firstAttribute == .CenterY && constraint.secondAttribute == .CenterY
+        }.first
         
         // Start animation
+        horizontalConstraint?.constant = containerView.frame.size.height
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
-            presentedControllerView.center = finalCenter
-            }, completion: { (completed) -> Void in
-                transitionContext.completeTransition(true)
+            presentedControllerView.superview?.layoutIfNeeded()
+        }, completion: { (completed) -> Void in
+            transitionContext.completeTransition(true)
         })
     }
 }
