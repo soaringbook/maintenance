@@ -8,5 +8,13 @@
 
 import UIKit
 
-class WinterStartViewController: UIViewController {
+class WinterStartViewController: UIViewController, ActionViewControllerDelegate {
+    
+    // MARK: - ActionViewControllerDelegate
+    
+    var image: UIImage? {
+        get {
+            return UIImage(named: "Watch")
+        }
+    }
 }

@@ -8,17 +8,20 @@
 
 import UIKit
 
-class ActionViewController: UIViewController {
+protocol ActionViewControllerDelegate: NSObjectProtocol {
+    var image: UIImage? { get }
+}
+
+class ActionViewController<Controller: UIViewController where Controller: ActionViewControllerDelegate>: UIViewController {
     var actionView: ActionView! { return self.view as! ActionView }
     
-    private var controller: UIViewController!
-    
+    private var controller: Controller!
     
     let actionTransitioningDelegate = ActionTransitioningDelegate()
     
     // MARK: - Init
     
-    convenience init(withController controller: UIViewController) {
+    convenience init(withController controller: Controller) {
         self.init(nibName: "ActionViewController", bundle: nil)
         
         self.controller = controller
@@ -47,5 +50,7 @@ class ActionViewController: UIViewController {
         actionView.contentView.addSubview(controller.view)
         controller.view.autoPinEdgesToSuperviewEdges()
         controller.didMoveToParentViewController(self)
+        
+        actionView.image = controller.image
     }
 }

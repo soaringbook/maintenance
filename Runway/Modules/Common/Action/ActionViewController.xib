@@ -31,9 +31,9 @@
                         <constraint firstAttribute="bottom" secondItem="Lm7-V9-aNk" secondAttribute="bottom" id="gvy-CR-lgO"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-m2-SpP">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watch" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-m2-SpP">
                     <rect key="frame" x="165" y="0.0" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.18823529410000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="BZE-Wi-Nsu"/>
                         <constraint firstAttribute="height" constant="70" id="oSh-1D-rWm"/>
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="840" y="660.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Watch" width="41" height="55"/>
+    </resources>
 </document>

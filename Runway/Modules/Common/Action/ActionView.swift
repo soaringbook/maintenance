@@ -13,12 +13,22 @@ class ActionView: UIView {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var contentView: UIView!
     
+    // MARK: - Setters
+    
+    var image: UIImage? {
+        set {
+            imageView.image = newValue
+        }
+        get {
+            return imageView.image
+        }
+    }
+    
     // MARK: - View flow
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        imageView.backgroundColor = UIColor.redColor()
         imageView.layer.cornerRadius = imageView.frame.size.height / 2.0
     }
 }
