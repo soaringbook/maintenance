@@ -25,6 +25,8 @@
 		0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
 		04CCECD51C388D020089AC37 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCECD41C388D020089AC37 /* SearchTextField.swift */; };
+		04CCECD91C39247B0089AC37 /* WinterEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCECD71C39247B0089AC37 /* WinterEndViewController.swift */; };
+		04CCECDA1C39247B0089AC37 /* WinterEndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CCECD81C39247B0089AC37 /* WinterEndViewController.xib */; };
 		04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04F9F1BF3578300F33F1F /* LoginView.swift */; };
 		04D04FA31BF3578300F33F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D04FA01BF3578300F33F1F /* LoginViewController.swift */; };
 		04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D04FA61BF35CD100F33F1F /* Launch.storyboard */; };
@@ -80,6 +82,8 @@
 		0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
 		04CCECD41C388D020089AC37 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		04CCECD71C39247B0089AC37 /* WinterEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterEndViewController.swift; sourceTree = "<group>"; };
+		04CCECD81C39247B0089AC37 /* WinterEndViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterEndViewController.xib; sourceTree = "<group>"; };
 		04D04F9F1BF3578300F33F1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04D04FA01BF3578300F33F1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04D04FA61BF35CD100F33F1F /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -185,6 +189,15 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
+		04CCECD61C3924660089AC37 /* End */ = {
+			isa = PBXGroup;
+			children = (
+				04CCECD71C39247B0089AC37 /* WinterEndViewController.swift */,
+				04CCECD81C39247B0089AC37 /* WinterEndViewController.xib */,
+			);
+			path = End;
+			sourceTree = "<group>";
+		};
 		04D04F9C1BF3578300F33F1F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				04E1F4C91C09AA6E00159ABF /* Comment */,
+				04CCECD61C3924660089AC37 /* End */,
 				04F34D981BF736A5006EEC4A /* Start */,
 				04F34D861BF72582006EEC4A /* Winter.storyboard */,
 				04484A551C006F4D00965B5F /* WinterView.swift */,
@@ -505,6 +519,7 @@
 				04F34DAC1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib in Resources */,
 				041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */,
 				0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */,
+				04CCECDA1C39247B0089AC37 /* WinterEndViewController.xib in Resources */,
 				040CBAEE1C386DD400B093F5 /* WinterStartViewController.xib in Resources */,
 				04F34D871BF72582006EEC4A /* Winter.storyboard in Resources */,
 			);
@@ -617,6 +632,7 @@
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */,
+				04CCECD91C39247B0089AC37 /* WinterEndViewController.swift in Sources */,
 				040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */,
 				04484A561C006F4D00965B5F /* WinterView.swift in Sources */,
 			);
