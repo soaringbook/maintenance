@@ -49,12 +49,6 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        textView.becomeFirstResponder()
-    }
-    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
