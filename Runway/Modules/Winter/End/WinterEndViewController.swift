@@ -49,10 +49,23 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        textView.becomeFirstResponder()
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
+        textView.resignFirstResponder()
         delegate?.winterEndViewControllerDidCancel(self)
+    }
+    
+    // MARK: - First responder
+    
+    override func resignFirstResponder() -> Bool {
+        return textView.resignFirstResponder()
     }
     
     // MARK: - Actions

@@ -63,6 +63,8 @@ class ActionPresentationController: UIPresentationController {
     // MARK: - Gestures
     
     func dismiss(sender: AnyObject) {
-        presentingViewController.dismissViewControllerAnimated(true, completion: nil)
+        if !presentedViewController.resignFirstResponder() {
+            presentingViewController.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 }

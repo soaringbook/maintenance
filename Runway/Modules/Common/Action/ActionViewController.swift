@@ -54,6 +54,12 @@ class ActionViewController<Controller: UIViewController where Controller: Action
         actionView.image = controller.image
     }
     
+    // MARK: - First responder
+    
+    override func resignFirstResponder() -> Bool {
+        return controller.resignFirstResponder()
+    }
+    
     // MARK: - Status
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
