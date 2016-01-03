@@ -11,7 +11,7 @@ import UIKit
 private let SelectionCellSpacing: CGFloat = 10.0
 private let CollectionViewSpacing: CGFloat = 20.0
 
-class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate, WinterCommentViewControllerDelegate {
+class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate, WinterEndViewControllerDelegate {
     var winterView: WinterView! { return self.view as! WinterView }
     
     private var activeRegistration: Registration?
@@ -47,8 +47,6 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         if let controller = segue.destinationViewController as? WizardViewController where segue.identifier == "Start" {
             controller.dataSource = self
             controller.delegate = self
-        } else if let controller = segue.destinationViewController as? WinterCommentViewController {
-            controller.delegate = self
         }
     }
     
@@ -66,14 +64,19 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         ]
     }
     
-    // MARK: - WinterCommentViewControllerDelegate
+    // MARK: - WinterEndViewControllerDelegate
     
-    func winterCommentViewController(controller: WinterCommentViewController, didAddComment comment: String) {
+    func winterEndViewController(controller: WinterEndViewController, didEndWithComment comment: String) {
         if let registration = activeRegistration, let indexPath = activeRegistrationIndexPath {
             print("💾 \(registration.pilot!.displayName) registration stop")
             registration.stop(withComment: comment)
             winterView.removeRegistration(atIndexPath: indexPath)
+            dismissViewControllerAnimated(true, completion: nil)
         }
+    }
+    
+    func winterEndViewControllerDidCancel(controller: WinterEndViewController) {
+        
     }
     
     // MARK: - WizardViewControllerDelegate
@@ -94,7 +97,11 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath) {
         activeRegistration = registration
         activeRegistrationIndexPath = indexPath
-        performSegueWithIdentifier("Comment", sender: nil)
+        
+        let controller = WinterEndViewController(withItem: registration.pilot!)
+        controller.delegate = self
+        let actionViewController = ActionViewController(withController: controller)
+        presentViewController(actionViewController, animated: true, completion: nil)
     }
     
     func winterViewWillStartRegistration(view: WinterView) {

@@ -41,6 +41,10 @@ class ActionViewController<Controller: UIViewController where Controller: Action
         modalPresentationStyle = .Custom
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     // MARK: - View flow
     
     override func viewDidLoad() {
@@ -52,6 +56,40 @@ class ActionViewController<Controller: UIViewController where Controller: Action
         controller.didMoveToParentViewController(self)
         
         actionView.image = controller.image
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+            if let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+                let bottomConstraint = self.actionView.constraints.filter { (constraint) -> Bool in
+                    constraint.firstAttribute == .Bottom && constraint.secondAttribute == .Bottom
+                }.first
+                
+                bottomConstraint?.constant = value.CGRectValue().size.height
+                if let value = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber {
+                    UIView.animateWithDuration(value.doubleValue) {
+                        self.view.layoutIfNeeded()
+                    }
+                }
+            }
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+            let bottomConstraint = self.actionView.constraints.filter { (constraint) -> Bool in
+                return constraint.firstAttribute == .Bottom && constraint.secondAttribute == .Bottom
+            }.first
+            
+            bottomConstraint?.constant = 0
+            if let value = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber {
+                UIView.animateWithDuration(value.doubleValue) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    // MARK: - First responder
+    
+    override func resignFirstResponder() -> Bool {
+        return controller.resignFirstResponder()
     }
     
     // MARK: - Status
