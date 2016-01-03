@@ -13,6 +13,7 @@ class IconCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var label: UILabel!
     
     // MARK: - Configuration
     
