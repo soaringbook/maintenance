@@ -97,7 +97,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         activeRegistration = registration
         activeRegistrationIndexPath = indexPath
         
-        let controller = WinterEndViewController(withItem: registration.pilot!)
+        let controller = UIStoryboard(name: "WinterEnd", bundle: nil).instantiateInitialViewController() as! WinterEndViewController
+        controller.item = registration.pilot
         controller.delegate = self
         let actionViewController = ActionViewController(withController: controller)
         presentViewController(actionViewController, animated: true, completion: nil)

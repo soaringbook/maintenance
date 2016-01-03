@@ -18,36 +18,7 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     var delegate: WinterEndViewControllerDelegate?
     var item: WizardSelectionItem!
     
-    @IBOutlet var label: UILabel!
-    @IBOutlet var textView: UITextView!
-    
-    // MARK: - Init
-    
-    convenience init(withItem item: WizardSelectionItem) {
-        self.init(nibName: "WinterEndViewController", bundle: nil)
-        
-        self.item = item
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     // MARK: - View flow
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let name = item.shortName {
-            label.text = "Done working for today \(name)?"
-        } else {
-            label.text = "Done working for today?"
-        }
-    }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -55,13 +26,11 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
         delegate?.winterEndViewControllerDidCancel(self)
     }
     
-    // MARK: - Actions
+    // MARK: - Segue
     
-    @IBAction func end(sender: AnyObject) {
-        if textView.text.isEmpty {
-            
-        } else {
-            delegate?.winterEndViewController(self, didEndItem: item, withComment: textView.text)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? WinterEndActionViewController {
+            controller.item = item
         }
     }
     
