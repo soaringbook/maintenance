@@ -71,6 +71,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
             print("💾 \(registration.pilot!.displayName) registration stop")
             registration.stop(withComment: comment)
             winterView.removeRegistration(atIndexPath: indexPath)
+            dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
