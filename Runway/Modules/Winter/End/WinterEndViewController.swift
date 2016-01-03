@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WinterEndViewControllerDelegate {
-    func winterEndViewController(controller: WinterEndViewController, didEndItem item: WizardSelectionItem, withComment comment: String)
+    func winterEndViewController(controller: WinterEndViewController, didEndWithComment comment: String)
     func winterEndViewControllerDidCancel(controller: WinterEndViewController)
 }
 
@@ -18,7 +18,36 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     var delegate: WinterEndViewControllerDelegate?
     var item: WizardSelectionItem!
     
+    @IBOutlet var label: UILabel!
+    @IBOutlet var textView: UITextView!
+    
+    // MARK: - Init
+    
+    convenience init(withItem item: WizardSelectionItem) {
+        self.init(nibName: "WinterEndViewController", bundle: nil)
+        
+        self.item = item
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: - View flow
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let name = item.shortName {
+            label.text = "Done for today \(name)?"
+        } else {
+            label.text = "Done for today?"
+        }
+    }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -26,11 +55,13 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
         delegate?.winterEndViewControllerDidCancel(self)
     }
     
-    // MARK: - Segue
+    // MARK: - Actions
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? WinterEndActionViewController {
-            controller.item = item
+    @IBAction func end(sender: AnyObject) {
+        if textView.text.isEmpty {
+            
+        } else {
+            delegate?.winterEndViewController(self, didEndWithComment: textView.text)
         }
     }
     

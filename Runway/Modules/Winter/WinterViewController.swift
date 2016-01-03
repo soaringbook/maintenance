@@ -66,7 +66,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     // MARK: - WinterEndViewControllerDelegate
     
-    func winterEndViewController(controller: WinterEndViewController, didEndItem item: WizardSelectionItem, withComment comment: String) {
+    func winterEndViewController(controller: WinterEndViewController, didEndWithComment comment: String) {
         if let registration = activeRegistration, let indexPath = activeRegistrationIndexPath {
             print("💾 \(registration.pilot!.displayName) registration stop")
             registration.stop(withComment: comment)
@@ -97,8 +97,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         activeRegistration = registration
         activeRegistrationIndexPath = indexPath
         
-        let controller = UIStoryboard(name: "WinterEnd", bundle: nil).instantiateInitialViewController() as! WinterEndViewController
-        controller.item = registration.pilot
+        let controller = WinterEndViewController(withItem: registration.pilot!)
         controller.delegate = self
         let actionViewController = ActionViewController(withController: controller)
         presentViewController(actionViewController, animated: true, completion: nil)
