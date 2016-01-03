@@ -39,7 +39,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let containerView = transitionContext.containerView()!
         
         let horizontalConstraint = presentedControllerView.autoAlignAxisToSuperviewAxis(.Horizontal)
-        horizontalConstraint.constant = containerView.frame.size.height
+        horizontalConstraint.constant = -containerView.frame.size.height
         presentedControllerView.autoAlignAxisToSuperviewAxis(.Vertical)
         presentedControllerView.superview?.layoutIfNeeded()
 
