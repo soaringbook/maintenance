@@ -98,8 +98,12 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
         prepareContent()
         placeholderLabel?.hidden = !selectionItems.isEmpty
         searchField?.hidden = selectionItems.isEmpty
-        if !selectionItems.isEmpty {
-            searchField?.becomeFirstResponder()
+        
+        dispatch_main_after(0.5) {
+            if !self.selectionItems.isEmpty {
+                self.searchField?.becomeFirstResponder()
+            }
+            return
         }
     }
     

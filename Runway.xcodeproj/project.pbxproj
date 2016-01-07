@@ -18,6 +18,7 @@
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
 		0461364B1C3EF26200C45350 /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364A1C3EF26200C45350 /* SlideSegue.swift */; };
+		0461364F1C3EF6A900C45350 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364E1C3EF6A900C45350 /* ScaleSegue.swift */; };
 		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
 		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
 		0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */; };
@@ -75,6 +76,7 @@
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
 		0461364A1C3EF26200C45350 /* SlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
+		0461364E1C3EF6A900C45350 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			isa = PBXGroup;
 			children = (
 				0461364A1C3EF26200C45350 /* SlideSegue.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		0461364D1C3EF69400C45350 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				0461364E1C3EF6A900C45350 /* ScaleSegue.swift */,
 			);
 			name = Transition;
 			sourceTree = "<group>";
@@ -271,6 +281,7 @@
 		04F34D981BF736A5006EEC4A /* Start */ = {
 			isa = PBXGroup;
 			children = (
+				0461364D1C3EF69400C45350 /* Transition */,
 				04F34D991BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift */,
 				040CBAEB1C386DD400B093F5 /* WinterStartViewController.swift */,
 				040CBAEC1C386DD400B093F5 /* WinterStartViewController.xib */,
@@ -596,6 +607,7 @@
 			files = (
 				04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */,
 				04F34DA21BF74258006EEC4A /* SBCollectionViewDynamicFlowLayout.swift in Sources */,
+				0461364F1C3EF6A900C45350 /* ScaleSegue.swift in Sources */,
 				62F1F3B41BBC1DFF001FF957 /* NSError+Custom.swift in Sources */,
 				0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */,
 				622D75111BBABE8D00D8949F /* BottomBorderTextField.swift in Sources */,

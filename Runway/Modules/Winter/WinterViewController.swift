@@ -48,6 +48,9 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
             controller.dataSource = self
             controller.delegate = self
         }
+        if let segue = segue as? ScaleSegue, let view = sender as? UIView {
+            segue.referenceView = view
+        }
     }
     
     @IBAction func unwindToWinter(segue: UIStoryboardSegue) {
@@ -104,8 +107,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         presentViewController(actionViewController, animated: true, completion: nil)
     }
     
-    func winterViewWillStartRegistration(view: WinterView) {
-        performSegueWithIdentifier("Start", sender: nil)
+    func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView) {
+        performSegueWithIdentifier("Start", sender: subview)
     }
     
     // MARK: - Time

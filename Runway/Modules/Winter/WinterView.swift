@@ -10,7 +10,7 @@ import UIKit
 
 protocol WinterViewDelegate {
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath)
-    func winterViewWillStartRegistration(view: WinterView)
+    func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView)
 }
 
 class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -67,7 +67,9 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
-            delegate?.winterViewWillStartRegistration(self)
+            if let cell = collectionView.cellForItemAtIndexPath(indexPath) {
+                delegate?.winterViewWillStartRegistration(self, fromView: cell)
+            }
         } else {
             let registration = registrations[rowForRegistration(atIndexPath: indexPath)]
             delegate?.winterView(self, didSelectRegistration: registration, atIndexPath: indexPath)
