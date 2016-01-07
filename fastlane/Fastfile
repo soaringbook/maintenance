@@ -1,35 +1,50 @@
-fastlane_version '1.39.0'
+fastlane_version '1.49.0'
 
 default_platform :ios
 
 platform :ios do
-  desc 'Upload this version to HockyApp.'
-  lane :hockey do
+  before_all do
     # Version bump.
     increment_build_number
     commit_version_bump
     add_git_tag prefix: 'v'
     push_to_git_remote
 
+    # Prepare the codesigning.
     match(
-      type: "adhoc",
-      app_identifier: "com.soaringbook.runway"
+      type:           'adhoc',
+      app_identifier: 'com.soaringbook.runway'
     )
 
     # Build the application.
     gym(
-      scheme: 'Runway',
-      configuration: 'Production',
-      clean: true,
+      scheme:               'Runway',
+      configuration:        'Production',
+      clean:                true,
       use_legacy_build_api: true
     )
+  end
 
+  desc 'Upload this version to HockyApp.'
+  lane :hockey do
     # Upload to HockeyApp.
     hockey(
       api_token: ENV['HOCKEYAPP_API_TOKEN'],
-      teams: 'Runway',
-      notify: '1',
-      status: '2'
+      teams:     'Runway',
+      notify:    '1',
+      status:    '2'
+    )
+  end
+
+  desc 'Upload this version to S3.'
+  lane :s3 do
+    # Upload to S3.
+    s3(
+      access_key:        ENV['S3_ACCESS_KEY'],
+      secret_access_key: ENV['S3_SECRET_ACCESS_KEY'],
+      bucket:            ENV['S3_BUCKET'],
+      region:            ENV['S3_REGION'],
+      ipa:               'Runway.ipa'
     )
   end
 end
