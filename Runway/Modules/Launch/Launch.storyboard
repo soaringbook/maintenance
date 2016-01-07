@@ -35,13 +35,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LbB-nQ-siM" userLabel="Keyboard View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0j2-u2-1qv" userLabel="Content View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j2-u2-1qv" userLabel="Content View">
                                         <rect key="frame" x="50" y="210" width="500" height="181"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zsP-M0-XHl">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="181"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5s1-H0-bvV" userLabel="Token Title View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5s1-H0-bvV" userLabel="Token Title View">
                                                 <rect key="frame" x="220" y="0.0" width="280" height="181"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-ps-aYX" userLabel="Title Container">
@@ -71,7 +71,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="gUQ-7M-MZq" secondAttribute="trailing" id="zX9-pf-OuX"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in your club token..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="une-Ug-bUB" customClass="BottomBorderedTextField" customModule="Runway" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in your club token..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="une-Ug-bUB" customClass="BottomBorderedTextField" customModule="Runway" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="141" width="280" height="40"/>
                                                         <color key="tintColor" red="0.098039215686274508" green="0.66666666666666663" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -90,7 +90,7 @@
                                                             <outlet property="delegate" destination="y30-gr-TNe" id="2lb-wc-GIF"/>
                                                         </connections>
                                                     </textField>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q05-Ii-aWB">
                                                         <rect key="frame" x="121" y="143" width="37" height="37"/>
                                                         <color key="color" red="0.1176470588" green="0.65098039220000004" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     </activityIndicatorView>
@@ -199,7 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kvy-fo-Fmk"/>
                     <connections>
-                        <segue destination="3hn-D0-lny" kind="show" identifier="Application" id="1Do-RG-IoW"/>
+                        <segue destination="3hn-D0-lny" kind="show" identifier="Application" customClass="SlideSegue" customModule="Runway" customModuleProvider="target" id="1Do-RG-IoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzj-T5-JOB" userLabel="First Responder" sceneMemberID="firstResponder"/>

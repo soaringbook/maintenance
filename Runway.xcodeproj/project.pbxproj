@@ -17,6 +17,7 @@
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
+		0461364B1C3EF26200C45350 /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364A1C3EF26200C45350 /* SlideSegue.swift */; };
 		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
 		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
 		0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */; };
@@ -73,6 +74,7 @@
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
+		0461364A1C3EF26200C45350 /* SlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = Formatters;
 			sourceTree = "<group>";
 		};
+		046136491C3EF25400C45350 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				0461364A1C3EF26200C45350 /* SlideSegue.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		047CE30C1BF3743300ACF7E0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 			children = (
 				04D04F9F1BF3578300F33F1F /* LoginView.swift */,
 				04D04FA01BF3578300F33F1F /* LoginViewController.swift */,
+				046136491C3EF25400C45350 /* Transition */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -598,6 +609,7 @@
 				041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Pilot.swift in Sources */,
 				04CCECD51C388D020089AC37 /* SearchTextField.swift in Sources */,
+				0461364B1C3EF26200C45350 /* SlideSegue.swift in Sources */,
 				041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */,
 				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
