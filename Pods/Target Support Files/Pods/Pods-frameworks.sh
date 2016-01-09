@@ -87,14 +87,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AERecord.framework"
   install_framework "Pods/PureLayout.framework"
   install_framework "Pods/SSKeychain.framework"
+  install_framework "Pods/UITextView_Placeholder.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AERecord.framework"
   install_framework "Pods/PureLayout.framework"
   install_framework "Pods/SSKeychain.framework"
+  install_framework "Pods/UITextView_Placeholder.framework"
 fi
 if [[ "$CONFIGURATION" == "Production" ]]; then
   install_framework "Pods/AERecord.framework"
   install_framework "Pods/PureLayout.framework"
   install_framework "Pods/SSKeychain.framework"
+  install_framework "Pods/UITextView_Placeholder.framework"
 fi
