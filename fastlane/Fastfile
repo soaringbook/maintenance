@@ -6,9 +6,6 @@ platform :ios do
   before_all do
     # Version bump.
     increment_build_number
-    commit_version_bump
-    add_git_tag prefix: 'v'
-    push_to_git_remote
 
     # Prepare the codesigning.
     match(
@@ -25,17 +22,6 @@ platform :ios do
     )
   end
 
-  desc 'Upload this version to HockyApp.'
-  lane :hockey do
-    # Upload to HockeyApp.
-    hockey(
-      api_token: ENV['HOCKEYAPP_API_TOKEN'],
-      teams:     'Runway',
-      notify:    '1',
-      status:    '2'
-    )
-  end
-
   desc 'Upload this version to S3.'
   lane :s3 do
     # Upload to S3.
@@ -47,5 +33,13 @@ platform :ios do
       ipa:                'Runway.ipa',
       html_template_path: './fastlane/template/s3.erb'
     )
+  end
+
+  after_all do |lane|
+    commit_version_bump
+    add_git_tag prefix: 'v'
+    push_to_git_remote
+    
+    clean_build_artifacts
   end
 end
