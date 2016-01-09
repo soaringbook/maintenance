@@ -481,6 +481,7 @@
 				F3DE284F1FBF3EE700B64129 /* Embed Pods Frameworks */,
 				567A562B201D2C9B0AABB5DC /* Copy Pods Resources */,
 				626D239A1BBA859F0055D8FC /* Load environment variables */,
+				049E66861C414893008118CA /* Load Fabric */,
 			);
 			buildRules = (
 			);
@@ -545,6 +546,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		049E66861C414893008118CA /* Load Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Load Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/load_fabric.rb;
+		};
 		567A562B201D2C9B0AABB5DC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -806,6 +821,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 25;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
