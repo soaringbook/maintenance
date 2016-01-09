@@ -66,7 +66,7 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     
     @IBAction func end(sender: AnyObject) {
         if textView.text.isEmpty {
-            
+            textView.shake()
         } else {
             delegate?.winterEndViewController(self, didEndWithComment: textView.text)
         }
