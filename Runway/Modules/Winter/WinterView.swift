@@ -33,7 +33,6 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func invalidateLayout() {
-        
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsetsMake(0.0, 20.0, 20.0, 20.0)
         }

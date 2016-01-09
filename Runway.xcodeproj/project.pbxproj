@@ -17,7 +17,6 @@
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
-		0461364B1C3EF26200C45350 /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364A1C3EF26200C45350 /* SlideSegue.swift */; };
 		0461364F1C3EF6A900C45350 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364E1C3EF6A900C45350 /* ScaleSegue.swift */; };
 		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
 		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
@@ -25,6 +24,7 @@
 		0481AD761C37DF4700335453 /* ActionPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD751C37DF4700335453 /* ActionPresentationController.swift */; };
 		0481AD781C37E0F500335453 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD771C37E0F500335453 /* ActionView.swift */; };
 		0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */; };
+		04BDD58F1C413AC000033548 /* SlideTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
 		04CCECD51C388D020089AC37 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCECD41C388D020089AC37 /* SearchTextField.swift */; };
 		04CCECE81C392F250089AC37 /* WinterEndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CCECE61C392F250089AC37 /* WinterEndViewController.xib */; };
@@ -75,7 +75,6 @@
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
-		0461364A1C3EF26200C45350 /* SlideSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		0461364E1C3EF6A900C45350 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		0481AD751C37DF4700335453 /* ActionPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationController.swift; sourceTree = "<group>"; };
 		0481AD771C37E0F500335453 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
+		04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTransitioningDelegate.swift; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
 		04CCECD41C388D020089AC37 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		04CCECE61C392F250089AC37 /* WinterEndViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterEndViewController.xib; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		046136491C3EF25400C45350 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				0461364A1C3EF26200C45350 /* SlideSegue.swift */,
+				04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */,
 			);
 			name = Transition;
 			sourceTree = "<group>";
@@ -621,7 +621,6 @@
 				041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */,
 				623728AB1BBECBB500948D0D /* Pilot.swift in Sources */,
 				04CCECD51C388D020089AC37 /* SearchTextField.swift in Sources */,
-				0461364B1C3EF26200C45350 /* SlideSegue.swift in Sources */,
 				041D8E3F1C2E9A98004917AE /* SBDefaults.swift in Sources */,
 				04F34D971BF72EEF006EEC4A /* WizardView.swift in Sources */,
 				626D23971BBA7E290055D8FC /* SBKeychain.swift in Sources */,
@@ -645,6 +644,7 @@
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */,
+				04BDD58F1C413AC000033548 /* SlideTransitioningDelegate.swift in Sources */,
 				040CBAED1C386DD400B093F5 /* WinterStartViewController.swift in Sources */,
 				04484A561C006F4D00965B5F /* WinterView.swift in Sources */,
 			);
