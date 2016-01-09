@@ -73,7 +73,7 @@
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
                     <connections>
                         <segue destination="kol-EC-gub" kind="presentation" identifier="Comment" modalPresentationStyle="formSheet" id="9vc-TM-3jQ"/>
-                        <segue destination="n7J-hw-QyJ" kind="presentation" identifier="Start" customClass="ScaleSegue" customModule="Runway" customModuleProvider="target" id="Kpi-fN-xNw"/>
+                        <segue destination="n7J-hw-QyJ" kind="presentation" identifier="Start" id="Kpi-fN-xNw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-AD-LdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

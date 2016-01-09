@@ -17,6 +17,8 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     private var activeRegistration: Registration?
     private var activeRegistrationIndexPath: NSIndexPath?
     
+    let scaleTransitionDelegate = ScaleTransitioningDelegate()
+    
     // MARK: - View flow
     
     override func viewDidLoad() {
@@ -44,12 +46,12 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? WizardViewController where segue.identifier == "Start" {
+        if let controller = segue.destinationViewController as? WizardViewController, let view = sender as? UIView where segue.identifier == "Start" {
             controller.dataSource = self
             controller.delegate = self
-        }
-        if let segue = segue as? ScaleSegue, let view = sender as? UIView {
-            segue.referenceView = view
+            
+            scaleTransitionDelegate.referenceView = view
+            controller.transitioningDelegate = scaleTransitionDelegate
         }
     }
     

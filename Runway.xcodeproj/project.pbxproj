@@ -25,6 +25,7 @@
 		0481AD781C37E0F500335453 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD771C37E0F500335453 /* ActionView.swift */; };
 		0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */; };
 		04BDD58F1C413AC000033548 /* SlideTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */; };
+		04BDD5911C413CDC00033548 /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD5901C413CDC00033548 /* ScaleTransitioningDelegate.swift */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
 		04CCECD51C388D020089AC37 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCECD41C388D020089AC37 /* SearchTextField.swift */; };
 		04CCECE81C392F250089AC37 /* WinterEndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CCECE61C392F250089AC37 /* WinterEndViewController.xib */; };
@@ -83,6 +84,7 @@
 		0481AD771C37E0F500335453 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
 		04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTransitioningDelegate.swift; sourceTree = "<group>"; };
+		04BDD5901C413CDC00033548 /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
 		04CCECD41C388D020089AC37 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		04CCECE61C392F250089AC37 /* WinterEndViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterEndViewController.xib; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0461364E1C3EF6A900C45350 /* ScaleSegue.swift */,
+				04BDD5901C413CDC00033548 /* ScaleTransitioningDelegate.swift */,
 			);
 			name = Transition;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				04F1F01C1C07A11800BAB0B9 /* SBWebService+Registrations.swift in Sources */,
 				626D23A01BBA8F200055D8FC /* CommonMacros.swift in Sources */,
 				626D239E1BBA8D640055D8FC /* UIAlertController+Errors.swift in Sources */,
+				04BDD5911C413CDC00033548 /* ScaleTransitioningDelegate.swift in Sources */,
 				04F34D9A1BF736D6006EEC4A /* WinterPilotSelectionChildViewController.swift in Sources */,
 				0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */,
 				04BDD58F1C413AC000033548 /* SlideTransitioningDelegate.swift in Sources */,
