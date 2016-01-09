@@ -39,7 +39,7 @@ platform :ios do
     commit_version_bump
     add_git_tag prefix: 'v'
     push_to_git_remote
-    
+
     clean_build_artifacts
   end
 end
