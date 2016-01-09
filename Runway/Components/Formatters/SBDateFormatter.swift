@@ -26,7 +26,7 @@ class SBDateFormatter: NSObject {
     override init() {
         super.init()
         
-        apiFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        apiFormatter.dateFormat = "yyyy-MM-dd"
         apiFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
     }
 }
