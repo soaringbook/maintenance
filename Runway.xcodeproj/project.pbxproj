@@ -25,6 +25,7 @@
 		0481AD781C37E0F500335453 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD771C37E0F500335453 /* ActionView.swift */; };
 		0481AD7A1C37E14E00335453 /* ActionPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */; };
 		049E66851C414108008118CA /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E66841C414108008118CA /* UIView+Shake.swift */; };
+		049E66891C415269008118CA /* SyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E66881C415269008118CA /* SyncButton.swift */; };
 		04BDD58F1C413AC000033548 /* SlideTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */; };
 		04BDD5911C413CDC00033548 /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD5901C413CDC00033548 /* ScaleTransitioningDelegate.swift */; };
 		04C6BCAC1BFD2AA900788F55 /* Runway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C6BCAA1BFD2AA900788F55 /* Runway.xcdatamodeld */; };
@@ -85,6 +86,7 @@
 		0481AD771C37E0F500335453 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		0481AD791C37E14E00335453 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
 		049E66841C414108008118CA /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		049E66881C415269008118CA /* SyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncButton.swift; sourceTree = "<group>"; };
 		04BDD58E1C413AC000033548 /* SlideTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTransitioningDelegate.swift; sourceTree = "<group>"; };
 		04BDD5901C413CDC00033548 /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 		04C6BCAB1BFD2AA900788F55 /* Runway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runway.xcdatamodel; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
+		049E66871C415250008118CA /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				049E66881C415269008118CA /* SyncButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		04CCECD61C3924660089AC37 /* End */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +345,7 @@
 		622D750C1BBABE7400D8949F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				049E66871C415250008118CA /* Buttons */,
 				04F34DA81BF7452A006EEC4A /* Cells */,
 				04F34DA01BF74254006EEC4A /* Layouts */,
 				622D750D1BBABE7400D8949F /* TextFields */,
@@ -652,6 +663,7 @@
 				04EE42B91BF3D65E0022651C /* SettingsViewController.swift in Sources */,
 				04D04FA21BF3578300F33F1F /* LoginView.swift in Sources */,
 				0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */,
+				049E66891C415269008118CA /* SyncButton.swift in Sources */,
 				04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */,
 				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,

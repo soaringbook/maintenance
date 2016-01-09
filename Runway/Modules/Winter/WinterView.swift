@@ -11,10 +11,12 @@ import UIKit
 protocol WinterViewDelegate {
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath)
     func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView)
+    func winterViewWillSync(view: WinterView)
 }
 
 class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var syncButton: SyncButton!
     
     var delegate: WinterViewDelegate?
     
@@ -47,6 +49,16 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     func removeRegistration(atIndexPath indexPath: NSIndexPath) {
         registrations.removeAtIndex(rowForRegistration(atIndexPath: indexPath))
         collectionView.deleteItemsAtIndexPaths([indexPath])
+    }
+    
+    // MARK: - Sync
+    
+    func startSyncing() {
+        syncButton.startAnimating()
+    }
+    
+    func stopSyncing() {
+        syncButton.stopAnimating()
     }
     
     // MARK: - Timer
@@ -88,6 +100,12 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         } else {
             return registrationCell(forIndexPath: indexPath)
         }
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func sync(sender: AnyObject) {
+        delegate?.winterViewWillSync(self)
     }
     
     // MARK: - Cells

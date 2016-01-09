@@ -32,7 +32,7 @@
                                     <outlet property="delegate" destination="YAG-UT-x6U" id="Eqc-Yi-7pY"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-5G-wXd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-5G-wXd" customClass="SyncButton" customModule="Runway" customModuleProvider="target">
                                 <rect key="frame" x="536" y="28" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="4fK-DV-U6q"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                                 <state key="normal" image="Sync"/>
                                 <connections>
-                                    <action selector="sync:" destination="ON6-NM-AOy" eventType="touchUpInside" id="C6C-di-g8x"/>
+                                    <action selector="sync:" destination="YAG-UT-x6U" eventType="touchUpInside" id="VRV-51-xAN"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-99-f5q">
@@ -68,6 +68,7 @@
                         </constraints>
                         <connections>
                             <outlet property="collectionView" destination="XNr-Ay-vRT" id="4kR-hW-Z6H"/>
+                            <outlet property="syncButton" destination="FGW-5G-wXd" id="bvA-Rb-5D6"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>
