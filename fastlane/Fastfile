@@ -20,6 +20,13 @@ platform :ios do
       clean:                true,
       use_legacy_build_api: true
     )
+
+    # Upload to Fabric
+    crashlytics(
+      api_token:    ENV['FABRIC_API_KEY'],
+      build_secret: ENV['FABRIC_BUILD_SECRET'],
+      ipa_path:     'Runway.ipa',
+    )
   end
 
   desc 'Upload this version to S3.'

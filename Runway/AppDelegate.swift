@@ -7,8 +7,10 @@
 //
 
 import UIKit
+
 import AERecord
-import HockeySDK
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        configureHockeyApp()
+        configureFabric()
         configureCoreData()
         
         return true
@@ -36,17 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - HockeyApp
     
-    private func configureHockeyApp() {
+    private func configureFabric() {
         guard isDebug() else {
-            // Don't use hockey app configuration in debug mode.
+            // Don't use Fabric configuration in debug mode.
             return
         }
         
-        printVerbose("Loading HockeyApp configuration.")
+        printVerbose("Loading Fabric configuration.")
         
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier(SBConfiguration.sharedInstance.hockeyAppIdentifier)
-        BITHockeyManager.sharedHockeyManager().startManager()
-        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
-        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
+        Fabric.with([Crashlytics.self])
     }
 }

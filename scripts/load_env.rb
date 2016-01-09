@@ -13,5 +13,5 @@ puts "-- Set the correct variables"
 `/usr/libexec/PlistBuddy "#{plist_location}" -c "set API_HOST #{ENV['API_HOST']}"`
 `/usr/libexec/PlistBuddy "#{plist_location}" -c "set API_PROTOCOL #{ENV['API_PROTOCOL']}"`
 `/usr/libexec/PlistBuddy "#{plist_location}" -c "set API_VERSION #{ENV['API_VERSION']}"`
-`/usr/libexec/PlistBuddy "#{plist_location}" -c "set HOCKEY_APP_IDENTIFIER #{ENV['HOCKEY_APP_IDENTIFIER']}"`
+`/usr/libexec/PlistBuddy "#{plist_location}" -c "set Fabric:APIKey #{ENV['FABRIC_API_KEY']}"`
 
