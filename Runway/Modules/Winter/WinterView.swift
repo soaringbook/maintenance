@@ -11,7 +11,9 @@ import UIKit
 protocol WinterViewDelegate {
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath)
     func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView)
-    func winterViewWillSync(view: WinterView)
+    
+    func winterViewDidStartSync(view: WinterView)
+    func winterViewDidCancelSync(view: WinterView)
 }
 
 class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -105,7 +107,11 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: - Actions
     
     @IBAction func sync(sender: AnyObject) {
-        delegate?.winterViewWillSync(self)
+        if syncButton.animating {
+            delegate?.winterViewDidCancelSync(self)
+        } else {
+            delegate?.winterViewDidStartSync(self)
+        }
     }
     
     // MARK: - Hit
@@ -116,7 +122,6 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         if super.hitTest(point, withEvent: event) == syncButton {
-            print("pressed sync button")
             return syncButton
         } else {
             shake()
