@@ -108,6 +108,22 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         delegate?.winterViewWillSync(self)
     }
     
+    // MARK: - Hit
+    
+    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        guard syncButton.animating else {
+            return super.hitTest(point, withEvent: event)
+        }
+        
+        if super.hitTest(point, withEvent: event) == syncButton {
+            print("pressed sync button")
+            return syncButton
+        } else {
+            shake()
+            return nil
+        }
+    }
+    
     // MARK: - Cells
     
     private func addCell(forIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
