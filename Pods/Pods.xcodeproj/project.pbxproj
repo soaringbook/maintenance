@@ -7,39 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06691F8E6C665E3B2D0DDB91431D45E2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 804EDD595C08B056340ACF442DF502BE /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0AB45221E972EFD15A5617EA7223FE70 /* AERecord-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78229728B0C205E1C44A3D8F6D96799A /* AERecord-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06691F8E6C665E3B2D0DDB91431D45E2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586F9AAB8B093B1E48CDF95FB51E6FB /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0AB45221E972EFD15A5617EA7223FE70 /* AERecord-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9A8389C8A354D56D503CE433411308 /* AERecord-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C80846A82D321CA0A34B0022E3DC613 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 619433650AB9DD95864FF6849129D7B5 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20B174C378DDF27CB09598225355C223 /* UITextView+Placeholder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CADDF93A416B0D75F0C0A5DCD9EAC34 /* UITextView+Placeholder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D4B344B6892FD205FA933DDF54F23DD /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCADE738F8694F6636AC52032B95FE4 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20B174C378DDF27CB09598225355C223 /* UITextView+Placeholder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E1E7D72B1CD6DDD1EF720AF79C77AE /* UITextView+Placeholder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D4B344B6892FD205FA933DDF54F23DD /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E4944550FA590760B82418935F1F11D7 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30A89DFE83C994015C84FB27E349D23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */; };
-		3F3C84561DE22794C117D10215B6D577 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 267344C686C096577C4BCF1E70985244 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40E1E006864E048AACBC03F33BCC3603 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A96A354E0AC978B25CED25E9D8E2AB98 /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4A8E27F2997AA10CC818F66F595FCAF7 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF009F2943052B14B380E7F49EF3C14 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F6FF7ED4B7740D944495BBCD71EA88D /* AERecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2410F9657B5E260CDFD7E65F3EBEBA3 /* AERecord-dummy.m */; };
+		3F3C84561DE22794C117D10215B6D577 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A47BA370357632E18A304009E509C36 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40E1E006864E048AACBC03F33BCC3603 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E91990FAC29D0EAA80FCB40DB12E73 /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4A8E27F2997AA10CC818F66F595FCAF7 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E612C0E6E49C231270D51F6613DD6E1 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F6FF7ED4B7740D944495BBCD71EA88D /* AERecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C466BD0D20CFA3351221C862B9B935 /* AERecord-dummy.m */; };
 		4F93BB8FEB0F9FC3EFE103D77E4392AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */; };
 		55EAD2BF8E636E40AF2B07A99E613C92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42FBF9C41BE23794EE0429ABBAB8B4 /* Security.framework */; };
 		56CF8BA9A8BD52F1DF9B66D438B48416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EDBBCF0517C5D37B5B1FEEEAAAD46A /* UIKit.framework */; };
-		7237BADD07D574D623AD2F82710BD45D /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC50B114C5D641D7B2691155959174 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7539E8BA3B24E6D4DA5AE91254730EB8 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 601FD7EE903CE0D5E2059AC1A8579377 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7237BADD07D574D623AD2F82710BD45D /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C07534A51864A784222C6CC836E3530C /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7539E8BA3B24E6D4DA5AE91254730EB8 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7CBF0F14CB2CDE10D7E9D83C1DC98F /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E194F0267C4B4241C45591B3513B985 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1E6540644432560CBFCD59A129F50D /* Pods-dummy.m */; };
-		9DF5C5B318C45C4BF8C09369BE214252 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A02C2E56C7357254F21C27FB2421957 /* UITextView+Placeholder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9DF5C5B318C45C4BF8C09369BE214252 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = A36C25EEF7B06EF1A1270BF486AA540F /* UITextView+Placeholder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1AA70171C12A02C947A08CEE678C8F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */; };
-		AF4C59422F88F8DD3594274F063C91F0 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B382BEB335C2C56375BAD6C711E2E5 /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B02B96718AF00E0C30D1EC837A02DBFB /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B982343B64A45E03966380BF69D9CAE9 /* SSKeychain-dummy.m */; };
-		BE9EDB30F71E29715406983250549386 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F92641EEBE30F2EF77CB871144FC2A03 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C935CB9BE84A32BE0F5A896A8A335D84 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0204903D954AA7A985AC555C29B7EAB2 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF4C59422F88F8DD3594274F063C91F0 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3324D95A70737305057700D096F58CE9 /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B02B96718AF00E0C30D1EC837A02DBFB /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C265B1885B9356C19EE25DBC8BC320 /* SSKeychain-dummy.m */; };
+		BE9EDB30F71E29715406983250549386 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 98F1E5BBB9D04EC23C30ED09C7218901 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C935CB9BE84A32BE0F5A896A8A335D84 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 638DAF91302356211E99BFC5B4C4A83E /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB3A961C6B29964FEC641E088568854F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */; };
-		D341425AA1AB69A45F778FDF1EAFBA1E /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 249A3958BC99E3AE9F18575BCFCBD1CE /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9133C275EBA4FCA2EE71188679D491C /* SSKeychain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B45A42CDB8A43D31D680A288E150254 /* SSKeychain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE16C247E26A9540A3CC5C5A8959D632 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A1A5D41A16AC2CD0166662DAF702A4B4 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0AC93153509DEC3FE58C7C3A52B2C99 /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA1318618885F46ABAA4238E75548E /* AERecord.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E105664A89F84B95FD8A48C7302FE4BA /* UITextView+Placeholder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0455A2F215523166031D080933ED582 /* UITextView+Placeholder-dummy.m */; };
-		E4A8FFAB56CF6C859E1A4C1212AC0D34 /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A2246F2DC5DCDA19E3C5D251CFFA14 /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5DF3809C3024382A7C0031F2F8DC339 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F0D9C5D00EE47555C91E1D346FEF8335 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D341425AA1AB69A45F778FDF1EAFBA1E /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 03407B2D663C913D8E332C528FE96704 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9133C275EBA4FCA2EE71188679D491C /* SSKeychain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B62DC158332FE39369DE14FDD51C252 /* SSKeychain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE16C247E26A9540A3CC5C5A8959D632 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F4E0A046F4B9F4ED6548388B75D0E803 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0AC93153509DEC3FE58C7C3A52B2C99 /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61257A9654C69850F4A482F64F9AE /* AERecord.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E105664A89F84B95FD8A48C7302FE4BA /* UITextView+Placeholder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E035569AA9649FD35D5931FAB3042550 /* UITextView+Placeholder-dummy.m */; };
+		E4A8FFAB56CF6C859E1A4C1212AC0D34 /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F5B98558957E6DB23852364FD968FB /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5DF3809C3024382A7C0031F2F8DC339 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = B6D03D9A8E7CCFF06FE0DEB1068E36F0 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE76FE94DBD3376C9D2EE303090F8D19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */; };
-		F923FF8EE121F7DE4B3DEF049CA26E31 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD5C25804BF761945CC63137E88322 /* PureLayout-dummy.m */; };
-		FF3928B6650319146A9A41BD2320765A /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D875B6CDA94ACBD0707B05745EA2FC25 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F923FF8EE121F7DE4B3DEF049CA26E31 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F96F82048F570EAB675DAA528872A7F /* PureLayout-dummy.m */; };
+		FF3928B6650319146A9A41BD2320765A /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F468B6974F55CE858E9D5CB0F1454B1E /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,67 +74,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0204903D954AA7A985AC555C29B7EAB2 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		015C831FA2DA44F1FD3DFB6DAE84DA42 /* AERecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-prefix.pch"; sourceTree = "<group>"; };
 		031C779A2E2AA929856581A6D4D8D864 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		0B45A42CDB8A43D31D680A288E150254 /* SSKeychain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-umbrella.h"; sourceTree = "<group>"; };
+		03407B2D663C913D8E332C528FE96704 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		0C5DC02F237AA9A3A7C823C224B4A36A /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		122E6DD20560DBE087BFD1EE75A002A8 /* UITextView+Placeholder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder-prefix.pch"; sourceTree = "<group>"; };
-		1C3E8C96FBA94992FBBE66E4F625B312 /* AERecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-prefix.pch"; sourceTree = "<group>"; };
-		1CF83606D81FC7768FEB9CFC6463A700 /* UITextView+Placeholder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UITextView+Placeholder.modulemap"; sourceTree = "<group>"; };
-		1D22B65F6AA804A93D779BA9460BDE6A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		10C466BD0D20CFA3351221C862B9B935 /* AERecord-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AERecord-dummy.m"; sourceTree = "<group>"; };
+		12887E1AB56A031602A5CA94CAB6B419 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1586F9AAB8B093B1E48CDF95FB51E6FB /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
 		200B4BA70FAC73DB78E218C06C4E7802 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		249A3958BC99E3AE9F18575BCFCBD1CE /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
-		267344C686C096577C4BCF1E70985244 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		20D5172089435C9FE8712B38034B08F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A47BA370357632E18A304009E509C36 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		2C1E6540644432560CBFCD59A129F50D /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		2CADDF93A416B0D75F0C0A5DCD9EAC34 /* UITextView+Placeholder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder-umbrella.h"; sourceTree = "<group>"; };
-		49D8E63D8D6552CC7C25973BD104B0DB /* UITextView+Placeholder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextView+Placeholder.xcconfig"; sourceTree = "<group>"; };
-		4EBA1318618885F46ABAA4238E75548E /* AERecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AERecord.swift; path = AERecord/AERecord.swift; sourceTree = "<group>"; };
+		2E77C8D95D5ED265439547B5159D7296 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		3324D95A70737305057700D096F58CE9 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		34091EC6D9C1E60858594AB2DC80634A /* UITextView+Placeholder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder-prefix.pch"; sourceTree = "<group>"; };
+		3B62DC158332FE39369DE14FDD51C252 /* SSKeychain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-umbrella.h"; sourceTree = "<group>"; };
+		416AEDECCF281E8AFE92F659333A47D8 /* AERecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AERecord.modulemap; sourceTree = "<group>"; };
+		44C6487A1E8FEBC82F9037D74617964C /* UITextView+Placeholder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UITextView+Placeholder.modulemap"; sourceTree = "<group>"; };
+		4664CDC5F83327E360257689D5F40C55 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		501844E8524392A60C9017785552B89E /* AERecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AERecord.xcconfig; sourceTree = "<group>"; };
 		51B0A59451C9D68C985DCF6FD263089F /* UITextView_Placeholder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextView_Placeholder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A4BBBFF494308EC7DE4A3964CF0BA8 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		601FD7EE903CE0D5E2059AC1A8579377 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		54F5B98558957E6DB23852364FD968FB /* UITextView+Placeholder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+Placeholder.h"; path = "UITextView+Placeholder/UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		55E1E7D72B1CD6DDD1EF720AF79C77AE /* UITextView+Placeholder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder-umbrella.h"; sourceTree = "<group>"; };
+		5AD358C431F75BEC5753C8E451A6B859 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		5F96F82048F570EAB675DAA528872A7F /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		619433650AB9DD95864FF6849129D7B5 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		62F2652F59208EF8F635C248EFAD7E82 /* SSKeychain.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SSKeychain.modulemap; sourceTree = "<group>"; };
 		635F0CFB6243C68AC4FE3441023CDFA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66B4F57A69E212F58B26F99D627AB68A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638DAF91302356211E99BFC5B4C4A83E /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		66F61257A9654C69850F4A482F64F9AE /* AERecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AERecord.swift; path = AERecord/AERecord.swift; sourceTree = "<group>"; };
 		671B7EEA69FF73745DC3976E47DE503C /* AERecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AERecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678BF3710B29AE098ACD21FBF6AFCBFA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		6BB0699866624BBEE6729268CFD5A150 /* SSKeychain.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SSKeychain.modulemap; sourceTree = "<group>"; };
-		6FCADE738F8694F6636AC52032B95FE4 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		78229728B0C205E1C44A3D8F6D96799A /* AERecord-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-umbrella.h"; sourceTree = "<group>"; };
-		7A02C2E56C7357254F21C27FB2421957 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+Placeholder.m"; path = "UITextView+Placeholder/UITextView+Placeholder.m"; sourceTree = "<group>"; };
-		804EDD595C08B056340ACF442DF502BE /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
-		8AAC50B114C5D641D7B2691155959174 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
-		94A2246F2DC5DCDA19E3C5D251CFFA14 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+Placeholder.h"; path = "UITextView+Placeholder/UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		6C4C3ED5EF7F8C44C032188D71D4754A /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
+		6E9A8389C8A354D56D503CE433411308 /* AERecord-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-umbrella.h"; sourceTree = "<group>"; };
+		77B574F28E8ACF8B0DEE6A2F4F9BD5BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B69327CA16A447D8860BF5276D318F /* UITextView+Placeholder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextView+Placeholder.xcconfig"; sourceTree = "<group>"; };
+		84E91990FAC29D0EAA80FCB40DB12E73 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		93698D58374A5F191DE2911854A8EFB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97CFA686853B188E9435E0F662793120 /* SSKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98F1E5BBB9D04EC23C30ED09C7218901 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		9E612C0E6E49C231270D51F6613DD6E1 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
 		9EA25E27AC2F9FE9EAE82C013163E63B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1A5D41A16AC2CD0166662DAF702A4B4 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		A358467343BDF3E53CA0D422003640DE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A51628BF0B13218E0B1F6123CA523772 /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
-		A96A354E0AC978B25CED25E9D8E2AB98 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		A36C25EEF7B06EF1A1270BF486AA540F /* UITextView+Placeholder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+Placeholder.m"; path = "UITextView+Placeholder/UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		AC7CBF0F14CB2CDE10D7E9D83C1DC98F /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
 		AD42FBF9C41BE23794EE0429ABBAB8B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		B0455A2F215523166031D080933ED582 /* UITextView+Placeholder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder-dummy.m"; sourceTree = "<group>"; };
-		B17D91F57DE7E7950A1618E11E278DB9 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		B2410F9657B5E260CDFD7E65F3EBEBA3 /* AERecord-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AERecord-dummy.m"; sourceTree = "<group>"; };
-		B2A79B11C6278FA62A76DCD24C2C33AB /* AERecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AERecord.xcconfig; sourceTree = "<group>"; };
+		B6D03D9A8E7CCFF06FE0DEB1068E36F0 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
 		B7307562A2039F7BBC71779F285DF955 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		B982343B64A45E03966380BF69D9CAE9 /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		B9C265B1885B9356C19EE25DBC8BC320 /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C340E14F5C6B0F8D21D6B7FF00C2E62D /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		C07534A51864A784222C6CC836E3530C /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		C0B33C215665C8C4ECDF50ADE6FF5447 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
 		C5781209B03AA628AA1DFAA96A095D40 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5A7C1B41C77C9F2911D1AF007AAEAFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CABD5C25804BF761945CC63137E88322 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
-		D1FD123B938BD185E486CC6FC57E826D /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
-		D6B382BEB335C2C56375BAD6C711E2E5 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		D875B6CDA94ACBD0707B05745EA2FC25 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		DAF009F2943052B14B380E7F49EF3C14 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
-		DEBF0A3A3F692D2B0E57AA7B9F7DFF51 /* AERecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AERecord.modulemap; sourceTree = "<group>"; };
+		E035569AA9649FD35D5931FAB3042550 /* UITextView+Placeholder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder-dummy.m"; sourceTree = "<group>"; };
 		E3AAD761BD5C3C45508B915700E2639C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5C5B82B6ACD5DA02BA8B4F289E56F9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4944550FA590760B82418935F1F11D7 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		E92F1ECABE2ABC65E4D641BE95AF08CB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		EAC83A2BFFB2825073CE7A314FB668A0 /* Pods.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.production.xcconfig; sourceTree = "<group>"; };
-		ED3E35665278B1143CC05F6DFC512D39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0D9C5D00EE47555C91E1D346FEF8335 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
 		F3EDBBCF0517C5D37B5B1FEEEAAAD46A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F92641EEBE30F2EF77CB871144FC2A03 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
-		FB7055C0A0C4A352DF06EF805AF92F5C /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		F468B6974F55CE858E9D5CB0F1454B1E /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		F4E0A046F4B9F4ED6548388B75D0E803 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		FA0625BA54A6C3EBAD979C1DF7581697 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,18 +184,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		036FAFB8B057D668C1B1E4B453D8B78C /* Support Files */ = {
+		077F1B842CADF9E87328531BD64B3818 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DEBF0A3A3F692D2B0E57AA7B9F7DFF51 /* AERecord.modulemap */,
-				B2A79B11C6278FA62A76DCD24C2C33AB /* AERecord.xcconfig */,
-				B2410F9657B5E260CDFD7E65F3EBEBA3 /* AERecord-dummy.m */,
-				1C3E8C96FBA94992FBBE66E4F625B312 /* AERecord-prefix.pch */,
-				78229728B0C205E1C44A3D8F6D96799A /* AERecord-umbrella.h */,
-				E5C5B82B6ACD5DA02BA8B4F289E56F9C /* Info.plist */,
+				FA0625BA54A6C3EBAD979C1DF7581697 /* Crashlytics.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/AERecord";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
@@ -213,22 +208,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		20CC003560842A97F95AA571C884A16B /* Frameworks */ = {
+		21E373872FE0DC221FC34C9B811C65D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D22B65F6AA804A93D779BA9460BDE6A /* Fabric.framework */,
+				E92F1ECABE2ABC65E4D641BE95AF08CB /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		339052D30D85C5073ED3CFE7183AA2A4 /* Pods */ = {
+		23C63A6071591622497FBCBCB2504CB5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75AFD9456681DBDEE9F2620CCC2F3370 /* AERecord */,
-				E10BA13466252537CF7E05135AD17F48 /* Fabric */,
-				39B8D1C598F7B9927999EE6A59288A4E /* PureLayout */,
-				D60A2467C2C94F2DCC110E843062AE9D /* SSKeychain */,
-				B58C9B517BA0351DB8E25E4656F3C8A6 /* UITextView+Placeholder */,
+				F228174CFC7DEDE651C1DFB146FFD081 /* AERecord */,
+				AA899E348B4C2847E20C67703881D2D8 /* Crashlytics */,
+				4FA0DA7C2CFDD43F484DF9A24434AE90 /* Fabric */,
+				C17E0DDBBCBC8FA655B6AFEA33C9CF7A /* PureLayout */,
+				500D35E517CD36190E1130A3B3FA1795 /* SSKeychain */,
+				E2D42BE30750D3CEEBB39BC74B84FEE2 /* UITextView+Placeholder */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -243,30 +239,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		39B8D1C598F7B9927999EE6A59288A4E /* PureLayout */ = {
+		4FA0DA7C2CFDD43F484DF9A24434AE90 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				A1A5D41A16AC2CD0166662DAF702A4B4 /* ALView+PureLayout.h */,
-				D6B382BEB335C2C56375BAD6C711E2E5 /* ALView+PureLayout.m */,
-				D875B6CDA94ACBD0707B05745EA2FC25 /* NSArray+PureLayout.h */,
-				804EDD595C08B056340ACF442DF502BE /* NSArray+PureLayout.m */,
-				0204903D954AA7A985AC555C29B7EAB2 /* NSLayoutConstraint+PureLayout.h */,
-				A96A354E0AC978B25CED25E9D8E2AB98 /* NSLayoutConstraint+PureLayout.m */,
-				F92641EEBE30F2EF77CB871144FC2A03 /* PureLayout.h */,
-				6FCADE738F8694F6636AC52032B95FE4 /* PureLayout+Internal.h */,
-				249A3958BC99E3AE9F18575BCFCBD1CE /* PureLayoutDefines.h */,
-				D7378850877810871232D1385DAD9467 /* Support Files */,
+				21E373872FE0DC221FC34C9B811C65D3 /* Frameworks */,
 			);
-			path = PureLayout;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		75AFD9456681DBDEE9F2620CCC2F3370 /* AERecord */ = {
+		500D35E517CD36190E1130A3B3FA1795 /* SSKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				4EBA1318618885F46ABAA4238E75548E /* AERecord.swift */,
-				036FAFB8B057D668C1B1E4B453D8B78C /* Support Files */,
+				B6D03D9A8E7CCFF06FE0DEB1068E36F0 /* SSKeychain.h */,
+				AC7CBF0F14CB2CDE10D7E9D83C1DC98F /* SSKeychain.m */,
+				9E612C0E6E49C231270D51F6613DD6E1 /* SSKeychainQuery.h */,
+				C07534A51864A784222C6CC836E3530C /* SSKeychainQuery.m */,
+				E32AFF4E8A88A3A3F2188EC01386BC4C /* Support Files */,
 			);
-			path = AERecord;
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -274,48 +264,49 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				339052D30D85C5073ED3CFE7183AA2A4 /* Pods */,
+				23C63A6071591622497FBCBCB2504CB5 /* Pods */,
 				D220B392F5FE02D965B33E880DFD06DC /* Products */,
 				16E3B58E364CEC2BC0CCE2B950B91E3C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		86073E6880F968937FF8570264C3DCBE /* Support Files */ = {
+		A6B9CCC04175DF46E9DBED241AE327BC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ED3E35665278B1143CC05F6DFC512D39 /* Info.plist */,
-				1CF83606D81FC7768FEB9CFC6463A700 /* UITextView+Placeholder.modulemap */,
-				49D8E63D8D6552CC7C25973BD104B0DB /* UITextView+Placeholder.xcconfig */,
-				B0455A2F215523166031D080933ED582 /* UITextView+Placeholder-dummy.m */,
-				122E6DD20560DBE087BFD1EE75A002A8 /* UITextView+Placeholder-prefix.pch */,
-				2CADDF93A416B0D75F0C0A5DCD9EAC34 /* UITextView+Placeholder-umbrella.h */,
+				20D5172089435C9FE8712B38034B08F2 /* Info.plist */,
+				2E77C8D95D5ED265439547B5159D7296 /* PureLayout.modulemap */,
+				5AD358C431F75BEC5753C8E451A6B859 /* PureLayout.xcconfig */,
+				5F96F82048F570EAB675DAA528872A7F /* PureLayout-dummy.m */,
+				4664CDC5F83327E360257689D5F40C55 /* PureLayout-prefix.pch */,
+				2A47BA370357632E18A304009E509C36 /* PureLayout-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UITextView+Placeholder";
+			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
-		B58C9B517BA0351DB8E25E4656F3C8A6 /* UITextView+Placeholder */ = {
+		AA899E348B4C2847E20C67703881D2D8 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				94A2246F2DC5DCDA19E3C5D251CFFA14 /* UITextView+Placeholder.h */,
-				7A02C2E56C7357254F21C27FB2421957 /* UITextView+Placeholder.m */,
-				86073E6880F968937FF8570264C3DCBE /* Support Files */,
+				077F1B842CADF9E87328531BD64B3818 /* Frameworks */,
 			);
-			path = "UITextView+Placeholder";
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
-		B6D8D56F54045776A2946BAC2E906036 /* Support Files */ = {
+		C17E0DDBBCBC8FA655B6AFEA33C9CF7A /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
-				66B4F57A69E212F58B26F99D627AB68A /* Info.plist */,
-				6BB0699866624BBEE6729268CFD5A150 /* SSKeychain.modulemap */,
-				A51628BF0B13218E0B1F6123CA523772 /* SSKeychain.xcconfig */,
-				B982343B64A45E03966380BF69D9CAE9 /* SSKeychain-dummy.m */,
-				FB7055C0A0C4A352DF06EF805AF92F5C /* SSKeychain-prefix.pch */,
-				0B45A42CDB8A43D31D680A288E150254 /* SSKeychain-umbrella.h */,
+				F4E0A046F4B9F4ED6548388B75D0E803 /* ALView+PureLayout.h */,
+				3324D95A70737305057700D096F58CE9 /* ALView+PureLayout.m */,
+				F468B6974F55CE858E9D5CB0F1454B1E /* NSArray+PureLayout.h */,
+				1586F9AAB8B093B1E48CDF95FB51E6FB /* NSArray+PureLayout.m */,
+				638DAF91302356211E99BFC5B4C4A83E /* NSLayoutConstraint+PureLayout.h */,
+				84E91990FAC29D0EAA80FCB40DB12E73 /* NSLayoutConstraint+PureLayout.m */,
+				98F1E5BBB9D04EC23C30ED09C7218901 /* PureLayout.h */,
+				E4944550FA590760B82418935F1F11D7 /* PureLayout+Internal.h */,
+				03407B2D663C913D8E332C528FE96704 /* PureLayoutDefines.h */,
+				A6B9CCC04175DF46E9DBED241AE327BC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SSKeychain";
+			path = PureLayout;
 			sourceTree = "<group>";
 		};
 		D220B392F5FE02D965B33E880DFD06DC /* Products */ = {
@@ -330,38 +321,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D60A2467C2C94F2DCC110E843062AE9D /* SSKeychain */ = {
+		E2D42BE30750D3CEEBB39BC74B84FEE2 /* UITextView+Placeholder */ = {
 			isa = PBXGroup;
 			children = (
-				F0D9C5D00EE47555C91E1D346FEF8335 /* SSKeychain.h */,
-				601FD7EE903CE0D5E2059AC1A8579377 /* SSKeychain.m */,
-				DAF009F2943052B14B380E7F49EF3C14 /* SSKeychainQuery.h */,
-				8AAC50B114C5D641D7B2691155959174 /* SSKeychainQuery.m */,
-				B6D8D56F54045776A2946BAC2E906036 /* Support Files */,
+				54F5B98558957E6DB23852364FD968FB /* UITextView+Placeholder.h */,
+				A36C25EEF7B06EF1A1270BF486AA540F /* UITextView+Placeholder.m */,
+				F59E3035F35A422184198FF2806E2303 /* Support Files */,
 			);
-			path = SSKeychain;
+			path = "UITextView+Placeholder";
 			sourceTree = "<group>";
 		};
-		D7378850877810871232D1385DAD9467 /* Support Files */ = {
+		E2D6D35FBBE0389C8F859357FB9E1108 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C5A7C1B41C77C9F2911D1AF007AAEAFA /* Info.plist */,
-				D1FD123B938BD185E486CC6FC57E826D /* PureLayout.modulemap */,
-				C340E14F5C6B0F8D21D6B7FF00C2E62D /* PureLayout.xcconfig */,
-				CABD5C25804BF761945CC63137E88322 /* PureLayout-dummy.m */,
-				B17D91F57DE7E7950A1618E11E278DB9 /* PureLayout-prefix.pch */,
-				267344C686C096577C4BCF1E70985244 /* PureLayout-umbrella.h */,
+				416AEDECCF281E8AFE92F659333A47D8 /* AERecord.modulemap */,
+				501844E8524392A60C9017785552B89E /* AERecord.xcconfig */,
+				10C466BD0D20CFA3351221C862B9B935 /* AERecord-dummy.m */,
+				015C831FA2DA44F1FD3DFB6DAE84DA42 /* AERecord-prefix.pch */,
+				6E9A8389C8A354D56D503CE433411308 /* AERecord-umbrella.h */,
+				12887E1AB56A031602A5CA94CAB6B419 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PureLayout";
+			path = "../Target Support Files/AERecord";
 			sourceTree = "<group>";
 		};
-		E10BA13466252537CF7E05135AD17F48 /* Fabric */ = {
+		E32AFF4E8A88A3A3F2188EC01386BC4C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				20CC003560842A97F95AA571C884A16B /* Frameworks */,
+				93698D58374A5F191DE2911854A8EFB3 /* Info.plist */,
+				62F2652F59208EF8F635C248EFAD7E82 /* SSKeychain.modulemap */,
+				6C4C3ED5EF7F8C44C032188D71D4754A /* SSKeychain.xcconfig */,
+				B9C265B1885B9356C19EE25DBC8BC320 /* SSKeychain-dummy.m */,
+				C0B33C215665C8C4ECDF50ADE6FF5447 /* SSKeychain-prefix.pch */,
+				3B62DC158332FE39369DE14FDD51C252 /* SSKeychain-umbrella.h */,
 			);
-			path = Fabric;
+			name = "Support Files";
+			path = "../Target Support Files/SSKeychain";
 			sourceTree = "<group>";
 		};
 		ED5830F16D1DE02D183364F7319B61F4 /* Pods */ = {
@@ -381,6 +376,29 @@
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		F228174CFC7DEDE651C1DFB146FFD081 /* AERecord */ = {
+			isa = PBXGroup;
+			children = (
+				66F61257A9654C69850F4A482F64F9AE /* AERecord.swift */,
+				E2D6D35FBBE0389C8F859357FB9E1108 /* Support Files */,
+			);
+			path = AERecord;
+			sourceTree = "<group>";
+		};
+		F59E3035F35A422184198FF2806E2303 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77B574F28E8ACF8B0DEE6A2F4F9BD5BB /* Info.plist */,
+				44C6487A1E8FEBC82F9037D74617964C /* UITextView+Placeholder.modulemap */,
+				84B69327CA16A447D8860BF5276D318F /* UITextView+Placeholder.xcconfig */,
+				E035569AA9649FD35D5931FAB3042550 /* UITextView+Placeholder-dummy.m */,
+				34091EC6D9C1E60858594AB2DC80634A /* UITextView+Placeholder-prefix.pch */,
+				55E1E7D72B1CD6DDD1EF720AF79C77AE /* UITextView+Placeholder-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITextView+Placeholder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,7 +655,7 @@
 /* Begin XCBuildConfiguration section */
 		15E0D0647DDA9C03B5B114EFFF546AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C340E14F5C6B0F8D21D6B7FF00C2E62D /* PureLayout.xcconfig */;
+			baseConfigurationReference = 5AD358C431F75BEC5753C8E451A6B859 /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -664,7 +682,7 @@
 		};
 		27A356D4C973C690AD3F7DBB8B4D1B4D /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A51628BF0B13218E0B1F6123CA523772 /* SSKeychain.xcconfig */;
+			baseConfigurationReference = 6C4C3ED5EF7F8C44C032188D71D4754A /* SSKeychain.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -691,7 +709,7 @@
 		};
 		2FA260357AD3953D3E9DC52F3137F907 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2A79B11C6278FA62A76DCD24C2C33AB /* AERecord.xcconfig */;
+			baseConfigurationReference = 501844E8524392A60C9017785552B89E /* AERecord.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -719,7 +737,7 @@
 		};
 		3BC51811D3556A7390275D4FBD75837E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A51628BF0B13218E0B1F6123CA523772 /* SSKeychain.xcconfig */;
+			baseConfigurationReference = 6C4C3ED5EF7F8C44C032188D71D4754A /* SSKeychain.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -746,7 +764,7 @@
 		};
 		4720933D0D45D92BF55E2692CECE9B29 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C340E14F5C6B0F8D21D6B7FF00C2E62D /* PureLayout.xcconfig */;
+			baseConfigurationReference = 5AD358C431F75BEC5753C8E451A6B859 /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -812,7 +830,7 @@
 		};
 		6A88CD23967597CCCB214EFFE543C016 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49D8E63D8D6552CC7C25973BD104B0DB /* UITextView+Placeholder.xcconfig */;
+			baseConfigurationReference = 84B69327CA16A447D8860BF5276D318F /* UITextView+Placeholder.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -936,7 +954,7 @@
 		};
 		85F4F7A9B0A4EFD0E45E3D37D7F8E292 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2A79B11C6278FA62A76DCD24C2C33AB /* AERecord.xcconfig */;
+			baseConfigurationReference = 501844E8524392A60C9017785552B89E /* AERecord.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -963,7 +981,7 @@
 		};
 		989076F31EACB3FE9E46937C87F5C22F /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2A79B11C6278FA62A76DCD24C2C33AB /* AERecord.xcconfig */;
+			baseConfigurationReference = 501844E8524392A60C9017785552B89E /* AERecord.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -990,7 +1008,7 @@
 		};
 		A7D5474AB296206F94D2E22A51654202 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A51628BF0B13218E0B1F6123CA523772 /* SSKeychain.xcconfig */;
+			baseConfigurationReference = 6C4C3ED5EF7F8C44C032188D71D4754A /* SSKeychain.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1017,7 +1035,7 @@
 		};
 		B1A8FF0E0C321A78E65BCA06A0E023A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49D8E63D8D6552CC7C25973BD104B0DB /* UITextView+Placeholder.xcconfig */;
+			baseConfigurationReference = 84B69327CA16A447D8860BF5276D318F /* UITextView+Placeholder.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1044,7 +1062,7 @@
 		};
 		C1F2BD4377C151BD94CFC4F594C96FEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C340E14F5C6B0F8D21D6B7FF00C2E62D /* PureLayout.xcconfig */;
+			baseConfigurationReference = 5AD358C431F75BEC5753C8E451A6B859 /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1132,7 +1150,7 @@
 		};
 		F7F9462EA70EA1BC68554A6CC0E96B6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49D8E63D8D6552CC7C25973BD104B0DB /* UITextView+Placeholder.xcconfig */;
+			baseConfigurationReference = 84B69327CA16A447D8860BF5276D318F /* UITextView+Placeholder.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
