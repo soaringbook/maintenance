@@ -32,7 +32,5 @@ class ActionView: UIView {
         
         roundedView.layer.cornerRadius = 5.0
         imageView.layer.cornerRadius = imageView.frame.size.height / 2.0
-        imageView.layer.borderColor = UIColor.SBDarkGrayColor().CGColor
-        imageView.layer.borderWidth = 2.0
     }
 }
