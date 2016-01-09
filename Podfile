@@ -6,5 +6,6 @@ use_frameworks!
 pod 'SSKeychain',   '~> 1.2'
 pod 'PureLayout',   '~> 3.0'
 pod 'AERecord',     '~> 2.0'
+pod 'Fabric',       '~> 1.6'
 
 pod 'UITextView+Placeholder', '~> 1.1'
