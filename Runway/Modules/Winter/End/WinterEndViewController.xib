@@ -30,6 +30,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eF5-de-lLU">
                     <rect key="frame" x="20" y="76" width="513" height="150"/>
                     <color key="backgroundColor" red="0.88648047669999996" green="0.88959640579999999" blue="0.89894419309999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.12156862745098039" green="0.59607843137254901" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="igU-ix-NTt"/>
                         <constraint firstAttribute="width" constant="500" id="mr5-SU-mIv"/>

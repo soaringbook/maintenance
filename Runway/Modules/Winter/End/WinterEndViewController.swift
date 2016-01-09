@@ -8,6 +8,8 @@
 
 import UIKit
 
+import UITextView_Placeholder
+
 protocol WinterEndViewControllerDelegate {
     func winterEndViewController(controller: WinterEndViewController, didEndWithComment comment: String)
     func winterEndViewControllerDidCancel(controller: WinterEndViewController)
@@ -42,6 +44,11 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setup the textView.
+        textView.textContainerInset = UIEdgeInsetsMake(10, 5, 10, 5)
+        textView.placeholder = "Tell us what you worked on..."
+        
+        // Setup the label.
         if let name = item.shortName {
             label.text = "Done for today \(name)?"
         } else {
