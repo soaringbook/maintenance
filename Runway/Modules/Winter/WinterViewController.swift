@@ -14,6 +14,8 @@ private let CollectionViewSpacing: CGFloat = 20.0
 class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate, WinterEndViewControllerDelegate {
     var winterView: WinterView! { return self.view as! WinterView }
     
+    private var service: SBSyncService!
+    
     private var activeRegistration: Registration?
     private var activeRegistrationIndexPath: NSIndexPath?
     
@@ -33,14 +35,6 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     private func reloadData() {
         winterView.registrations = Registration.registrationsInProgress()
         winterView.reloadData()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func sync(sender: AnyObject) {
-        let service = SBSyncService()
-        service.sync { error in
-        }
     }
     
     // MARK: - Segues
@@ -111,6 +105,19 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView) {
         performSegueWithIdentifier("Start", sender: subview)
+    }
+    
+    func winterViewDidStartSync(view: WinterView) {
+        view.startSyncing()
+        service = SBSyncService()
+        service.sync { error in
+            view.stopSyncing()
+        }
+    }
+    
+    func winterViewDidCancelSync(view: WinterView) {
+        service.cancel()
+        view.stopSyncing()
     }
     
     // MARK: - Time

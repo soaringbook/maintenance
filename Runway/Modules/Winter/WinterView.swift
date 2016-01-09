@@ -11,10 +11,14 @@ import UIKit
 protocol WinterViewDelegate {
     func winterView(view: WinterView, didSelectRegistration registration: Registration, atIndexPath indexPath: NSIndexPath)
     func winterViewWillStartRegistration(view: WinterView, fromView subview: UIView)
+    
+    func winterViewDidStartSync(view: WinterView)
+    func winterViewDidCancelSync(view: WinterView)
 }
 
 class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var syncButton: SyncButton!
     
     var delegate: WinterViewDelegate?
     
@@ -47,6 +51,16 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     func removeRegistration(atIndexPath indexPath: NSIndexPath) {
         registrations.removeAtIndex(rowForRegistration(atIndexPath: indexPath))
         collectionView.deleteItemsAtIndexPaths([indexPath])
+    }
+    
+    // MARK: - Sync
+    
+    func startSyncing() {
+        syncButton.startAnimating()
+    }
+    
+    func stopSyncing() {
+        syncButton.stopAnimating()
     }
     
     // MARK: - Timer
@@ -87,6 +101,31 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
             return addCell(forIndexPath: indexPath)
         } else {
             return registrationCell(forIndexPath: indexPath)
+        }
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func sync(sender: AnyObject) {
+        if syncButton.animating {
+            delegate?.winterViewDidCancelSync(self)
+        } else {
+            delegate?.winterViewDidStartSync(self)
+        }
+    }
+    
+    // MARK: - Hit
+    
+    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        guard syncButton.animating else {
+            return super.hitTest(point, withEvent: event)
+        }
+        
+        if super.hitTest(point, withEvent: event) == syncButton {
+            return syncButton
+        } else {
+            shake()
+            return nil
         }
     }
     
