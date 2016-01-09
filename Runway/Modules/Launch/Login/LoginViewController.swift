@@ -11,6 +11,8 @@ import UIKit
 class LoginViewController : UIViewController, UITextFieldDelegate {
     var loginView: LoginView! { return self.view as! LoginView }
     
+    let slideTransitionDelegate = SlideTransitioningDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,6 +71,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    // MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        segue.destinationViewController.transitioningDelegate = slideTransitionDelegate
     }
     
     // MARK: - Navigation
