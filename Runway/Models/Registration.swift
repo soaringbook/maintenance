@@ -67,6 +67,11 @@ class Registration: NSManagedObject  {
         return registrations(fromPredicate: predicate, context: context)
     }
     
+    static func hasUploadableRegistrations(context: NSManagedObjectContext = AERecord.defaultContext) -> Bool {
+        let predicate = NSPredicate(format: "startedAt != nil AND duration == nil")
+        return countWithPredicate(predicate, context: context) > 0
+    }
+    
     static func nextRegistrationToUpload(context: NSManagedObjectContext = AERecord.defaultContext) -> Registration? {
         let predicate = NSPredicate(format: "startedAt != nil AND duration != nil")
         let descriptors = [

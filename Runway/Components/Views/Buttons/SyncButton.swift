@@ -29,10 +29,6 @@ class SyncButton: UIButton {
             }
         }
         badgeView.autoSetDimensionsToSize(CGSizeMake(20.0, 20.0))
-        
-        dispatch_main_after(2.0) { () -> Void in
-            self.badgeView.show()
-        }
     }
     
     // MARK: - Badge

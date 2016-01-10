@@ -8,13 +8,19 @@
 
 import UIKit
 
+// Fetch the updates from the service every 10 minutes.
+private let ServiceUpdateInterval: NSTimeInterval = 60.0 * 10
+
 private let SelectionCellSpacing: CGFloat = 10.0
 private let CollectionViewSpacing: CGFloat = 20.0
 
 class WinterViewController: UIViewController, WizardViewControllerDateSource, WizardViewControllerDelegate, WinterViewDelegate, WinterEndViewControllerDelegate {
     var winterView: WinterView! { return self.view as! WinterView }
     
-    private var service: SBSyncService!
+    private let service: SBSyncService = SBSyncService()
+    private var updatesTimer: NSTimer?
+    
+    private var syncablePilotsAvailable: Bool = false
     
     private var activeRegistration: Registration?
     private var activeRegistrationIndexPath: NSIndexPath?
@@ -27,7 +33,22 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         super.viewDidLoad()
         
         winterView.delegate = self
+        
+        updateBadge()
         reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchUpdates()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.updatesTimer?.invalidate()
+        self.updatesTimer = nil
     }
     
     // MARK: - Data
@@ -35,6 +56,33 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     private func reloadData() {
         winterView.registrations = Registration.registrationsInProgress()
         winterView.reloadData()
+    }
+    
+    // MARK: - Updates
+    
+    private func scheduleFetchUpdates() {
+        self.updatesTimer = NSTimer.scheduledTimerWithTimeInterval(ServiceUpdateInterval, target: self, selector: "fetchUpdates", userInfo: nil, repeats: false)
+    }
+    
+    func fetchUpdates() {
+        updatesTimer?.invalidate()
+        service.fetchUpdates { success, updatedPilots in
+            if success {
+                self.syncablePilotsAvailable = updatedPilots > 0
+                self.updateBadge()
+            }
+            dispatch_main {
+                self.scheduleFetchUpdates()
+            }
+        }
+    }
+    
+    private func updateBadge() {
+        dispatch_main {
+            let registrationsAvailable = Registration.hasUploadableRegistrations()
+            let showBadge = registrationsAvailable || self.syncablePilotsAvailable
+            self.winterView.toggleBadge(showBadge)
+        }
     }
     
     // MARK: - Segues
@@ -70,6 +118,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
             print("💾 \(registration.pilot!.displayName) registration stop")
             registration.stop(withComment: comment)
             winterView.removeRegistration(atIndexPath: indexPath)
+            updateBadge()
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -109,10 +158,12 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     
     func winterViewDidStartSync(view: WinterView) {
         view.startSyncing()
-        service = SBSyncService()
         service.sync { error in
             self.presentSyncCompletion()
             view.stopSyncing()
+            dispatch_main_after(2.0) {
+                self.fetchUpdates()
+            }
         }
     }
     

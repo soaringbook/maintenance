@@ -42,12 +42,6 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    // MARK: - Actions
-    
-    @IBAction func disconnect(sender: AnyObject) {
-        SBKeychain.sharedInstance.token = nil
-    }
-    
     @IBAction func synchronise(sender: AnyObject) {
         updatesTimer?.invalidate()
         service.sync { error in
