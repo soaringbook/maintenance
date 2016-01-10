@@ -25,12 +25,15 @@ class SyncButton: UIButton {
     }
     
     func stopAnimating() {
+        userInteractionEnabled = false
         animating = false
     }
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if animating {
             startAnimating()
+        } else {
+            userInteractionEnabled = true
         }
     }
 }
