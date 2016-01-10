@@ -27,7 +27,7 @@ class Registration: NSManagedObject  {
         return [
             "work_registration" : [
                 "pilot_id" :   Int(pilot!.id),
-                "started_at" : SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(startedAt!),
+                "started_at" : SBDateFormatter.sharedInstance.apiDateFormatter.stringFromDate(startedAt!),
                 "duration" :   String(duration ?? 0),
                 "comment" :    comment ?? ""
             ]
