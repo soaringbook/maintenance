@@ -68,7 +68,7 @@ class Registration: NSManagedObject  {
     }
     
     static func hasUploadableRegistrations(context: NSManagedObjectContext = AERecord.defaultContext) -> Bool {
-        let predicate = NSPredicate(format: "startedAt != nil AND duration == nil")
+        let predicate = NSPredicate(format: "startedAt != nil AND duration != nil")
         return countWithPredicate(predicate, context: context) > 0
     }
     
