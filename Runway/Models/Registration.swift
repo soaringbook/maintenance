@@ -27,7 +27,7 @@ class Registration: NSManagedObject  {
         return [
             "work_registration" : [
                 "pilot_id" :   Int(pilot!.id),
-                "started_at" : SBDateFormatter.sharedInstance.apiFormatter.stringFromDate(startedAt!),
+                "started_at" : SBDateFormatter.sharedInstance.apiDateFormatter.stringFromDate(startedAt!),
                 "duration" :   String(duration ?? 0),
                 "comment" :    comment ?? ""
             ]
@@ -65,6 +65,11 @@ class Registration: NSManagedObject  {
     static func registrationsInProgress(context: NSManagedObjectContext = AERecord.defaultContext) -> [Registration] {
         let predicate = NSPredicate(format: "startedAt != nil AND duration == nil")
         return registrations(fromPredicate: predicate, context: context)
+    }
+    
+    static func hasUploadableRegistrations(context: NSManagedObjectContext = AERecord.defaultContext) -> Bool {
+        let predicate = NSPredicate(format: "startedAt != nil AND duration != nil")
+        return countWithPredicate(predicate, context: context) > 0
     }
     
     static func nextRegistrationToUpload(context: NSManagedObjectContext = AERecord.defaultContext) -> Registration? {

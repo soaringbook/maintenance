@@ -63,6 +63,14 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         syncButton.stopAnimating()
     }
     
+    func toggleBadge(show: Bool) {
+        if show {
+            syncButton.showBadge()
+        } else {
+            syncButton.hideBadge()
+        }
+    }
+    
     // MARK: - Timer
     
     func updateTimer() {

@@ -115,13 +115,16 @@ class SBSyncService: NSObject {
     
     // MARK: - Updates
     
-    func fetchUpdates(callback callback: (updatedPilots: Int) -> ()) {
+    func fetchUpdates(callback callback: (success: Bool, updatedPilots: Int) -> ()) {
+        print("🚁 Fetching updates")
         service.fetchPilots { response in
             var count = 0
+            var success = false
             if let objects = (response.data as! NSDictionary?)?["pilots"] as? [NSDictionary] {
                 count = objects.count
+                success = true
             }
-            callback(updatedPilots: count)
+            callback(success: success, updatedPilots: count)
         }
     }
 }

@@ -13,6 +13,7 @@ class SBDateFormatter: NSObject {
     // MARK: - Read only
     
     private(set) internal var apiFormatter: NSDateFormatter = NSDateFormatter()
+    private(set) internal var apiDateFormatter: NSDateFormatter = NSDateFormatter()
     
     // MARK: - Initialization
     
@@ -26,8 +27,11 @@ class SBDateFormatter: NSObject {
     override init() {
         super.init()
         
-        apiFormatter.dateFormat = "yyyy-MM-dd"
+        apiFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         apiFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+        
+        apiDateFormatter.dateFormat = "yyyy-MM-dd"
+        apiDateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
     }
 }
 

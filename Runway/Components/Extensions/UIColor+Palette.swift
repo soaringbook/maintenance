@@ -20,4 +20,8 @@ extension UIColor {
     public class func SBGreenColor() -> UIColor {
         return UIColor(red:0.1, green:0.7, blue:0.58, alpha:1)
     }
+    
+    public class func SBRedColor() -> UIColor {
+        return UIColor(red:0.88, green:0.16, blue:0.31, alpha:1)
+    }
 }
