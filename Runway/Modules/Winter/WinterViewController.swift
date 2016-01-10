@@ -111,6 +111,7 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         view.startSyncing()
         service = SBSyncService()
         service.sync { error in
+            self.presentSyncCompletion()
             view.stopSyncing()
         }
     }
@@ -118,6 +119,15 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func winterViewDidCancelSync(view: WinterView) {
         service.cancel()
         view.stopSyncing()
+    }
+    
+    // MARK: - Sync
+    
+    private func presentSyncCompletion() {
+        dispatch_main {
+            let actionViewController = ActionViewController(withController: WinterSyncFinishedViewController())
+            self.presentViewController(actionViewController, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Time

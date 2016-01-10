@@ -18,6 +18,8 @@
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
 		0456C5611BF532A400D87FB8 /* SBDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */; };
 		0461364F1C3EF6A900C45350 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364E1C3EF6A900C45350 /* ScaleSegue.swift */; };
+		047092AD1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047092AB1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift */; };
+		047092AE1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047092AC1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib */; };
 		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
 		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
 		0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */; };
@@ -79,6 +81,8 @@
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
 		0456C5601BF532A400D87FB8 /* SBDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDateFormatter.swift; sourceTree = "<group>"; };
 		0461364E1C3EF6A900C45350 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
+		047092AB1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterSyncFinishedViewController.swift; sourceTree = "<group>"; };
+		047092AC1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterSyncFinishedViewController.xib; sourceTree = "<group>"; };
 		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +189,15 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
+		047092A81C42D72000A76D2D /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				047092AB1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift */,
+				047092AC1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
 		047CE30C1BF3743300ACF7E0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +279,7 @@
 			children = (
 				04CCECD61C3924660089AC37 /* End */,
 				04F34D981BF736A5006EEC4A /* Start */,
+				047092A81C42D72000A76D2D /* Sync */,
 				04F34D861BF72582006EEC4A /* Winter.storyboard */,
 				04484A551C006F4D00965B5F /* WinterView.swift */,
 				04F34D881BF72667006EEC4A /* WinterViewController.swift */,
@@ -546,6 +560,7 @@
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */,
 				04F34DAC1BF7452A006EEC4A /* NamedImageCollectionViewCell.xib in Resources */,
+				047092AE1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib in Resources */,
 				041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */,
 				04CCECE81C392F250089AC37 /* WinterEndViewController.xib in Resources */,
 				0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */,
@@ -669,6 +684,7 @@
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
 				04CCECEA1C392F990089AC37 /* WinterEndViewController.swift in Sources */,
+				047092AD1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
 				041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */,
 				0481AD781C37E0F500335453 /* ActionView.swift in Sources */,
