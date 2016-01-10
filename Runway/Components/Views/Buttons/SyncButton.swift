@@ -11,10 +11,44 @@ import UIKit
 class SyncButton: UIButton {
     
     private(set) var animating: Bool = false
+    private(set) var badgeView: SyncBadge!
+    
+    // MARK: - View flow
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        badgeView = SyncBadge()
+        addSubview(badgeView)
+        let centerConstraints = badgeView.autoCenterInSuperview()
+        for constraint in centerConstraints {
+            if constraint.firstAttribute == .CenterX {
+                constraint.constant = 15
+            } else {
+                constraint.constant = -15
+            }
+        }
+        badgeView.autoSetDimensionsToSize(CGSizeMake(20.0, 20.0))
+        
+        dispatch_main_after(2.0) { () -> Void in
+            self.badgeView.show()
+        }
+    }
+    
+    // MARK: - Badge
+    
+    func showBadge() {
+        badgeView.show()
+    }
+    
+    func hideBadge() {
+        badgeView.hide()
+    }
     
     // MARK: - Rotation
     
     func startAnimating() {
+        hideBadge()
         animating = true
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0.0

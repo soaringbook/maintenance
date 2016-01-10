@@ -20,6 +20,7 @@
 		0461364F1C3EF6A900C45350 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461364E1C3EF6A900C45350 /* ScaleSegue.swift */; };
 		047092AD1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047092AB1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift */; };
 		047092AE1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047092AC1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib */; };
+		047092B01C42DC2700A76D2D /* SyncBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047092AF1C42DC2700A76D2D /* SyncBadge.swift */; };
 		0481AD701C37DBFC00335453 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD6E1C37DBFC00335453 /* ActionViewController.swift */; };
 		0481AD711C37DBFC00335453 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481AD6F1C37DBFC00335453 /* ActionViewController.xib */; };
 		0481AD741C37DEF700335453 /* ActionTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */; };
@@ -83,6 +84,7 @@
 		0461364E1C3EF6A900C45350 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		047092AB1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterSyncFinishedViewController.swift; sourceTree = "<group>"; };
 		047092AC1C42D75A00A76D2D /* WinterSyncFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinterSyncFinishedViewController.xib; sourceTree = "<group>"; };
+		047092AF1C42DC2700A76D2D /* SyncBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncBadge.swift; sourceTree = "<group>"; };
 		0481AD6E1C37DBFC00335453 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		0481AD6F1C37DBFC00335453 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 		0481AD731C37DEF700335453 /* ActionTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		049E66871C415250008118CA /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				047092AF1C42DC2700A76D2D /* SyncBadge.swift */,
 				049E66881C415269008118CA /* SyncButton.swift */,
 			);
 			path = Buttons;
@@ -683,6 +686,7 @@
 				04F34D931BF72B85006EEC4A /* WizardChildViewController.swift in Sources */,
 				620D3FF81BBA94F300751D86 /* SBWebService+Pilots.swift in Sources */,
 				04F34D8F1BF72B08006EEC4A /* WizardViewController.swift in Sources */,
+				047092B01C42DC2700A76D2D /* SyncBadge.swift in Sources */,
 				04CCECEA1C392F990089AC37 /* WinterEndViewController.swift in Sources */,
 				047092AD1C42D75A00A76D2D /* WinterSyncFinishedViewController.swift in Sources */,
 				626D23571BBA696C0055D8FC /* AppDelegate.swift in Sources */,
