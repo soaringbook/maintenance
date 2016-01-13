@@ -2,7 +2,7 @@
 "common_errors_global" = "Foutmelding";
 
 /* common_errors_service_authentication */
-"common_errors_service_authentication" = "Er was een probleem met de authenticatie met de web server.";
+"common_errors_service_authentication" = "Er was een probleem met de authenticatie met de webserver.";
 
 /* common_errors_service_fetching */
 "common_errors_service_fetching" = "Er was een probleem met het downloaden van de webserver.";
@@ -10,9 +10,45 @@
 /* common_errors_service_image_downloading */
 "common_errors_service_image_downloading" = "Er was een probleem bij het downloaden van de afbeeldingen van de webserver.";
 
+/* common_labels_no_data */
+"common_labels_no_data" = "Geen data beschikbaar";
+
 /* common_labels_ok */
 "common_labels_ok" = "Ok";
 
 /* login_placeholders_token */
 "login_placeholders_token" = "Vul je club token in";
+
+/* sync_buttons_continue */
+"sync_buttons_continue" = "Ga verder";
+
+/* sync_labels_finished */
+"sync_labels_finished" = "Alle data is zonder probleem verzonden naar de Soaring Book server.";
+
+/* work_buttons_add */
+"work_buttons_add" = "Begin te werken";
+
+/* work_buttons_end_stop */
+"work_buttons_end_stop" = "Stop met werken!";
+
+/* work_buttons_start_working */
+"work_buttons_start_working" = "Start!";
+
+/* work_labels_end_placeholder */
+"work_labels_end_placeholder" = "Vertel ons waar je aan hebt gewerkt...";
+
+/* work_labels_end_title */
+"work_labels_end_title" = "Klaar met werken %@?";
+
+/* work_labels_start_ready_user */
+"work_labels_start_ready_user" = "Klaar om te beginnen werken %@?";
+
+/* work_labels_start_search_placeholder */
+"work_labels_start_search_placeholder" = "Zoek een piloot";
+
+/* work_labels_start_title */
+"work_labels_start_title" = "Wie ben jij?";
+
+/* work_labels_title */
+"work_labels_title" = "Winterwerk";
 

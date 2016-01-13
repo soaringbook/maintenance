@@ -17,11 +17,11 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     // MARK: Getters
     
     override var wizardTitle: String {
-        return "Who are you?"
+        return NSLocalizedString("work_labels_start_title", comment: "")
     }
     
     override var searchPlaceholderTitle: String {
-        return "Search for a pilot"
+        return NSLocalizedString("work_labels_start_search_placeholder", comment: "")
     }
     
     // MARK: - Data

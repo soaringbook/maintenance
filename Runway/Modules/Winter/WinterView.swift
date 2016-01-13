@@ -143,7 +143,8 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: - Cells
     
     private func addCell(forIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Add", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Add", forIndexPath: indexPath) as! IconCollectionViewCell
+        cell.configure()
         return cell
     }
     

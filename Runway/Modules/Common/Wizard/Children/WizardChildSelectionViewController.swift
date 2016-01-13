@@ -218,7 +218,7 @@ class WizardChildSelectionViewController: WizardChildViewController, UICollectio
     
     private func preparePlaceholder() {
         placeholderLabel = UILabel()
-        placeholderLabel?.text = "No data available"
+        placeholderLabel?.text = NSLocalizedString("common_labels_no_data", comment: "")
         placeholderLabel?.textAlignment = .Center
         placeholderLabel?.font = UIFont.systemFontOfSize(20.0, weight: UIFontWeightMedium)
         view.addSubview(placeholderLabel!)

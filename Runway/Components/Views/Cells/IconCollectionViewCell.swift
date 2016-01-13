@@ -18,5 +18,6 @@ class IconCollectionViewCell: UICollectionViewCell {
     // MARK: - Configuration
     
     func configure() {
+        label.text = NSLocalizedString("work_buttons_add", comment: "")
     }
 }
