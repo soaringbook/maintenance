@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WinterSyncFinishedViewController" customModule="Runway" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="xGk-Kv-6TH" id="Vzh-NX-p3Q"/>
+                <outlet property="label" destination="IEe-3h-4ru" id="4fU-7b-PHj"/>
                 <outlet property="view" destination="FB8-f1-9Bl" id="zXE-cf-Aub"/>
             </connections>
         </placeholder>

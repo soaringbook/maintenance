@@ -19,6 +19,7 @@ class WinterStartViewController: UIViewController, ActionViewControllerDelegate 
     var item: WizardSelectionItem!
     
     @IBOutlet var label: UILabel!
+    @IBOutlet var button: UIButton!
     
     // MARK: - Init
     
@@ -41,10 +42,10 @@ class WinterStartViewController: UIViewController, ActionViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        button.setTitle(NSLocalizedString("work_buttons_start_working", comment: ""), forState: .Normal)
         if let name = item.shortName {
-            label.text = "Ready to start working \(name)?"
-        } else {
-            label.text = "Ready to start working?"
+            let localizedLabel = NSLocalizedString("work_labels_start_ready_user", comment: "")
+            label.text = String(NSString(format: localizedLabel, name))
         }
     }
     

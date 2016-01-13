@@ -1,0 +1,54 @@
+/* common_errors_global */
+"common_errors_global" = "An error occured";
+
+/* common_errors_service_authentication */
+"common_errors_service_authentication" = "There was a problem authenticating with the webservice.";
+
+/* common_errors_service_fetching */
+"common_errors_service_fetching" = "There was a problem fetching from the webservice.";
+
+/* common_errors_service_image_downloading */
+"common_errors_service_image_downloading" = "There was a problem downloading the images from the webservice.";
+
+/* common_labels_no_data */
+"common_labels_no_data" = "No data available";
+
+/* common_labels_ok */
+"common_labels_ok" = "Ok";
+
+/* login_placeholders_token */
+"login_placeholders_token" = "Fill in your club token";
+
+/* sync_buttons_continue */
+"sync_buttons_continue" = "Continue";
+
+/* sync_labels_finished */
+"sync_labels_finished" = "Everything was correctly sent to the Soaring Book server.";
+
+/* work_buttons_add */
+"work_buttons_add" = "Start working";
+
+/* work_buttons_end_stop */
+"work_buttons_end_stop" = "Stop working!";
+
+/* work_buttons_start_working */
+"work_buttons_start_working" = "Start!";
+
+/* work_labels_end_placeholder */
+"work_labels_end_placeholder" = "Tell us what you worked on...";
+
+/* work_labels_end_title */
+"work_labels_end_title" = "Done working %@?";
+
+/* work_labels_start_ready_user */
+"work_labels_start_ready_user" = "Ready to start working %@?";
+
+/* work_labels_start_search_placeholder */
+"work_labels_start_search_placeholder" = "Search a pilot";
+
+/* work_labels_start_title */
+"work_labels_start_title" = "Who are you?";
+
+/* work_labels_title */
+"work_labels_title" = "Winterwork";
+

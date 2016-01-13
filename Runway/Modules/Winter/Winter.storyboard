@@ -69,6 +69,7 @@
                         <connections>
                             <outlet property="collectionView" destination="XNr-Ay-vRT" id="4kR-hW-Z6H"/>
                             <outlet property="syncButton" destination="FGW-5G-wXd" id="bvA-Rb-5D6"/>
+                            <outlet property="titleLabel" destination="DNn-xG-PEn" id="dhh-IV-2qO"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="DNp-Fo-1rq"/>

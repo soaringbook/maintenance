@@ -22,6 +22,7 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     
     @IBOutlet var label: UILabel!
     @IBOutlet var textView: UITextView!
+    @IBOutlet var button: UIButton!
     
     // MARK: - Init
     
@@ -44,15 +45,16 @@ class WinterEndViewController: UIViewController, ActionViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        button.setTitle(NSLocalizedString("work_buttons_end_stop", comment: ""), forState: .Normal)
+        
         // Setup the textView.
         textView.textContainerInset = UIEdgeInsetsMake(10, 5, 10, 5)
-        textView.placeholder = "Tell us what you worked on..."
+        textView.placeholder = NSLocalizedString("work_labels_end_placeholder", comment: "")
         
         // Setup the label.
         if let name = item.shortName {
-            label.text = "Done for today \(name)?"
-        } else {
-            label.text = "Done for today?"
+            let localizedLabel = NSLocalizedString("work_labels_end_title", comment: "")
+            label.text = String(NSString(format: localizedLabel, name))
         }
     }
     

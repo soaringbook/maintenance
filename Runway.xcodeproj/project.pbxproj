@@ -13,6 +13,7 @@
 		041D8E421C2E9E90004917AE /* ApplicationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */; };
 		041D8E481C2EA45B004917AE /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */; };
 		041D8E491C2EA45B004917AE /* IconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D8E471C2EA45B004917AE /* IconCollectionViewCell.xib */; };
+		04437D2C1C46EDB2000EBECB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04437D2E1C46EDB2000EBECB /* Localizable.strings */; };
 		04484A541C006B5400965B5F /* NSTimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */; };
 		04484A561C006F4D00965B5F /* WinterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04484A551C006F4D00965B5F /* WinterView.swift */; };
 		0456C55E1BF530CA00D87FB8 /* SBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */; };
@@ -77,6 +78,8 @@
 		041D8E411C2E9E90004917AE /* ApplicationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainerViewController.swift; sourceTree = "<group>"; };
 		041D8E461C2EA45B004917AE /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		041D8E471C2EA45B004917AE /* IconCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconCollectionViewCell.xib; sourceTree = "<group>"; };
+		04437D2D1C46EDB2000EBECB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04437D2F1C46EDBA000EBECB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04484A531C006B5400965B5F /* NSTimeInterval+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Format.swift"; sourceTree = "<group>"; };
 		04484A551C006F4D00965B5F /* WinterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinterView.swift; sourceTree = "<group>"; };
 		0456C55D1BF530CA00D87FB8 /* SBSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBSyncService.swift; sourceTree = "<group>"; };
@@ -394,6 +397,7 @@
 			children = (
 				04D04FAA1BF35E4500F33F1F /* Configurations */,
 				626D23621BBA696C0055D8FC /* Info.plist */,
+				04437D2E1C46EDB2000EBECB /* Localizable.strings */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -541,7 +545,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				nl,
 			);
 			mainGroup = 626D234A1BBA696C0055D8FC;
 			productRefGroup = 626D23541BBA696C0055D8FC /* Products */;
@@ -559,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D04FA71BF35CD100F33F1F /* Launch.storyboard in Resources */,
+				04437D2C1C46EDB2000EBECB /* Localizable.strings in Resources */,
 				626D23891BBA69C20055D8FC /* Launch Screen.storyboard in Resources */,
 				626D23871BBA69B50055D8FC /* Images.xcassets in Resources */,
 				04F34D8D1BF72A6D006EEC4A /* Wizard.storyboard in Resources */,
@@ -706,6 +711,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04437D2E1C46EDB2000EBECB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04437D2D1C46EDB2000EBECB /* en */,
+				04437D2F1C46EDBA000EBECB /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0402E7531C388AFC0046D0D7 /* Production */ = {
