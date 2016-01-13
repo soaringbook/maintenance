@@ -176,6 +176,9 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
     func winterViewDidCancelSync(view: WinterView) {
         service.cancel()
         view.stopSyncing()
+        dispatch_main_after(2.0) {
+            self.fetchUpdates()
+        }
     }
     
     // MARK: - Sync
