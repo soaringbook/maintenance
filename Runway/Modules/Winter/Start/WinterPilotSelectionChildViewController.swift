@@ -40,9 +40,11 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     // MARK: - WinterStartViewControllerDelegate
     
     func winterStartViewController(controller: WinterStartViewController, didStartItem item: WizardSelectionItem) {
-        if let item = item as? Pilot {
-            self.selectedPilot = item
-            self.wizardViewController?.presentNextController()
+        controller.presentingViewController?.dismissViewControllerAnimated(true) {
+            if let item = item as? Pilot {
+                self.selectedPilot = item
+                self.wizardViewController?.presentNextController()
+            }
         }
     }
     
