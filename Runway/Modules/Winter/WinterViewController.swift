@@ -51,6 +51,12 @@ class WinterViewController: UIViewController, WizardViewControllerDateSource, Wi
         self.updatesTimer = nil
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        winterView.updateCollectionView()
+    }
+    
     // MARK: - Data
     
     private func reloadData() {

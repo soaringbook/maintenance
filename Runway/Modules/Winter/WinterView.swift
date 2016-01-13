@@ -16,7 +16,7 @@ protocol WinterViewDelegate {
     func winterViewDidCancelSync(view: WinterView)
 }
 
-class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
+class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var syncButton: SyncButton!
     @IBOutlet var titleLabel: UILabel!
@@ -34,12 +34,12 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         
         collectionView.registerNib(UINib(nibName: "NamedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         collectionView.registerNib(UINib(nibName: "IconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Add")
-        invalidateLayout()
+        setupLayout()
         
         NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
     }
     
-    func invalidateLayout() {
+    func setupLayout() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsetsMake(0.0, 20.0, 20.0, 20.0)
         }
@@ -85,6 +85,24 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
                 }
             }
         }
+    }
+    
+    // MARK: - CollectionView
+    
+    func updateCollectionView() {
+        collectionView.performBatchUpdates({ () -> Void in
+            // We reload all the cells just to make sure they are resized.
+            self.collectionView.reloadItemsAtIndexPaths(self.collectionView.indexPathsForVisibleItems())
+        }, completion: nil)
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let padding = 10.0
+        let numberOfRows = UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation) ? 3.0 : 4.0
+        let height = floor((collectionView.frame.size.height - CGFloat(numberOfRows * padding) - CGFloat(40)) / CGFloat(numberOfRows))
+        return CGSizeMake(height, height)
     }
     
     // MARK: - UICollectionViewDelegate
