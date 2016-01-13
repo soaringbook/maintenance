@@ -17,7 +17,7 @@ class WinterPilotSelectionChildViewController: WizardChildSelectionViewControlle
     // MARK: Getters
     
     override var wizardTitle: String {
-        return NSLocalizedString("work_labels_start_title", comment: "")
+        return NSLocalizedString("work_labels_start_title", comment: "").uppercaseString
     }
     
     override var searchPlaceholderTitle: String {
