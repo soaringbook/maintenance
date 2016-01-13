@@ -1,0 +1,18 @@
+/* common_errors_global */
+"common_errors_global" = "An error occured";
+
+/* common_errors_service_authentication */
+"common_errors_service_authentication" = "There was a problem authenticating with the webservice.";
+
+/* common_errors_service_fetching */
+"common_errors_service_fetching" = "There was a problem fetching from the webservice.";
+
+/* common_errors_service_image_downloading */
+"common_errors_service_image_downloading" = "There was a problem downloading the images from the webservice.";
+
+/* common_labels_ok */
+"common_labels_ok" = "Ok";
+
+/* login_placeholders_token */
+"login_placeholders_token" = "Fill in your club token";
+

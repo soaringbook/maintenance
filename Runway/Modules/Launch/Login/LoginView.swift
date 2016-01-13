@@ -26,6 +26,8 @@ class LoginView: UIView {
         super.awakeFromNib()
         reset()
         tokenField.alpha = 0
+        
+        tokenField.placeholder = NSLocalizedString("login_placeholders_token", comment: "")
     }
     
     override func resignFirstResponder() -> Bool {

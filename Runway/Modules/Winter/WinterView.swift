@@ -19,6 +19,7 @@ protocol WinterViewDelegate {
 class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var syncButton: SyncButton!
+    @IBOutlet var titleLabel: UILabel!
     
     var delegate: WinterViewDelegate?
     
@@ -28,6 +29,8 @@ class WinterView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        titleLabel.text = NSLocalizedString("work_labels_title", comment: "")
         
         collectionView.registerNib(UINib(nibName: "NamedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         collectionView.registerNib(UINib(nibName: "IconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Add")
