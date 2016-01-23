@@ -1,4 +1,4 @@
-fastlane_version '1.49.0'
+fastlane_version '1.53.0'
 
 desc 'Upload this version to S3.'
 lane :deploy do
