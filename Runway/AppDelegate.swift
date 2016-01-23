@@ -39,13 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - HockeyApp
     
     private func configureFabric() {
-        guard isDebug() else {
-            // Don't use Fabric configuration in debug mode.
-            return
-        }
-        
         printVerbose("Loading Fabric configuration.")
-        
+
+        Fabric.sharedSDK().debug = true
         Fabric.with([Crashlytics.self])
     }
 }
