@@ -28,3 +28,6 @@ Carthage
 fastlane/report.xml
 Runway.app.dSYM.zip
 .translations
+.env.release
+.env.production
+.env.debug
