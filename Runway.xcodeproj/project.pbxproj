@@ -768,13 +768,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0402E7561C388BE70046D0D7 /* Pods.production.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck (743AM63YFU)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 30;
 				INFOPLIST_FILE = Runway/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Runway;
-				PROVISIONING_PROFILE = "$(sigh_com.soaringbook.runway_adhoc)";
+				PROVISIONING_PROFILE = "015ea9ab-891c-44cd-ac0a-47691ebac6bc";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Production;
