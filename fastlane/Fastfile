@@ -8,12 +8,6 @@ lane :deploy do
   # Version bump.
   increment_build_number
 
-  # Prepare the codesigning.
-  match(
-    type:           'adhoc',
-    app_identifier: 'com.soaringbook.runway'
-  )
-
   # Build the application.
   gym(
     scheme:               'Runway',
