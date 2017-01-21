@@ -1,5 +1,7 @@
 fastlane_version '1.53.0'
 
+xcode_select('/Applications/Developer/Xcode731.app')
+
 desc 'Upload this version to S3.'
 lane :deploy do
   # Make sure you can only deploy from the master branch.
